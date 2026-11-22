@@ -8,6 +8,7 @@ runs/
 logs/
 wandb/
 *.pt
+!checkpoints/**/*.pt
 *.pth
 *.onnx
 *.npz

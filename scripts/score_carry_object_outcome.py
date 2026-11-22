@@ -1,4 +1,4 @@
-"""Secondary physical outcome metrics for CarryPlace; never replaces strict success.
+"""Score terminal goal location and physical handling diagnostics for CarryPlace.
 
 Usage: python scripts/score_carry_object_outcome.py --rollout TRACE.npz
        --eval-json SCORE.json --motion REFERENCE.npz --output SECONDARY.json
@@ -24,6 +24,7 @@ from mjlab_g1.tasks.smtrack.carryplace_eval import evaluate_carry_place
 # is above 0.33 m cannot touch that plane, regardless of its orientation.
 # Warp sometimes reports a stale box/plane contact while the box is elevated.
 IMPOSSIBLE_FLOOR_CONTACT_ABOVE_Z_M = 0.33
+TERMINAL_GOAL_RADIUS_M = 0.12
 
 
 def _segments(mask: np.ndarray) -> list[tuple[int, int]]:
@@ -75,6 +76,7 @@ def score_episode(
     )
     target_xy_error = float(np.linalg.norm(pos[-1, :2] - target_pos[:2]))
     target_height_error = float(abs(pos[-1, 2] - target_pos[2]))
+    target_distance_3d = float(np.hypot(target_xy_error, target_height_error))
     orientation_error = float(2 * np.arccos(np.clip(abs(np.dot(quat[-1], target_quat)), 0, 1)))
     final_speed = float(np.linalg.norm(box_v[-15:], axis=1).max())
     final_spin = float(np.linalg.norm(box_w[-15:], axis=1).max())
@@ -105,6 +107,7 @@ def score_episode(
             episode_complete=complete)["success"])
     return {
         **stages,
+        "terminal_box_near_goal": bool(target_distance_3d <= TERMINAL_GOAL_RADIUS_M),
         "object_outcome": bool(outcome),
         "intermittent_carry": interaction,
         "strict_success_after_floor_guard": corrected_strict,
@@ -118,6 +121,7 @@ def score_episode(
         "peak_lift_m": peak_lift,
         "target_xy_error_m": target_xy_error,
         "target_height_error_m": target_height_error,
+        "target_distance_3d_m": target_distance_3d,
         "target_orientation_error_rad": orientation_error,
     }
 
@@ -165,12 +169,13 @@ def main() -> None:
         for row, is_strict in zip(scores, strict):
             row["strict_success_existing_evaluator"] = bool(is_strict)
         metrics = {key + "_rate": sum(row[key] for row in scores) / len(scores)
-                   for key in ("object_outcome", "intermittent_carry",
+                   for key in ("terminal_box_near_goal", "object_outcome", "intermittent_carry",
                                "strict_success_existing_evaluator",
                                "strict_success_after_floor_guard")}
         report = {"rollout": str(args.rollout), "checkpoint": str(trace["checkpoint"].item()),
                   "seed": int(trace["seed"].item()), "episodes": len(scores),
-                  "thresholds": {"lift_m": 0.15, "airborne_clearance_m": 0.05,
+                  "thresholds": {"terminal_goal_3d_m": TERMINAL_GOAL_RADIUS_M,
+                                 "lift_m": 0.15, "airborne_clearance_m": 0.05,
                                  "airborne_net_xy_m": 0.5, "minimum_flight_frames": 10,
                                  "contact_duty_for_interaction": 0.20,
                                  "target_xy_m": 0.12, "target_height_m": 0.06,

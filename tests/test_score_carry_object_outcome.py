@@ -7,7 +7,8 @@ import numpy as np
 from scripts.score_carry_object_outcome import score_episode
 
 
-TRACE = Path(__file__).resolve().parents[1] / 'assets/sm800_seed2027_episode0_rollout.npz'
+TRACE = (Path(__file__).resolve().parents[1]
+         / 'assets/sm4096_h32_ori12_iter1000_seed161803_episode0_physical.npz')
 
 
 def _load():
@@ -26,6 +27,8 @@ def _score(trace, steps=None, floor=None):
 
 def test_real_lift_transport_release_succeeds_without_continuous_grip():
     record = _score(_load())
+    assert record['terminal_box_near_goal']
+    assert record['target_distance_3d_m'] <= 0.12
     assert record['object_outcome'] and record['intermittent_carry']
     assert record['airborne_transport_m'] > 1.4
     assert record['both_hands_airborne_duty'] < 1.0
@@ -49,9 +52,7 @@ def test_floor_drag_cannot_count_as_airborne_carry():
 
 
 def test_real_raised_box_with_spurious_floor_contact_is_successful():
-    with np.load(Path(__file__).resolve().parents[1] /
-                 'docs/metrics/sm4096_h32_ori12_iter1000_seed161803_episode0_physical.npz') as trace:
-        record = _score(trace)
+    record = _score(_load())
     assert record['impossible_floor_contact_frames'] >= 200
     assert record['airborne_transport_m'] > 1.4
     assert record['object_outcome'] and record['intermittent_carry']
@@ -63,3 +64,22 @@ def test_short_episode_returns_failure_diagnostic_instead_of_crashing():
     record = _score(trace, steps=21)
     assert not record['object_outcome']
     assert not record['intermittent_carry']
+
+
+def test_terminal_goal_is_a_position_only_binary_outcome():
+    trace = _load()
+    trace['state'][-1, 71:74] = trace['target_pos_w']
+    trace['left_hand_contact'][:] = False
+    trace['right_hand_contact'][:] = False
+    trace['episode_complete'] = np.array(False)
+    score = _score(trace)
+    assert score['terminal_box_near_goal']
+    assert score['target_distance_3d_m'] == 0.0
+    assert not score['intermittent_carry']
+    assert not score['strict_success_after_floor_guard']
+    assert not score['completed']
+
+    trace['state'][-1, 71:74] = trace['target_pos_w'] + [0.08, 0.08, 0.08]
+    score = _score(trace)
+    assert not score['terminal_box_near_goal']
+    assert score['target_distance_3d_m'] > 0.12

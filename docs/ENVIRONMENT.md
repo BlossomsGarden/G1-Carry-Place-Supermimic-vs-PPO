@@ -5,14 +5,14 @@
 | 操作系统 | Ubuntu 20.04.1 LTS | 服务器上的实测平台；本仓库未在 Windows 物理训练 |
 | GPU | NVIDIA RTX 4090 24 GiB；另有 48 GiB 型号 | 本页四组 SuperMimic 在 24 GiB 单卡；正式 PPO 四张卡 |
 | 宿主驱动 | NVIDIA 550.144.03 | **须安装在宿主机**；conda/pip 只提供用户态库，不安装显卡内核驱动 |
-| Python | 3.12 环境（项目声明 `>=3.12,<3.14`） | 历史实验使用已有 `wan` conda 环境；包脚本以源码路径运行 |
+| Python | `wan` 中实测 **3.10.13**；`pyproject.toml` 仍声明 `>=3.12,<3.14` | 历史训练与推理直接运行源码，`PYTHONPATH=src`；不能把源码可运行误称为此 Python 版本符合可编辑安装的元数据声明 |
 | 深度学习 | PyTorch `2.6.0+cu124`、torchvision `0.21.0`、torchaudio `2.6.0` | CUDA 12.4 对应的 wheel；`nvidia-smi` 中 CUDA 版本不等于 toolkit 安装状态 |
 | 仿真/任务 | MuJoCo `3.10.0`、mjlab `1.4.0`、mujoco-warp `3.8.0.3`、warp-lang `1.14.0` | 以**服务器运行时组合**为准；来源仓库的 uv 解析锁曾选出更新的 torch/warp，故不把那份锁当成本实验环境 |
 | 算法 | 仓库内 `rsl_rl` 5.2.0 + `src/mjlab_g1` | 主模型源码、评估和任务配置均在本仓库 |
 
 历史运行证明上述 **驱动 + 依赖组合**可在该服务器上训练和物理评估；不等于宣称普通 `pip install -e .` 会自动解析出同一组版本，也不保证其他驱动/GPU 相同表现。网络不通时，在可访问网络的机器下载 wheel 和 mjlab v1.4.0 源码再复制到服务器；无需在服务器实时联网。
 
-在已经具备匹配 NVIDIA 驱动的 Ubuntu 主机，先建立 Python 3.12 conda 环境；若沿用已验证的 `wan` 环境，只做下列**核验**，避免无谓重装。准备新环境时，先安装对应 PyTorch CUDA wheel：
+**原样复现实验首选已有 `wan` 环境（Python 3.10.13）**：检查包与驱动后，按 README 的 `PYTHONPATH=src` 启动脚本，不对 `wan` 执行 `pip install -e .`（项目元数据目前要求 Python ≥3.12）。下面的 Python 3.12 指令只展示**从零新建环境**的方向，没有验证该新环境与历史 `wan` 的二进制组合逐项相同；先安装对应 PyTorch CUDA wheel：
 
 ~~~bash
 conda create -n g1-carry python=3.12 -y

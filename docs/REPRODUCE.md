@@ -6,6 +6,7 @@
 
 ~~~bash
 python scripts/verify_report.py            # 只读归档：验证四组逐 episode / 日志 / PPO 历史
+python scripts/rescore_terminal_placement.py # 重算旧物理回放的终点三维到位率（无 GPU）
 export PYTHONPATH=src MUJOCO_GL=disable
 python -m unittest discover -s tests -p 'test_carryplace_eval.py' -v
 CUDA_VISIBLE_DEVICES=0 python src/mjlab_g1/scripts/train_track.py \
@@ -43,34 +44,20 @@ CARRY_MASTER_PORT=29571 CARRY_SAVE_INTERVAL=100 bash scripts/run_carry_experimen
 
 ## 同一物理评测 + 保存逐帧状态
 
-本初版 Git 仓库存代码、1 条训练参考、实验日志/评分 JSON 和演示素材；**训练好的 checkpoint 原件仍在实验机的历史 run 目录，不在初始提交中**。训练完找到实际 run 名，再按校正后评分器分别评估。三个验证种子中 2027/314159 用于两方法交集比较；161803 只在 SuperMimic 四组最终表中出现。
+仓库 [checkpoints/](../checkpoints/README.md) 已包含两份原训练权重及各自的 `params/agent.json`，Git LFS 下载后即可直接评测；两个验证种子 2027/314159 用于两方法交集，161803 只用于 SuperMimic 四组历史比较。以下会生成**新**随机化物理回放，和首页历史回放重评分开计数。
 
 ~~~bash
-SM_RUN=$(find logs/smtrack/G1-SMTrack-CarryPlace/supermimic -maxdepth 1 -type d -name '*sm4096_h32_ori12_s0' | sort | tail -1)
-PPO_RUN=$(find logs/smtrack/G1-SMTrack-CarryPlace/ppo -maxdepth 1 -type d -name '*cp_ppo_v2_s0_4g' | sort | tail -1)
-test -f "$SM_RUN/model_1000.pt" && test -f "$PPO_RUN/model_3999.pt"
-mkdir -p runs/evaluations
+git lfs pull  # 在有互联网的机器下载；原始实验服务器离线，可传入历史权重作为第 5 个参数
+export CARRY_PYTHON=/data/wlh/miniconda3/envs/wan/bin/python # 原服务器路径；其他主机可不设
 for seed in 2027 314159; do
-  CUDA_VISIBLE_DEVICES=6 python src/mjlab_g1/scripts/eval_track.py \
-    --task G1-SMTrack-CarryPlace --learner supermimic --checkpoint "$SM_RUN/model_1000.pt" \
-    --episodes 64 --seed "$seed" --randomize \
-    --rollout-all-npz "runs/evaluations/sm_$seed.npz" --output "runs/evaluations/sm_$seed.json"
-  python scripts/score_carry_object_outcome.py --rollout "runs/evaluations/sm_$seed.npz" \
-    --eval-json "runs/evaluations/sm_$seed.json" \
-    --motion dataset/tracking/carry_place_refs/carry_place_sugar_098_refined_v2.npz \
-    --output "runs/evaluations/sm_${seed}_object.json"
-  CUDA_VISIBLE_DEVICES=6 python src/mjlab_g1/scripts/eval_track.py \
-    --task G1-SMTrack-CarryPlace --learner ppo --checkpoint "$PPO_RUN/model_3999.pt" \
-    --episodes 64 --seed "$seed" --randomize \
-    --rollout-all-npz "runs/evaluations/ppo_$seed.npz" --output "runs/evaluations/ppo_$seed.json"
-  python scripts/score_carry_object_outcome.py --rollout "runs/evaluations/ppo_$seed.npz" \
-    --eval-json "runs/evaluations/ppo_$seed.json" \
-    --motion dataset/tracking/carry_place_refs/carry_place_sugar_098_refined_v2.npz \
-    --output "runs/evaluations/ppo_${seed}_object.json"
+  bash scripts/eval_checkpoints.sh supermimic 6 "$seed" 64
+  bash scripts/eval_checkpoints.sh ppo 6 "$seed" 64
 done
 ~~~
 
-批量评测在一张独立空闲卡上跑，每条起点仍是第 0 帧，打开 DR/观测/重置噪声并用确定性动作。`eval_track.py` 报告严格成功并保存原始物理轨迹；`score_carry_object_outcome.py` 把相同轨迹再按物体完成/间歇持物与几何修正严格指标计分。历史 [逐回合样本与完整数据](metrics/) 使用一次次真实回放；不同 GPU 重跑可能出现少量不同接触轨迹，不要求逐字节一致。评测耗时、显存和保存大规模回放的磁盘成本**不计入训练表**。
+批量评测在空闲卡跑，每条从参考第 0 帧起步，打开 DR/观测/重置噪声并用确定性策略动作。`eval_track.py` 保存原始物理轨迹；`score_carry_object_outcome.py` 对同一轨迹输出终点三维到位、间歇持物、几何校正的连续双手三个指标。结果为 `runs/evaluations/{learner}_{seed}_n64_metrics.json`；不同 GPU 的物理接触可能略有波动，评测成本**不计入训练表**。要复核历史首页数字而不新跑 GPU，运行 `python scripts/rescore_terminal_placement.py`，其逐集输入与源哈希见 [归档](metrics/terminal_goal_3d_12cm_rescore.json)。
+
+原实验服务器不能连接 GitHub 时，先在联网本机下载 LFS 再将 `checkpoints/` 搬入服务器本项目目录；若模型仍在原历史运行目录，可把 `bash scripts/eval_checkpoints.sh` 的**第 5 个参数**设为历史 checkpoint 路径，脚本从该目录的 `params/agent.json` 恢复相应网络配置。
 
 只复核首页的一个独立物理片段，不需要训练 checkpoint：
 

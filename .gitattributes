@@ -12,3 +12,4 @@
 *.png -text
 *.jpg -text
 *.STL -text
+checkpoints/**/*.pt filter=lfs diff=lfs merge=lfs -text

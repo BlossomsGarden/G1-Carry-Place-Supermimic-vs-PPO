@@ -5,6 +5,8 @@ No simulator or CUDA needed: python scripts/verify_report.py
 from __future__ import annotations
 
 import json
+import hashlib
+import math
 import re
 from pathlib import Path
 
@@ -72,7 +74,41 @@ def main() -> None:
           f"floor-guard strict: {new} ({sum(new)}/128) | "
           f"intermittent: {intermittent} ({sum(intermittent)}/128) | "
           f"wall_s={baseline['elapsed_seconds']:g} | gpu_hours={baseline['gpu_hours_so_far']:g}")
-    print("Archive verification passed. Training and GPU inference were not rerun.")
+    terminal = read_json("terminal_goal_3d_12cm_rescore.json")
+    assert terminal["radius_m"] == 0.12
+    expected_goal = {"sm4096_h32_ori04_s0": 178, "sm4096_h16_ori04_s0": 175,
+                     "sm4096_h32_ori12_s0": 188, "sm4096_h16_ori12_s0": 131,
+                     "ppo3999": 127}
+    total = 0
+    for name, group in terminal["groups"].items():
+        assert group["counts"]["terminal_box_near_goal"] == expected_goal[name]
+        for record in group["by_seed"].values():
+            source = ROOT / record["source"]
+            assert hashlib.sha256(source.read_bytes()).hexdigest() == record["source_sha256"]
+            original = json.loads(source.read_text(encoding="utf-8"))
+            assert len(original["per_episode"]) == len(record["episodes"]) == 64
+            for old, new in zip(original["per_episode"], record["episodes"]):
+                distance = math.hypot(old["target_xy_error_m"], old["target_height_error_m"])
+                assert math.isclose(new["terminal_distance_3d_m"], distance, abs_tol=1e-12)
+                assert new["terminal_box_near_goal"] == (distance <= terminal["radius_m"])
+                total += 1
+    assert total == 896
+    for learner, seed, goal, intermittent, strict in (
+        ("supermimic", 2027, 64, 56, 0), ("supermimic", 314159, 60, 51, 0),
+        ("ppo", 2027, 64, 64, 23), ("ppo", 314159, 63, 63, 30),
+    ):
+        evaluation = read_json(f"recheck_{learner}_seed{seed}_eval.json")
+        replay = read_json(f"recheck_{learner}_seed{seed}_score.json")
+        assert evaluation["seed"] == replay["seed"] == seed
+        assert len(evaluation["per_episode"]) == len(replay["per_episode"]) == 64
+        assert all(a["success"] == b["strict_success_existing_evaluator"]
+                   for a, b in zip(evaluation["per_episode"], replay["per_episode"]))
+        for key, count in (("terminal_box_near_goal", goal),
+                           ("intermittent_carry", intermittent),
+                           ("strict_success_after_floor_guard", strict)):
+            assert sum(row[key] for row in replay["per_episode"]) == count
+    print("Archive verification passed: 896 re-scored historical + 256 fresh physical episodes.")
+    print("This command does not run training or GPU inference.")
 
 
 if __name__ == "__main__":
