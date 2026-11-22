@@ -1,0 +1,205 @@
+[train_track] G1-SMTrack-CarryPlace supermimic N=4096 world=1 iters=1000 seed=0 -> /data4/DATA/wlh/offer/supermimic/logs/smtrack/G1-SMTrack-CarryPlace/supermimic/2026-11-22_09-20-32_sm4096_h32_ori04_s0
+Setting seed: 0
+Warp 1.14.0 initialized:
+   CUDA Toolkit 12.9, Driver 12.4
+   Devices:
+     "cpu"      : "x86_64"
+     "cuda:0"   : "NVIDIA GeForce RTX 4090" (24 GiB, sm_89, mempool enabled)
+   Kernel cache:
+     /data4/DATA/wlh/offer/tmp/xdg-cache/warp/1.14.0
+Module mujoco_warp._src.smooth cf7a289 load on device 'cuda:0' took 0.84 ms  (cached)
+Module mujoco_warp._src.collision_driver 621a3f9 load on device 'cuda:0' took 0.28 ms  (cached)
+Module _nxn_broadphase__locals__kernel_4ee3649d 4ee3649 load on device 'cuda:0' took 0.27 ms  (cached)
+Module ccd_kernel_builder__locals__ccd_kernel_19b9824b 19b9824 load on device 'cuda:0' took 0.39 ms  (cached)
+Module ccd_kernel_builder__locals__ccd_kernel_f544fcd0 f544fcd load on device 'cuda:0' took 0.39 ms  (cached)
+Module _primitive_narrowphase__locals__primitive_narrowphase_e6e7390c e6e7390 load on device 'cuda:0' took 0.45 ms  (cached)
+Module mujoco_warp._src.constraint e56f243 load on device 'cuda:0' took 0.50 ms  (cached)
+Module _efc_contact_init__locals__kernel_991c9928 991c992 load on device 'cuda:0' took 0.29 ms  (cached)
+Module _efc_contact_jac_sparse__locals__kernel_882c8742 882c874 load on device 'cuda:0' took 0.28 ms  (cached)
+Module _efc_contact_update__locals__kernel_59511347 5951134 load on device 'cuda:0' took 0.28 ms  (cached)
+Module mujoco_warp._src.sensor a993087 load on device 'cuda:0' took 0.54 ms  (cached)
+Module mujoco_warp._src.forward f5bfed4 load on device 'cuda:0' took 0.43 ms  (cached)
+Module mujoco_warp._src.passive cc48b2a load on device 'cuda:0' took 0.34 ms  (cached)
+Module mujoco_warp._src.forward 46b3f78 load on device 'cuda:0' took 0.43 ms  (cached)
+Module mujoco_warp._src.support d1e71d9 load on device 'cuda:0' took 0.25 ms  (cached)
+Module _solve_LD_sparse_fused__locals__kernel_b5f54982 4b36a3a load on device 'cuda:0' took 0.28 ms  (cached)
+Module mujoco_warp._src.solver d53b47b load on device 'cuda:0' took 0.47 ms  (cached)
+Module solve_init_jaref__locals__kernel_df47addd df47add load on device 'cuda:0' took 0.27 ms  (cached)
+Module mul_m_sparse__locals___mul_m_sparse_0651ae8b 0651ae8 load on device 'cuda:0' took 0.26 ms  (cached)
+Module update_constraint_efc__locals__kernel_060c7e30 060c7e3 load on device 'cuda:0' took 0.27 ms  (cached)
+Module update_constraint_gauss_cost__locals__kernel_5bfc650a 5bfc650 load on device 'cuda:0' took 0.27 ms  (cached)
+Module update_gradient_cholesky_blocked__locals__kernel_29a29cf7 7dc67d2 load on device 'cuda:0' took 119.78 ms  (cached)
+Module linesearch_jv_fused__locals__kernel_ee855540 ee85554 load on device 'cuda:0' took 0.36 ms  (cached)
+Module linesearch_prepare_gauss__locals__kernel_294e7814 294e781 load on device 'cuda:0' took 0.29 ms  (cached)
+Module update_constraint_efc__locals__kernel_7a23931f 7a23931 load on device 'cuda:0' took 0.30 ms  (cached)
+Module update_gradient_cholesky_blocked_skip_unchanged__locals__kernel_e8a39c03 0d3c869 load on device 'cuda:0' took 125.48 ms  (cached)
+Module mujoco_warp._src.derivative 212adeb load on device 'cuda:0' took 0.49 ms  (cached)
+Module reset_data__locals__reset_xfrc_applied_03030511 0303051 load on device 'cuda:0' took 0.34 ms  (cached)
+Module reset_data__locals__reset_qM_77e9abb2 77e9abb load on device 'cuda:0' took 0.26 ms  (cached)
+Module reset_data__locals__reset_mocap_6513201c 6513201 load on device 'cuda:0' took 0.23 ms  (cached)
+Module reset_data__locals__reset_contact_ce86818d ce86818 load on device 'cuda:0' took 0.23 ms  (cached)
+Module reset_data__locals__reset_nworld_1743ec1f 1743ec1 load on device 'cuda:0' took 0.23 ms  (cached)
+
++---------------------------------+
+|         Base Environment        |
++------------------------+--------+
+| Property               | Value  |
++------------------------+--------+
+| Number of environments | 4096   |
+| Environment device     | cuda:0 |
+| Environment seed       | 0      |
+| Physics step-size      | 0.005  |
+| Environment step-size  | 0.02   |
++------------------------+--------+
+
+[INFO] <EventManager> contains 1 active terms.
++-------------------------------------+
+| Active Event Terms in Mode: 'reset' |
++----------+--------------------------+
+|  Index   | Name                     |
++----------+--------------------------+
+|    0     | base_com                 |
+|    1     | encoder_bias             |
+|    2     | foot_friction            |
+|    3     | box_mass                 |
+|    4     | box_friction             |
++----------+--------------------------+
++-----------------------------+
+| Domain Randomization Fields |
++-------+---------------------+
+| Index | Field Name          |
++-------+---------------------+
+|   0   | body_ipos           |
+|   1   | body_subtreemass    |
+|   2   | dof_invweight0      |
+|   3   | body_invweight0     |
+|   4   | tendon_length0      |
+|   5   | tendon_invweight0   |
+|   6   | geom_friction       |
+|   7   | body_mass           |
+|   8   | body_inertia        |
++-------+---------------------+
+
+Module repeat_array_kernel_4f67a4c3 711f54c load on device 'cuda:0' took 0.42 ms  (cached)
+Module repeat_array_kernel_4f67a4c3 7224d07 load on device 'cuda:0' took 0.33 ms  (cached)
+Module repeat_array_kernel_4f67a4c3 b2885b0 load on device 'cuda:0' took 0.32 ms  (cached)
+[INFO] <CommandManager> contains 1 active terms.
++----------------------------------+
+|       Active Command Terms       |
++-------+--------+-----------------+
+| Index | Name   |       Type      |
++-------+--------+-----------------+
+|   0   | motion | SMMotionCommand |
++-------+--------+-----------------+
+
+[INFO] <ActionManager> contains 1 active terms.
++---------------------------------+
+| Active Action Terms (shape: 29) |
++-------+-----------+-------------+
+| Index | Name      |   Dimension |
++-------+-----------+-------------+
+|   0   | joint_pos |          29 |
++-------+-----------+-------------+
+
+W1122 09:22:05.311000 3512329 site-packages/torch/_dynamo/convert_frame.py:906] [11/8] torch._dynamo hit config.cache_size_limit (8)
+W1122 09:22:05.311000 3512329 site-packages/torch/_dynamo/convert_frame.py:906] [11/8]    function: 'quat_apply_inverse' (/data4/DATA/wlh/offer/supermimic/src/mjlab_g1/rl/supermimic/geometry.py:66)
+W1122 09:22:05.311000 3512329 site-packages/torch/_dynamo/convert_frame.py:906] [11/8]    last reason: 11/1: tensor 'L['q']' requires_grad mismatch. expected requires_grad=0
+W1122 09:22:05.311000 3512329 site-packages/torch/_dynamo/convert_frame.py:906] [11/8] To log all recompilation reasons, use TORCH_LOGS="recompiles".
+W1122 09:22:05.311000 3512329 site-packages/torch/_dynamo/convert_frame.py:906] [11/8] To diagnose recompilation issues, see https://pytorch.org/docs/main/torch.compiler_troubleshooting.html.
+[INFO] <ObservationManager> contains 3 groups.
++------------------------------------------------------------------+
+| Active Observation Terms in Group: 'actor_hist' (shape: (1020,)) |
++---------+--------------------------+-----------------------------+
+|  Index  | Name                     |            Shape            |
++---------+--------------------------+-----------------------------+
+|    0    | joint_pos                |      (290,)  ← 10×(29,)     |
+|    1    | joint_vel                |      (290,)  ← 10×(29,)     |
+|    2    | base_ang_vel             |       (30,)  ← 10×(3,)      |
+|    3    | projected_gravity        |       (30,)  ← 10×(3,)      |
+|    4    | actions                  |      (290,)  ← 10×(29,)     |
+|    5    | box_pos_b                |       (30,)  ← 10×(3,)      |
+|    6    | box_rot6d_b              |       (60,)  ← 10×(6,)      |
++---------+--------------------------+-----------------------------+
++-----------------------------------------------------------------+
+| Active Observation Terms in Group: 'actor_goal' (shape: (730,)) |
++---------------------+-----------------+-------------------------+
+|        Index        | Name            |          Shape          |
++---------------------+-----------------+-------------------------+
+|          0          | goal            |          (730,)         |
++---------------------+-----------------+-------------------------+
++--------------------------------------------------------------+
+| Active Observation Terms in Group: 'critic' (shape: (1031,)) |
++-----------+------------------------------------+-------------+
+|   Index   | Name                               |    Shape    |
++-----------+------------------------------------+-------------+
+|     0     | command                            |    (58,)    |
+|     1     | motion_anchor_pos_b                |     (3,)    |
+|     2     | motion_anchor_ori_b                |     (6,)    |
+|     3     | body_pos                           |    (42,)    |
+|     4     | body_ori                           |    (84,)    |
+|     5     | base_lin_vel                       |     (3,)    |
+|     6     | base_ang_vel                       |     (3,)    |
+|     7     | joint_pos                          |    (29,)    |
+|     8     | joint_vel                          |    (29,)    |
+|     9     | actions                            |    (29,)    |
+|     10    | goal                               |    (730,)   |
+|     11    | box_state                          |    (15,)    |
++-----------+------------------------------------+-------------+
+
+[INFO] <TerminationManager> contains 6 active terms.
++-------------------------------+
+|    Active Termination Terms   |
++-------+------------+----------+
+| Index | Name       | Time Out |
++-------+------------+----------+
+|   0   | time_out   |   True   |
+|   1   | anchor_pos |  False   |
+|   2   | anchor_ori |  False   |
+|   3   | clip_end   |   True   |
+|   4   | nan        |   True   |
+|   5   | box_pos    |  False   |
++-------+------------+----------+
+
+[INFO] <RewardManager> contains 10 active terms.
++-----------------------------------------+
+|           Active Reward Terms           |
++-------+------------------------+--------+
+| Index | Name                   | Weight |
++-------+------------------------+--------+
+|   0   | motion_global_root_pos |    0.5 |
+|   1   | motion_global_root_ori |    0.5 |
+|   2   | motion_body_pos        |    1.0 |
+|   3   | motion_body_ori        |    1.0 |
+|   4   | motion_body_lin_vel    |    1.0 |
+|   5   | motion_body_ang_vel    |    1.0 |
+|   6   | action_rate_l2         |   -0.1 |
+|   7   | joint_limit            |   -2.0 |
+|   8   | box_pos                |    1.0 |
+|   9   | box_ori                |    0.5 |
++-------+------------------------+--------+
+
+[INFO] <NullCurriculumManager> (inactive)
+[INFO] <NullMetricsManager> (inactive)
+[INFO] <NullRecorderManager> (inactive)
+Module mujoco_warp._src.io 7ed51ae load on device 'cuda:0' took 1.03 ms  (cached)
+[SuperMimic] startup parity: parity/transitions=1.31e+05, parity/r_maxabs=7.26e-07, parity/term_events=3.75e+03, parity/term_pred_events=3.75e+03, parity/term_mismatch=0, parity/trunc_events=318, parity/trunc_mismatch=0, parity/r_motion_global_root_pos_maxabs=2.31e-07, parity/r_motion_global_root_ori_maxabs=1.07e-08, parity/r_motion_body_pos_maxabs=4.88e-07, parity/r_motion_body_ori_maxabs=1.12e-08, parity/r_motion_body_lin_vel_maxabs=3.97e-07, parity/r_motion_body_ang_vel_maxabs=8.38e-09, parity/r_action_rate_l2_maxabs=4.66e-10, parity/r_joint_limit_maxabs=9.31e-10, parity/r_box_pos_maxabs=1.86e-09, parity/r_box_ori_maxabs=8.38e-09, parity/obs_excess_max=1.12e-08
+[SuperMimic] it 50 | env_steps 643072 | r/step 0.0681 | norm_ret 0.101 | ep_len 22.1 | wm 5.7409 | J 0.9066 | V 0.01537 | 794s
+[SuperMimic] it 100 | env_steps 1155072 | r/step 0.0705 | norm_ret 0.119 | ep_len 25.0 | wm 3.7956 | J 0.9906 | V 0.00764 | 1532s
+[SuperMimic] it 150 | env_steps 1667072 | r/step 0.0707 | norm_ret 0.131 | ep_len 29.7 | wm 3.9686 | J 1.1300 | V 0.00951 | 2242s
+[SuperMimic] it 200 | env_steps 2179072 | r/step 0.0708 | norm_ret 0.148 | ep_len 33.3 | wm 3.8157 | J 1.2940 | V 0.01793 | 2950s
+[SuperMimic] it 250 | env_steps 2691072 | r/step 0.0700 | norm_ret 0.166 | ep_len 40.1 | wm 3.6637 | J 1.5204 | V 0.03671 | 3631s
+[SuperMimic] it 300 | env_steps 3203072 | r/step 0.0739 | norm_ret 0.184 | ep_len 45.9 | wm 3.4537 | J 1.7914 | V 0.04382 | 4330s
+[SuperMimic] it 350 | env_steps 3715072 | r/step 0.0775 | norm_ret 0.203 | ep_len 50.1 | wm 3.2710 | J 2.0799 | V 0.04653 | 4988s
+[SuperMimic] it 400 | env_steps 4227072 | r/step 0.0785 | norm_ret 0.224 | ep_len 57.0 | wm 3.1464 | J 2.3678 | V 0.06528 | 5637s
+[SuperMimic] it 450 | env_steps 4739072 | r/step 0.0748 | norm_ret 0.241 | ep_len 63.2 | wm 3.1283 | J 2.7412 | V 0.10201 | 6328s
+[SuperMimic] it 500 | env_steps 5251072 | r/step 0.0740 | norm_ret 0.279 | ep_len 73.4 | wm 3.1075 | J 3.1990 | V 0.14320 | 7009s
+[SuperMimic] it 550 | env_steps 5763072 | r/step 0.0734 | norm_ret 0.321 | ep_len 89.6 | wm 2.9609 | J 3.7843 | V 0.17926 | 7689s
+[SuperMimic] it 600 | env_steps 6275072 | r/step 0.0754 | norm_ret 0.372 | ep_len 103.7 | wm 2.7861 | J 4.2281 | V 0.17458 | 8367s
+[SuperMimic] it 650 | env_steps 6787072 | r/step 0.0783 | norm_ret 0.430 | ep_len 139.9 | wm 2.6033 | J 4.6741 | V 0.17130 | 9043s
+[SuperMimic] it 700 | env_steps 7299072 | r/step 0.0817 | norm_ret 0.457 | ep_len 163.2 | wm 2.4099 | J 5.0966 | V 0.15459 | 9708s
+[SuperMimic] it 750 | env_steps 7811072 | r/step 0.0850 | norm_ret 0.497 | ep_len 172.6 | wm 2.2847 | J 5.4729 | V 0.14060 | 10405s
+[SuperMimic] it 800 | env_steps 8323072 | r/step 0.0856 | norm_ret 0.527 | ep_len 180.4 | wm 2.1748 | J 5.7831 | V 0.12592 | 11125s
+[SuperMimic] it 850 | env_steps 8835072 | r/step 0.0887 | norm_ret 0.546 | ep_len 184.3 | wm 1.9905 | J 6.0080 | V 0.09896 | 11815s
+[SuperMimic] it 900 | env_steps 9347072 | r/step 0.0918 | norm_ret 0.573 | ep_len 194.0 | wm 1.8035 | J 6.2460 | V 0.08134 | 12476s
+[SuperMimic] it 950 | env_steps 9859072 | r/step 0.0931 | norm_ret 0.560 | ep_len 183.3 | wm 1.6220 | J 6.3959 | V 0.06791 | 13128s
+[SuperMimic] it 1000 | env_steps 10371072 | r/step 0.0930 | norm_ret 0.585 | ep_len 186.6 | wm 1.4856 | J 6.4394 | V 0.06180 | 13789s

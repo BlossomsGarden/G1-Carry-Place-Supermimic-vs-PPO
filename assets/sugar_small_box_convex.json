@@ -1,0 +1,14 @@
+{
+  "source_usd_sha256": "f0222315ab4e0f2bffec9469586a1533ac75838853eee3935b51fec63218b9c3",
+  "collision_obj_sha256": "633c5457015cd066d241eca4f2ba3d5c9c0a0313115cc53c193fc125c1f3bf43",
+  "input_vertices": 50004,
+  "convex_vertices": 1369,
+  "convex_faces": 2734,
+  "volume_m3": 0.035502799612422684,
+  "dimensions_aabb_m": [
+    0.4,
+    0.5461,
+    0.5361
+  ],
+  "source": "SUGAR official processed descriptions.zip: small_box/obj_aligned.usd"
+}

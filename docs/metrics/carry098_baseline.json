@@ -1,0 +1,60 @@
+{
+  "source_clip": "data_098",
+  "frames": 500,
+  "grasp_frame": 152,
+  "release_frame": 459,
+  "source_annotated_contact_frames": 307,
+  "kinematic_left_hand_box_contact_frames": 305,
+  "kinematic_right_hand_box_contact_frames": 268,
+  "kinematic_both_hand_box_contact_frames": 264,
+  "kinematic_both_hand_fraction_during_source_contact": 0.86,
+  "kinematic_either_hand_fraction_during_source_contact": 0.971,
+  "kinematic_floor_contact_before_grasp_fraction": 0.711,
+  "kinematic_floor_contact_after_release_fraction": 1.0,
+  "kinematic_floor_contact_last_0p3s_fraction": 1.0,
+  "kinematic_any_foot_floor_fraction_during_carry": 0.899,
+  "kinematic_both_foot_floor_fraction_during_carry": 0.078,
+  "hand_contact_penetration_p95_m": 0.0951,
+  "hand_contact_penetration_max_m": 0.1299,
+  "non_hand_box_contacts": 93,
+  "sample_contacts": {
+    "0": [],
+    "152": [
+      [
+        "left_wrist_pitch_link",
+        -0.0036
+      ],
+      [
+        "left_wrist_yaw_link",
+        -0.0597
+      ]
+    ],
+    "182": [
+      [
+        "left_wrist_pitch_link",
+        -0.0002
+      ],
+      [
+        "left_wrist_yaw_link",
+        -0.0736
+      ],
+      [
+        "right_wrist_yaw_link",
+        -0.014
+      ]
+    ],
+    "250": [
+      [
+        "left_wrist_yaw_link",
+        -0.0273
+      ],
+      [
+        "right_wrist_yaw_link",
+        -0.0602
+      ]
+    ],
+    "454": [],
+    "499": []
+  },
+  "scope": "Kinematic geometric contacts only, not a physically simulated rollout or policy success"
+}

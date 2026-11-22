@@ -1,0 +1,826 @@
+{
+  "source": "existing randomized real MuJoCo rollouts; original strict intact",
+  "ground_z_m": 0.0,
+  "maximum_box_mesh_radius_m": 0.29545,
+  "reject_floor_contact_if_box_center_z_above_m": 0.33,
+  "runs": {
+    "sm4096_h32_ori04_s0": {
+      "gpu": 4,
+      "previous_best_iteration": 1000,
+      "best_iteration_from_corrected_dev": 1000,
+      "dev": {
+        "1000": {
+          "metrics": {
+            "object_outcome_rate": 0.8125,
+            "intermittent_carry_rate": 0.8125,
+            "strict_success_existing_evaluator_rate": 0.0,
+            "strict_success_after_floor_guard_rate": 0.0
+          },
+          "impossible_floor_frames": 808,
+          "episodes_with_impossible_floor": 7,
+          "file": "/data4/DATA/wlh/offer/tmp/carry_runs/evaluations/object_outcome/h32-ori04-dev/iter1000_seed0_n16_geometry.json"
+        },
+        "100": {
+          "metrics": {
+            "object_outcome_rate": 0.0,
+            "intermittent_carry_rate": 0.0,
+            "strict_success_existing_evaluator_rate": 0.0,
+            "strict_success_after_floor_guard_rate": 0.0
+          },
+          "impossible_floor_frames": 0,
+          "episodes_with_impossible_floor": 0,
+          "file": "/data4/DATA/wlh/offer/tmp/carry_runs/evaluations/object_outcome/h32-ori04-dev/iter100_seed0_n16_geometry.json"
+        },
+        "200": {
+          "metrics": {
+            "object_outcome_rate": 0.0,
+            "intermittent_carry_rate": 0.0,
+            "strict_success_existing_evaluator_rate": 0.0,
+            "strict_success_after_floor_guard_rate": 0.0
+          },
+          "impossible_floor_frames": 0,
+          "episodes_with_impossible_floor": 0,
+          "file": "/data4/DATA/wlh/offer/tmp/carry_runs/evaluations/object_outcome/h32-ori04-dev/iter200_seed0_n16_geometry.json"
+        },
+        "400": {
+          "metrics": {
+            "object_outcome_rate": 0.0,
+            "intermittent_carry_rate": 0.0,
+            "strict_success_existing_evaluator_rate": 0.0,
+            "strict_success_after_floor_guard_rate": 0.0
+          },
+          "impossible_floor_frames": 0,
+          "episodes_with_impossible_floor": 0,
+          "file": "/data4/DATA/wlh/offer/tmp/carry_runs/evaluations/object_outcome/h32-ori04-dev/iter400_seed0_n16_geometry.json"
+        },
+        "600": {
+          "metrics": {
+            "object_outcome_rate": 0.625,
+            "intermittent_carry_rate": 0.5,
+            "strict_success_existing_evaluator_rate": 0.0,
+            "strict_success_after_floor_guard_rate": 0.0
+          },
+          "impossible_floor_frames": 1758,
+          "episodes_with_impossible_floor": 9,
+          "file": "/data4/DATA/wlh/offer/tmp/carry_runs/evaluations/object_outcome/h32-ori04-dev/iter600_seed0_n16_geometry.json"
+        },
+        "800": {
+          "metrics": {
+            "object_outcome_rate": 0.5,
+            "intermittent_carry_rate": 0.5,
+            "strict_success_existing_evaluator_rate": 0.0,
+            "strict_success_after_floor_guard_rate": 0.0
+          },
+          "impossible_floor_frames": 2553,
+          "episodes_with_impossible_floor": 13,
+          "file": "/data4/DATA/wlh/offer/tmp/carry_runs/evaluations/object_outcome/h32-ori04-dev/iter800_seed0_n16_geometry.json"
+        }
+      },
+      "holdout": {
+        "2027": {
+          "iter1000_seed2027_n64": {
+            "metrics": {
+              "object_outcome_rate": 0.796875,
+              "intermittent_carry_rate": 0.796875,
+              "strict_success_existing_evaluator_rate": 0.0,
+              "strict_success_after_floor_guard_rate": 0.0
+            },
+            "impossible_floor_frames": 3870,
+            "episodes_with_impossible_floor": 29,
+            "file": "/data4/DATA/wlh/offer/tmp/carry_runs/evaluations/object_outcome/sm4096_h32_ori04_s0-heldout-seed2027/iter1000_seed2027_n64_geometry.json"
+          },
+          "iter600_seed2027_n64": {
+            "metrics": {
+              "object_outcome_rate": 0.578125,
+              "intermittent_carry_rate": 0.546875,
+              "strict_success_existing_evaluator_rate": 0.0,
+              "strict_success_after_floor_guard_rate": 0.0
+            },
+            "impossible_floor_frames": 7033,
+            "episodes_with_impossible_floor": 37,
+            "file": "/data4/DATA/wlh/offer/tmp/carry_runs/evaluations/object_outcome/sm4096_h32_ori04_s0-heldout-seed2027/iter600_seed2027_n64_geometry.json"
+          },
+          "iter800_seed2027_n64": {
+            "metrics": {
+              "object_outcome_rate": 0.59375,
+              "intermittent_carry_rate": 0.59375,
+              "strict_success_existing_evaluator_rate": 0.0,
+              "strict_success_after_floor_guard_rate": 0.0
+            },
+            "impossible_floor_frames": 7732,
+            "episodes_with_impossible_floor": 39,
+            "file": "/data4/DATA/wlh/offer/tmp/carry_runs/evaluations/object_outcome/sm4096_h32_ori04_s0-heldout-seed2027/iter800_seed2027_n64_geometry.json"
+          }
+        },
+        "314159": {
+          "iter1000_seed314159_n64": {
+            "metrics": {
+              "object_outcome_rate": 0.796875,
+              "intermittent_carry_rate": 0.796875,
+              "strict_success_existing_evaluator_rate": 0.0,
+              "strict_success_after_floor_guard_rate": 0.0
+            },
+            "impossible_floor_frames": 5041,
+            "episodes_with_impossible_floor": 31,
+            "file": "/data4/DATA/wlh/offer/tmp/carry_runs/evaluations/object_outcome/sm4096_h32_ori04_s0-heldout-seed314159/iter1000_seed314159_n64_geometry.json"
+          },
+          "iter600_seed314159_n64": {
+            "metrics": {
+              "object_outcome_rate": 0.390625,
+              "intermittent_carry_rate": 0.34375,
+              "strict_success_existing_evaluator_rate": 0.0,
+              "strict_success_after_floor_guard_rate": 0.0
+            },
+            "impossible_floor_frames": 5989,
+            "episodes_with_impossible_floor": 30,
+            "file": "/data4/DATA/wlh/offer/tmp/carry_runs/evaluations/object_outcome/sm4096_h32_ori04_s0-heldout-seed314159/iter600_seed314159_n64_geometry.json"
+          },
+          "iter800_seed314159_n64": {
+            "metrics": {
+              "object_outcome_rate": 0.4375,
+              "intermittent_carry_rate": 0.421875,
+              "strict_success_existing_evaluator_rate": 0.0,
+              "strict_success_after_floor_guard_rate": 0.0
+            },
+            "impossible_floor_frames": 8494,
+            "episodes_with_impossible_floor": 43,
+            "file": "/data4/DATA/wlh/offer/tmp/carry_runs/evaluations/object_outcome/sm4096_h32_ori04_s0-heldout-seed314159/iter800_seed314159_n64_geometry.json"
+          }
+        },
+        "161803": {
+          "iter1000_seed161803_n64": {
+            "metrics": {
+              "object_outcome_rate": 0.796875,
+              "intermittent_carry_rate": 0.796875,
+              "strict_success_existing_evaluator_rate": 0.0,
+              "strict_success_after_floor_guard_rate": 0.0
+            },
+            "impossible_floor_frames": 1213,
+            "episodes_with_impossible_floor": 9,
+            "file": "/data4/DATA/wlh/offer/tmp/carry_runs/evaluations/object_outcome/sm4096_h32_ori04_s0-heldout-seed161803/iter1000_seed161803_n64_geometry.json"
+          }
+        }
+      }
+    },
+    "sm4096_h16_ori04_s0": {
+      "gpu": 5,
+      "previous_best_iteration": 600,
+      "best_iteration_from_corrected_dev": 800,
+      "dev": {
+        "1000": {
+          "metrics": {
+            "object_outcome_rate": 0.625,
+            "intermittent_carry_rate": 0.125,
+            "strict_success_existing_evaluator_rate": 0.0,
+            "strict_success_after_floor_guard_rate": 0.0
+          },
+          "impossible_floor_frames": 200,
+          "episodes_with_impossible_floor": 1,
+          "file": "/data4/DATA/wlh/offer/tmp/carry_runs/evaluations/object_outcome/h16-ori04-dev/iter1000_seed0_n16_geometry.json"
+        },
+        "100": {
+          "metrics": {
+            "object_outcome_rate": 0.0,
+            "intermittent_carry_rate": 0.0,
+            "strict_success_existing_evaluator_rate": 0.0,
+            "strict_success_after_floor_guard_rate": 0.0
+          },
+          "impossible_floor_frames": 0,
+          "episodes_with_impossible_floor": 0,
+          "file": "/data4/DATA/wlh/offer/tmp/carry_runs/evaluations/object_outcome/h16-ori04-dev/iter100_seed0_n16_geometry.json"
+        },
+        "200": {
+          "metrics": {
+            "object_outcome_rate": 0.0,
+            "intermittent_carry_rate": 0.0,
+            "strict_success_existing_evaluator_rate": 0.0,
+            "strict_success_after_floor_guard_rate": 0.0
+          },
+          "impossible_floor_frames": 0,
+          "episodes_with_impossible_floor": 0,
+          "file": "/data4/DATA/wlh/offer/tmp/carry_runs/evaluations/object_outcome/h16-ori04-dev/iter200_seed0_n16_geometry.json"
+        },
+        "400": {
+          "metrics": {
+            "object_outcome_rate": 0.0,
+            "intermittent_carry_rate": 0.0,
+            "strict_success_existing_evaluator_rate": 0.0,
+            "strict_success_after_floor_guard_rate": 0.0
+          },
+          "impossible_floor_frames": 0,
+          "episodes_with_impossible_floor": 0,
+          "file": "/data4/DATA/wlh/offer/tmp/carry_runs/evaluations/object_outcome/h16-ori04-dev/iter400_seed0_n16_geometry.json"
+        },
+        "600": {
+          "metrics": {
+            "object_outcome_rate": 0.1875,
+            "intermittent_carry_rate": 0.1875,
+            "strict_success_existing_evaluator_rate": 0.0,
+            "strict_success_after_floor_guard_rate": 0.0
+          },
+          "impossible_floor_frames": 26,
+          "episodes_with_impossible_floor": 5,
+          "file": "/data4/DATA/wlh/offer/tmp/carry_runs/evaluations/object_outcome/h16-ori04-dev/iter600_seed0_n16_geometry.json"
+        },
+        "800": {
+          "metrics": {
+            "object_outcome_rate": 0.5,
+            "intermittent_carry_rate": 0.5,
+            "strict_success_existing_evaluator_rate": 0.0,
+            "strict_success_after_floor_guard_rate": 0.0
+          },
+          "impossible_floor_frames": 2516,
+          "episodes_with_impossible_floor": 13,
+          "file": "/data4/DATA/wlh/offer/tmp/carry_runs/evaluations/object_outcome/h16-ori04-dev/iter800_seed0_n16_geometry.json"
+        }
+      },
+      "holdout": {
+        "2027": {
+          "iter1000_seed2027_n64": {
+            "metrics": {
+              "object_outcome_rate": 0.65625,
+              "intermittent_carry_rate": 0.203125,
+              "strict_success_existing_evaluator_rate": 0.0,
+              "strict_success_after_floor_guard_rate": 0.0
+            },
+            "impossible_floor_frames": 395,
+            "episodes_with_impossible_floor": 2,
+            "file": "/data4/DATA/wlh/offer/tmp/carry_runs/evaluations/object_outcome/sm4096_h16_ori04_s0-heldout-seed2027/iter1000_seed2027_n64_geometry.json"
+          },
+          "iter600_seed2027_n64": {
+            "metrics": {
+              "object_outcome_rate": 0.203125,
+              "intermittent_carry_rate": 0.203125,
+              "strict_success_existing_evaluator_rate": 0.0,
+              "strict_success_after_floor_guard_rate": 0.0
+            },
+            "impossible_floor_frames": 82,
+            "episodes_with_impossible_floor": 15,
+            "file": "/data4/DATA/wlh/offer/tmp/carry_runs/evaluations/object_outcome/sm4096_h16_ori04_s0-heldout-seed2027/iter600_seed2027_n64_geometry.json"
+          },
+          "iter800_seed2027_n64": {
+            "metrics": {
+              "object_outcome_rate": 0.5,
+              "intermittent_carry_rate": 0.5,
+              "strict_success_existing_evaluator_rate": 0.0,
+              "strict_success_after_floor_guard_rate": 0.0
+            },
+            "impossible_floor_frames": 5021,
+            "episodes_with_impossible_floor": 26,
+            "file": "/data4/DATA/wlh/offer/tmp/carry_runs/evaluations/object_outcome/sm4096_h16_ori04_s0-heldout-seed2027/iter800_seed2027_n64_geometry.json"
+          }
+        },
+        "314159": {
+          "iter1000_seed314159_n64": {
+            "metrics": {
+              "object_outcome_rate": 0.5625,
+              "intermittent_carry_rate": 0.1875,
+              "strict_success_existing_evaluator_rate": 0.0,
+              "strict_success_after_floor_guard_rate": 0.0
+            },
+            "impossible_floor_frames": 202,
+            "episodes_with_impossible_floor": 1,
+            "file": "/data4/DATA/wlh/offer/tmp/carry_runs/evaluations/object_outcome/sm4096_h16_ori04_s0-heldout-seed314159/iter1000_seed314159_n64_geometry.json"
+          },
+          "iter600_seed314159_n64": {
+            "metrics": {
+              "object_outcome_rate": 0.21875,
+              "intermittent_carry_rate": 0.21875,
+              "strict_success_existing_evaluator_rate": 0.0,
+              "strict_success_after_floor_guard_rate": 0.0
+            },
+            "impossible_floor_frames": 1391,
+            "episodes_with_impossible_floor": 10,
+            "file": "/data4/DATA/wlh/offer/tmp/carry_runs/evaluations/object_outcome/sm4096_h16_ori04_s0-heldout-seed314159/iter600_seed314159_n64_geometry.json"
+          },
+          "iter800_seed314159_n64": {
+            "metrics": {
+              "object_outcome_rate": 0.53125,
+              "intermittent_carry_rate": 0.53125,
+              "strict_success_existing_evaluator_rate": 0.0,
+              "strict_success_after_floor_guard_rate": 0.0
+            },
+            "impossible_floor_frames": 5409,
+            "episodes_with_impossible_floor": 28,
+            "file": "/data4/DATA/wlh/offer/tmp/carry_runs/evaluations/object_outcome/sm4096_h16_ori04_s0-heldout-seed314159/iter800_seed314159_n64_geometry.json"
+          }
+        },
+        "161803": {
+          "iter600_seed161803_n64": {
+            "metrics": {
+              "object_outcome_rate": 0.21875,
+              "intermittent_carry_rate": 0.21875,
+              "strict_success_existing_evaluator_rate": 0.0,
+              "strict_success_after_floor_guard_rate": 0.0
+            },
+            "impossible_floor_frames": 1640,
+            "episodes_with_impossible_floor": 10,
+            "file": "/data4/DATA/wlh/offer/tmp/carry_runs/evaluations/object_outcome/sm4096_h16_ori04_s0-heldout-seed161803/iter600_seed161803_n64_geometry.json"
+          },
+          "iter800_seed161803_n64": {
+            "metrics": {
+              "object_outcome_rate": 0.578125,
+              "intermittent_carry_rate": 0.5625,
+              "strict_success_existing_evaluator_rate": 0.0,
+              "strict_success_after_floor_guard_rate": 0.0
+            },
+            "impossible_floor_frames": 6632,
+            "episodes_with_impossible_floor": 35,
+            "file": "/data4/DATA/wlh/offer/tmp/carry_runs/evaluations/object_outcome/sm4096_h16_ori04_s0-heldout-seed161803/iter800_seed161803_n64_geometry.json"
+          }
+        }
+      }
+    },
+    "sm4096_h32_ori12_s0": {
+      "gpu": 6,
+      "previous_best_iteration": 1000,
+      "best_iteration_from_corrected_dev": 1000,
+      "dev": {
+        "1000": {
+          "metrics": {
+            "object_outcome_rate": 0.9375,
+            "intermittent_carry_rate": 0.9375,
+            "strict_success_existing_evaluator_rate": 0.0,
+            "strict_success_after_floor_guard_rate": 0.0
+          },
+          "impossible_floor_frames": 803,
+          "episodes_with_impossible_floor": 4,
+          "file": "/data4/DATA/wlh/offer/tmp/carry_runs/evaluations/object_outcome/h32-ori12-dev/iter1000_seed0_n16_geometry.json"
+        },
+        "100": {
+          "metrics": {
+            "object_outcome_rate": 0.0,
+            "intermittent_carry_rate": 0.0,
+            "strict_success_existing_evaluator_rate": 0.0,
+            "strict_success_after_floor_guard_rate": 0.0
+          },
+          "impossible_floor_frames": 0,
+          "episodes_with_impossible_floor": 0,
+          "file": "/data4/DATA/wlh/offer/tmp/carry_runs/evaluations/object_outcome/h32-ori12-dev/iter100_seed0_n16_geometry.json"
+        },
+        "200": {
+          "metrics": {
+            "object_outcome_rate": 0.0,
+            "intermittent_carry_rate": 0.0,
+            "strict_success_existing_evaluator_rate": 0.0,
+            "strict_success_after_floor_guard_rate": 0.0
+          },
+          "impossible_floor_frames": 0,
+          "episodes_with_impossible_floor": 0,
+          "file": "/data4/DATA/wlh/offer/tmp/carry_runs/evaluations/object_outcome/h32-ori12-dev/iter200_seed0_n16_geometry.json"
+        },
+        "400": {
+          "metrics": {
+            "object_outcome_rate": 0.0,
+            "intermittent_carry_rate": 0.0,
+            "strict_success_existing_evaluator_rate": 0.0,
+            "strict_success_after_floor_guard_rate": 0.0
+          },
+          "impossible_floor_frames": 111,
+          "episodes_with_impossible_floor": 1,
+          "file": "/data4/DATA/wlh/offer/tmp/carry_runs/evaluations/object_outcome/h32-ori12-dev/iter400_seed0_n16_geometry.json"
+        },
+        "600": {
+          "metrics": {
+            "object_outcome_rate": 0.0,
+            "intermittent_carry_rate": 0.0,
+            "strict_success_existing_evaluator_rate": 0.0,
+            "strict_success_after_floor_guard_rate": 0.0
+          },
+          "impossible_floor_frames": 1277,
+          "episodes_with_impossible_floor": 7,
+          "file": "/data4/DATA/wlh/offer/tmp/carry_runs/evaluations/object_outcome/h32-ori12-dev/iter600_seed0_n16_geometry.json"
+        },
+        "800": {
+          "metrics": {
+            "object_outcome_rate": 0.1875,
+            "intermittent_carry_rate": 0.1875,
+            "strict_success_existing_evaluator_rate": 0.0,
+            "strict_success_after_floor_guard_rate": 0.0
+          },
+          "impossible_floor_frames": 1107,
+          "episodes_with_impossible_floor": 12,
+          "file": "/data4/DATA/wlh/offer/tmp/carry_runs/evaluations/object_outcome/h32-ori12-dev/iter800_seed0_n16_geometry.json"
+        }
+      },
+      "holdout": {
+        "2027": {
+          "iter1000_seed2027_n64": {
+            "metrics": {
+              "object_outcome_rate": 0.90625,
+              "intermittent_carry_rate": 0.90625,
+              "strict_success_existing_evaluator_rate": 0.0,
+              "strict_success_after_floor_guard_rate": 0.0
+            },
+            "impossible_floor_frames": 3566,
+            "episodes_with_impossible_floor": 26,
+            "file": "/data4/DATA/wlh/offer/tmp/carry_runs/evaluations/object_outcome/sm4096_h32_ori12_s0-heldout-seed2027/iter1000_seed2027_n64_geometry.json"
+          },
+          "iter800_seed2027_n64": {
+            "metrics": {
+              "object_outcome_rate": 0.296875,
+              "intermittent_carry_rate": 0.296875,
+              "strict_success_existing_evaluator_rate": 0.0,
+              "strict_success_after_floor_guard_rate": 0.0
+            },
+            "impossible_floor_frames": 2973,
+            "episodes_with_impossible_floor": 54,
+            "file": "/data4/DATA/wlh/offer/tmp/carry_runs/evaluations/object_outcome/sm4096_h32_ori12_s0-heldout-seed2027/iter800_seed2027_n64_geometry.json"
+          }
+        },
+        "314159": {
+          "iter1000_seed314159_n64": {
+            "metrics": {
+              "object_outcome_rate": 0.8125,
+              "intermittent_carry_rate": 0.8125,
+              "strict_success_existing_evaluator_rate": 0.0,
+              "strict_success_after_floor_guard_rate": 0.0
+            },
+            "impossible_floor_frames": 5730,
+            "episodes_with_impossible_floor": 28,
+            "file": "/data4/DATA/wlh/offer/tmp/carry_runs/evaluations/object_outcome/sm4096_h32_ori12_s0-heldout-seed314159/iter1000_seed314159_n64_geometry.json"
+          },
+          "iter800_seed314159_n64": {
+            "metrics": {
+              "object_outcome_rate": 0.375,
+              "intermittent_carry_rate": 0.375,
+              "strict_success_existing_evaluator_rate": 0.0,
+              "strict_success_after_floor_guard_rate": 0.0
+            },
+            "impossible_floor_frames": 845,
+            "episodes_with_impossible_floor": 51,
+            "file": "/data4/DATA/wlh/offer/tmp/carry_runs/evaluations/object_outcome/sm4096_h32_ori12_s0-heldout-seed314159/iter800_seed314159_n64_geometry.json"
+          }
+        },
+        "161803": {
+          "iter1000_seed161803_n64": {
+            "metrics": {
+              "object_outcome_rate": 0.90625,
+              "intermittent_carry_rate": 0.90625,
+              "strict_success_existing_evaluator_rate": 0.0,
+              "strict_success_after_floor_guard_rate": 0.0
+            },
+            "impossible_floor_frames": 4662,
+            "episodes_with_impossible_floor": 23,
+            "file": "/data4/DATA/wlh/offer/tmp/carry_runs/evaluations/object_outcome/sm4096_h32_ori12_s0-heldout-seed161803/iter1000_seed161803_n64_geometry.json"
+          }
+        }
+      }
+    },
+    "sm4096_h16_ori12_s0": {
+      "gpu": 7,
+      "previous_best_iteration": 800,
+      "best_iteration_from_corrected_dev": 800,
+      "dev": {
+        "1000": {
+          "metrics": {
+            "object_outcome_rate": 0.125,
+            "intermittent_carry_rate": 0.0,
+            "strict_success_existing_evaluator_rate": 0.0,
+            "strict_success_after_floor_guard_rate": 0.0
+          },
+          "impossible_floor_frames": 407,
+          "episodes_with_impossible_floor": 2,
+          "file": "/data4/DATA/wlh/offer/tmp/carry_runs/evaluations/object_outcome/h16-ori12-dev/iter1000_seed0_n16_geometry.json"
+        },
+        "100": {
+          "metrics": {
+            "object_outcome_rate": 0.0,
+            "intermittent_carry_rate": 0.0,
+            "strict_success_existing_evaluator_rate": 0.0,
+            "strict_success_after_floor_guard_rate": 0.0
+          },
+          "impossible_floor_frames": 0,
+          "episodes_with_impossible_floor": 0,
+          "file": "/data4/DATA/wlh/offer/tmp/carry_runs/evaluations/object_outcome/h16-ori12-dev/iter100_seed0_n16_geometry.json"
+        },
+        "200": {
+          "metrics": {
+            "object_outcome_rate": 0.0,
+            "intermittent_carry_rate": 0.0,
+            "strict_success_existing_evaluator_rate": 0.0,
+            "strict_success_after_floor_guard_rate": 0.0
+          },
+          "impossible_floor_frames": 0,
+          "episodes_with_impossible_floor": 0,
+          "file": "/data4/DATA/wlh/offer/tmp/carry_runs/evaluations/object_outcome/h16-ori12-dev/iter200_seed0_n16_geometry.json"
+        },
+        "400": {
+          "metrics": {
+            "object_outcome_rate": 0.0,
+            "intermittent_carry_rate": 0.0,
+            "strict_success_existing_evaluator_rate": 0.0,
+            "strict_success_after_floor_guard_rate": 0.0
+          },
+          "impossible_floor_frames": 0,
+          "episodes_with_impossible_floor": 0,
+          "file": "/data4/DATA/wlh/offer/tmp/carry_runs/evaluations/object_outcome/h16-ori12-dev/iter400_seed0_n16_geometry.json"
+        },
+        "600": {
+          "metrics": {
+            "object_outcome_rate": 0.0,
+            "intermittent_carry_rate": 0.0,
+            "strict_success_existing_evaluator_rate": 0.0,
+            "strict_success_after_floor_guard_rate": 0.0
+          },
+          "impossible_floor_frames": 99,
+          "episodes_with_impossible_floor": 2,
+          "file": "/data4/DATA/wlh/offer/tmp/carry_runs/evaluations/object_outcome/h16-ori12-dev/iter600_seed0_n16_geometry.json"
+        },
+        "800": {
+          "metrics": {
+            "object_outcome_rate": 0.5,
+            "intermittent_carry_rate": 0.5,
+            "strict_success_existing_evaluator_rate": 0.0,
+            "strict_success_after_floor_guard_rate": 0.0
+          },
+          "impossible_floor_frames": 196,
+          "episodes_with_impossible_floor": 1,
+          "file": "/data4/DATA/wlh/offer/tmp/carry_runs/evaluations/object_outcome/h16-ori12-dev/iter800_seed0_n16_geometry.json"
+        }
+      },
+      "holdout": {
+        "2027": {
+          "iter1000_seed2027_n64": {
+            "metrics": {
+              "object_outcome_rate": 0.171875,
+              "intermittent_carry_rate": 0.015625,
+              "strict_success_existing_evaluator_rate": 0.0,
+              "strict_success_after_floor_guard_rate": 0.0
+            },
+            "impossible_floor_frames": 2457,
+            "episodes_with_impossible_floor": 12,
+            "file": "/data4/DATA/wlh/offer/tmp/carry_runs/evaluations/object_outcome/sm4096_h16_ori12_s0-heldout-seed2027/iter1000_seed2027_n64_geometry.json"
+          },
+          "iter800_seed2027_n64": {
+            "metrics": {
+              "object_outcome_rate": 0.359375,
+              "intermittent_carry_rate": 0.34375,
+              "strict_success_existing_evaluator_rate": 0.0,
+              "strict_success_after_floor_guard_rate": 0.0
+            },
+            "impossible_floor_frames": 0,
+            "episodes_with_impossible_floor": 0,
+            "file": "/data4/DATA/wlh/offer/tmp/carry_runs/evaluations/object_outcome/sm4096_h16_ori12_s0-heldout-seed2027/iter800_seed2027_n64_geometry.json"
+          }
+        },
+        "314159": {
+          "iter1000_seed314159_n64": {
+            "metrics": {
+              "object_outcome_rate": 0.171875,
+              "intermittent_carry_rate": 0.015625,
+              "strict_success_existing_evaluator_rate": 0.0,
+              "strict_success_after_floor_guard_rate": 0.0
+            },
+            "impossible_floor_frames": 2854,
+            "episodes_with_impossible_floor": 14,
+            "file": "/data4/DATA/wlh/offer/tmp/carry_runs/evaluations/object_outcome/sm4096_h16_ori12_s0-heldout-seed314159/iter1000_seed314159_n64_geometry.json"
+          },
+          "iter800_seed314159_n64": {
+            "metrics": {
+              "object_outcome_rate": 0.546875,
+              "intermittent_carry_rate": 0.546875,
+              "strict_success_existing_evaluator_rate": 0.0,
+              "strict_success_after_floor_guard_rate": 0.0
+            },
+            "impossible_floor_frames": 747,
+            "episodes_with_impossible_floor": 4,
+            "file": "/data4/DATA/wlh/offer/tmp/carry_runs/evaluations/object_outcome/sm4096_h16_ori12_s0-heldout-seed314159/iter800_seed314159_n64_geometry.json"
+          }
+        },
+        "161803": {
+          "iter800_seed161803_n64": {
+            "metrics": {
+              "object_outcome_rate": 0.5625,
+              "intermittent_carry_rate": 0.5625,
+              "strict_success_existing_evaluator_rate": 0.0,
+              "strict_success_after_floor_guard_rate": 0.0
+            },
+            "impossible_floor_frames": 396,
+            "episodes_with_impossible_floor": 2,
+            "file": "/data4/DATA/wlh/offer/tmp/carry_runs/evaluations/object_outcome/sm4096_h16_ori12_s0-heldout-seed161803/iter800_seed161803_n64_geometry.json"
+          }
+        }
+      }
+    }
+  },
+  "historical": {
+    "original-seed2027": {
+      "iter1000_seed2027_n64": {
+        "metrics": {
+          "object_outcome_rate": 0.484375,
+          "intermittent_carry_rate": 0.484375,
+          "strict_success_existing_evaluator_rate": 0.0,
+          "strict_success_after_floor_guard_rate": 0.0
+        },
+        "impossible_floor_frames": 8493,
+        "episodes_with_impossible_floor": 42,
+        "file": "/data4/DATA/wlh/offer/tmp/carry_runs/evaluations/object_outcome/original-seed2027/iter1000_seed2027_n64_geometry.json"
+      },
+      "iter1200_seed2027_n64": {
+        "metrics": {
+          "object_outcome_rate": 0.921875,
+          "intermittent_carry_rate": 0.921875,
+          "strict_success_existing_evaluator_rate": 0.0,
+          "strict_success_after_floor_guard_rate": 0.0
+        },
+        "impossible_floor_frames": 573,
+        "episodes_with_impossible_floor": 37,
+        "file": "/data4/DATA/wlh/offer/tmp/carry_runs/evaluations/object_outcome/original-seed2027/iter1200_seed2027_n64_geometry.json"
+      },
+      "iter1500_seed2027_n64": {
+        "metrics": {
+          "object_outcome_rate": 0.96875,
+          "intermittent_carry_rate": 0.953125,
+          "strict_success_existing_evaluator_rate": 0.0,
+          "strict_success_after_floor_guard_rate": 0.0
+        },
+        "impossible_floor_frames": 0,
+        "episodes_with_impossible_floor": 0,
+        "file": "/data4/DATA/wlh/offer/tmp/carry_runs/evaluations/object_outcome/original-seed2027/iter1500_seed2027_n64_geometry.json"
+      },
+      "iter2000_seed2027_n64": {
+        "metrics": {
+          "object_outcome_rate": 0.96875,
+          "intermittent_carry_rate": 0.96875,
+          "strict_success_existing_evaluator_rate": 0.0,
+          "strict_success_after_floor_guard_rate": 0.0
+        },
+        "impossible_floor_frames": 482,
+        "episodes_with_impossible_floor": 41,
+        "file": "/data4/DATA/wlh/offer/tmp/carry_runs/evaluations/object_outcome/original-seed2027/iter2000_seed2027_n64_geometry.json"
+      },
+      "iter400_seed2027_n64": {
+        "metrics": {
+          "object_outcome_rate": 0.0,
+          "intermittent_carry_rate": 0.0,
+          "strict_success_existing_evaluator_rate": 0.0,
+          "strict_success_after_floor_guard_rate": 0.0
+        },
+        "impossible_floor_frames": 0,
+        "episodes_with_impossible_floor": 0,
+        "file": "/data4/DATA/wlh/offer/tmp/carry_runs/evaluations/object_outcome/original-seed2027/iter400_seed2027_n64_geometry.json"
+      },
+      "iter500_seed2027_n64": {
+        "metrics": {
+          "object_outcome_rate": 0.0,
+          "intermittent_carry_rate": 0.0,
+          "strict_success_existing_evaluator_rate": 0.0,
+          "strict_success_after_floor_guard_rate": 0.0
+        },
+        "impossible_floor_frames": 15,
+        "episodes_with_impossible_floor": 1,
+        "file": "/data4/DATA/wlh/offer/tmp/carry_runs/evaluations/object_outcome/original-seed2027/iter500_seed2027_n64_geometry.json"
+      },
+      "iter600_seed2027_n64": {
+        "metrics": {
+          "object_outcome_rate": 0.0,
+          "intermittent_carry_rate": 0.0,
+          "strict_success_existing_evaluator_rate": 0.0,
+          "strict_success_after_floor_guard_rate": 0.0
+        },
+        "impossible_floor_frames": 3179,
+        "episodes_with_impossible_floor": 39,
+        "file": "/data4/DATA/wlh/offer/tmp/carry_runs/evaluations/object_outcome/original-seed2027/iter600_seed2027_n64_geometry.json"
+      },
+      "iter700_seed2027_n64": {
+        "metrics": {
+          "object_outcome_rate": 0.03125,
+          "intermittent_carry_rate": 0.03125,
+          "strict_success_existing_evaluator_rate": 0.0,
+          "strict_success_after_floor_guard_rate": 0.0
+        },
+        "impossible_floor_frames": 3483,
+        "episodes_with_impossible_floor": 18,
+        "file": "/data4/DATA/wlh/offer/tmp/carry_runs/evaluations/object_outcome/original-seed2027/iter700_seed2027_n64_geometry.json"
+      },
+      "iter800_seed2027_n64": {
+        "metrics": {
+          "object_outcome_rate": 0.640625,
+          "intermittent_carry_rate": 0.640625,
+          "strict_success_existing_evaluator_rate": 0.0,
+          "strict_success_after_floor_guard_rate": 0.0
+        },
+        "impossible_floor_frames": 1047,
+        "episodes_with_impossible_floor": 7,
+        "file": "/data4/DATA/wlh/offer/tmp/carry_runs/evaluations/object_outcome/original-seed2027/iter800_seed2027_n64_geometry.json"
+      },
+      "iter900_seed2027_n64": {
+        "metrics": {
+          "object_outcome_rate": 0.59375,
+          "intermittent_carry_rate": 0.59375,
+          "strict_success_existing_evaluator_rate": 0.0,
+          "strict_success_after_floor_guard_rate": 0.0
+        },
+        "impossible_floor_frames": 6721,
+        "episodes_with_impossible_floor": 34,
+        "file": "/data4/DATA/wlh/offer/tmp/carry_runs/evaluations/object_outcome/original-seed2027/iter900_seed2027_n64_geometry.json"
+      }
+    },
+    "original-seed314159": {
+      "iter1200_seed314159_n64": {
+        "metrics": {
+          "object_outcome_rate": 0.9375,
+          "intermittent_carry_rate": 0.9375,
+          "strict_success_existing_evaluator_rate": 0.0,
+          "strict_success_after_floor_guard_rate": 0.0
+        },
+        "impossible_floor_frames": 161,
+        "episodes_with_impossible_floor": 14,
+        "file": "/data4/DATA/wlh/offer/tmp/carry_runs/evaluations/object_outcome/original-seed314159/iter1200_seed314159_n64_geometry.json"
+      },
+      "iter1500_seed314159_n64": {
+        "metrics": {
+          "object_outcome_rate": 0.953125,
+          "intermittent_carry_rate": 0.953125,
+          "strict_success_existing_evaluator_rate": 0.0,
+          "strict_success_after_floor_guard_rate": 0.0
+        },
+        "impossible_floor_frames": 0,
+        "episodes_with_impossible_floor": 0,
+        "file": "/data4/DATA/wlh/offer/tmp/carry_runs/evaluations/object_outcome/original-seed314159/iter1500_seed314159_n64_geometry.json"
+      },
+      "iter2000_seed314159_n64": {
+        "metrics": {
+          "object_outcome_rate": 1.0,
+          "intermittent_carry_rate": 1.0,
+          "strict_success_existing_evaluator_rate": 0.0,
+          "strict_success_after_floor_guard_rate": 0.0
+        },
+        "impossible_floor_frames": 453,
+        "episodes_with_impossible_floor": 37,
+        "file": "/data4/DATA/wlh/offer/tmp/carry_runs/evaluations/object_outcome/original-seed314159/iter2000_seed314159_n64_geometry.json"
+      },
+      "iter700_seed314159_n64": {
+        "metrics": {
+          "object_outcome_rate": 0.015625,
+          "intermittent_carry_rate": 0.015625,
+          "strict_success_existing_evaluator_rate": 0.0,
+          "strict_success_after_floor_guard_rate": 0.0
+        },
+        "impossible_floor_frames": 3871,
+        "episodes_with_impossible_floor": 19,
+        "file": "/data4/DATA/wlh/offer/tmp/carry_runs/evaluations/object_outcome/original-seed314159/iter700_seed314159_n64_geometry.json"
+      },
+      "iter800_seed314159_n64": {
+        "metrics": {
+          "object_outcome_rate": 0.609375,
+          "intermittent_carry_rate": 0.609375,
+          "strict_success_existing_evaluator_rate": 0.0,
+          "strict_success_after_floor_guard_rate": 0.0
+        },
+        "impossible_floor_frames": 590,
+        "episodes_with_impossible_floor": 3,
+        "file": "/data4/DATA/wlh/offer/tmp/carry_runs/evaluations/object_outcome/original-seed314159/iter800_seed314159_n64_geometry.json"
+      }
+    },
+    "ppo-seed2027": {
+      "iter3999_seed2027_n64": {
+        "metrics": {
+          "object_outcome_rate": 1.0,
+          "intermittent_carry_rate": 1.0,
+          "strict_success_existing_evaluator_rate": 0.34375,
+          "strict_success_after_floor_guard_rate": 0.34375
+        },
+        "impossible_floor_frames": 1072,
+        "episodes_with_impossible_floor": 44,
+        "file": "/data4/DATA/wlh/offer/tmp/carry_runs/evaluations/object_outcome/ppo-seed2027/iter3999_seed2027_n64_geometry.json"
+      },
+      "iter800_seed2027_n64": {
+        "metrics": {
+          "object_outcome_rate": 0.59375,
+          "intermittent_carry_rate": 0.359375,
+          "strict_success_existing_evaluator_rate": 0.078125,
+          "strict_success_after_floor_guard_rate": 0.125
+        },
+        "impossible_floor_frames": 3104,
+        "episodes_with_impossible_floor": 48,
+        "file": "/data4/DATA/wlh/offer/tmp/carry_runs/evaluations/object_outcome/ppo-seed2027/iter800_seed2027_n64_geometry.json"
+      }
+    },
+    "ppo-seed314159": {
+      "iter3999_seed314159_n64": {
+        "metrics": {
+          "object_outcome_rate": 0.984375,
+          "intermittent_carry_rate": 0.984375,
+          "strict_success_existing_evaluator_rate": 0.484375,
+          "strict_success_after_floor_guard_rate": 0.484375
+        },
+        "impossible_floor_frames": 1395,
+        "episodes_with_impossible_floor": 56,
+        "file": "/data4/DATA/wlh/offer/tmp/carry_runs/evaluations/object_outcome/ppo-seed314159/iter3999_seed314159_n64_geometry.json"
+      },
+      "iter800_seed314159_n64": {
+        "metrics": {
+          "object_outcome_rate": 0.453125,
+          "intermittent_carry_rate": 0.375,
+          "strict_success_existing_evaluator_rate": 0.0625,
+          "strict_success_after_floor_guard_rate": 0.0625
+        },
+        "impossible_floor_frames": 979,
+        "episodes_with_impossible_floor": 45,
+        "file": "/data4/DATA/wlh/offer/tmp/carry_runs/evaluations/object_outcome/ppo-seed314159/iter800_seed314159_n64_geometry.json"
+      }
+    }
+  }
+}
