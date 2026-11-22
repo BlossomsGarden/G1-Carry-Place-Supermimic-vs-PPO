@@ -1,0 +1,119 @@
+{
+  "start_utc": "2026-11-22T09:29:48.308272+00:00",
+  "original_iteration": 0,
+  "training_pid": 504743,
+  "eval_gpu": 2,
+  "threshold": "128/128 on 2027+314159; repeat on same GPU",
+  "results": [
+    {
+      "iteration": 500,
+      "new_iterations": 500,
+      "checkpoint": "/data4/DATA/wlh/offer/supermimic/logs/smtrack/G1-SMTrack-CarryPlace/supermimic/2026-11-22_17-29-14_sm4g8192_h32_ori12_mb4_s0_20261122/model_500.pt",
+      "utc": "2026-11-22T10:28:56.459726+00:00",
+      "results": [
+        {
+          "seed": 2027,
+          "terminal": 23,
+          "intermittent": 1,
+          "strict_both_hands": 0,
+          "seconds": 49.69,
+          "metrics_json": "/data4/DATA/wlh/offer/tmp/carry_runs/sm4g8192_h32_ori12_mb4_s0_20261122_evaluations/iter500_seed2027_metrics.json"
+        },
+        {
+          "seed": 314159,
+          "terminal": 19,
+          "intermittent": 0,
+          "strict_both_hands": 0,
+          "seconds": 45.45,
+          "metrics_json": "/data4/DATA/wlh/offer/tmp/carry_runs/sm4g8192_h32_ori12_mb4_s0_20261122_evaluations/iter500_seed314159_metrics.json"
+        }
+      ],
+      "terminal_128": 42,
+      "intermittent_128": 1,
+      "strict_128": 0
+    },
+    {
+      "iteration": 1000,
+      "new_iterations": 1000,
+      "checkpoint": "/data4/DATA/wlh/offer/supermimic/logs/smtrack/G1-SMTrack-CarryPlace/supermimic/2026-11-22_17-29-14_sm4g8192_h32_ori12_mb4_s0_20261122/model_1000.pt",
+      "utc": "2026-11-22T11:20:45.371413+00:00",
+      "results": [
+        {
+          "seed": 2027,
+          "terminal": 61,
+          "intermittent": 50,
+          "strict_both_hands": 0,
+          "seconds": 62.34,
+          "metrics_json": "/data4/DATA/wlh/offer/tmp/carry_runs/sm4g8192_h32_ori12_mb4_s0_20261122_evaluations/iter1000_seed2027_metrics.json"
+        },
+        {
+          "seed": 314159,
+          "terminal": 63,
+          "intermittent": 52,
+          "strict_both_hands": 0,
+          "seconds": 43.98,
+          "metrics_json": "/data4/DATA/wlh/offer/tmp/carry_runs/sm4g8192_h32_ori12_mb4_s0_20261122_evaluations/iter1000_seed314159_metrics.json"
+        }
+      ],
+      "terminal_128": 124,
+      "intermittent_128": 102,
+      "strict_128": 0
+    },
+    {
+      "iteration": 1500,
+      "new_iterations": 1500,
+      "checkpoint": "/data4/DATA/wlh/offer/supermimic/logs/smtrack/G1-SMTrack-CarryPlace/supermimic/2026-11-22_17-29-14_sm4g8192_h32_ori12_mb4_s0_20261122/model_1500.pt",
+      "utc": "2026-11-22T12:12:24.936084+00:00",
+      "results": [
+        {
+          "seed": 2027,
+          "terminal": 64,
+          "intermittent": 64,
+          "strict_both_hands": 2,
+          "seconds": 54.05,
+          "metrics_json": "/data4/DATA/wlh/offer/tmp/carry_runs/sm4g8192_h32_ori12_mb4_s0_20261122_evaluations/iter1500_seed2027_metrics.json"
+        },
+        {
+          "seed": 314159,
+          "terminal": 64,
+          "intermittent": 63,
+          "strict_both_hands": 5,
+          "seconds": 42.88,
+          "metrics_json": "/data4/DATA/wlh/offer/tmp/carry_runs/sm4g8192_h32_ori12_mb4_s0_20261122_evaluations/iter1500_seed314159_metrics.json"
+        }
+      ],
+      "terminal_128": 128,
+      "intermittent_128": 127,
+      "strict_128": 7,
+      "confirm": [
+        {
+          "seed": 2027,
+          "terminal": 64,
+          "intermittent": 64,
+          "strict_both_hands": 1,
+          "seconds": 41.88,
+          "metrics_json": "/data4/DATA/wlh/offer/tmp/carry_runs/sm4g8192_h32_ori12_mb4_s0_20261122_evaluations/iter1500_seed2027_confirm_metrics.json"
+        },
+        {
+          "seed": 314159,
+          "terminal": 64,
+          "intermittent": 64,
+          "strict_both_hands": 4,
+          "seconds": 42.98,
+          "metrics_json": "/data4/DATA/wlh/offer/tmp/carry_runs/sm4g8192_h32_ori12_mb4_s0_20261122_evaluations/iter1500_seed314159_confirm_metrics.json"
+        }
+      ],
+      "confirm_terminal_128": 128,
+      "heldout": {
+        "seed": 161803,
+        "terminal": 64,
+        "intermittent": 64,
+        "strict_both_hands": 2,
+        "seconds": 42.48,
+        "metrics_json": "/data4/DATA/wlh/offer/tmp/carry_runs/sm4g8192_h32_ori12_mb4_s0_20261122_evaluations/iter1500_seed161803_heldout_metrics.json"
+      }
+    }
+  ],
+  "status": "target corroborated at iteration 1500",
+  "stop_utc": "2026-11-22T12:14:32.284204+00:00"
+}

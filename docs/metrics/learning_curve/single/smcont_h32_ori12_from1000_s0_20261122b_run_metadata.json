@@ -1,0 +1,31 @@
+{
+  "pid": 397531,
+  "start_utc": "2026-11-22T09:00:06.220712+00:00",
+  "name": "smcont_h32_ori12_from1000_s0_20261122b",
+  "checkpoint": "/data4/DATA/wlh/offer/supermimic/logs/smtrack/G1-SMTrack-CarryPlace/supermimic/2026-11-22_09-17-16_sm4096_h32_ori12_s0/model_1000.pt",
+  "original_iteration": 1000,
+  "target_absolute_iteration": 3000,
+  "gpu": 6,
+  "num_envs": 4096,
+  "command": [
+    "bash",
+    "scripts/run_carry_experiment.sh",
+    "supermimic",
+    "6",
+    "4096",
+    "3000",
+    "smcont_h32_ori12_from1000_s0_20261122b",
+    "--resume-checkpoint",
+    "/data4/DATA/wlh/offer/supermimic/logs/smtrack/G1-SMTrack-CarryPlace/supermimic/2026-11-22_09-17-16_sm4096_h32_ori12_s0/model_1000.pt",
+    "--imag-microbatches",
+    "16",
+    "--lr-cosine-iters",
+    "250000",
+    "--imagination-horizon",
+    "32",
+    "--box-ori-std",
+    "1.2"
+  ],
+  "save_interval": 100,
+  "replay_repopulates": true
+}

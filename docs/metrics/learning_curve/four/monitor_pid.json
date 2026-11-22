@@ -1,0 +1,28 @@
+{
+  "pid": 509242,
+  "command": [
+    "python3",
+    "/data4/DATA/wlh/offer/tmp/carry_runs/monitor_sm_continuation.py",
+    "--repo",
+    "/data4/DATA/wlh/offer/supermimic",
+    "--checkpoint-dir",
+    "/data4/DATA/wlh/offer/supermimic/logs/smtrack/G1-SMTrack-CarryPlace/supermimic/2026-11-22_17-29-14_sm4g8192_h32_ori12_mb4_s0_20261122",
+    "--output-dir",
+    "/data4/DATA/wlh/offer/tmp/carry_runs/sm4g8192_h32_ori12_mb4_s0_20261122_evaluations",
+    "--train-pid",
+    "504743",
+    "--eval-gpu",
+    "2",
+    "--first",
+    "500",
+    "--last",
+    "4000",
+    "--interval",
+    "500",
+    "--original-iteration",
+    "0",
+    "--threshold-total",
+    "128"
+  ],
+  "start_utc": "2026-11-22T09:29:48.178867+00:00"
+}

@@ -1,0 +1,8 @@
+{
+  "pid": 424654,
+  "command": [
+    "python3",
+    "/data4/DATA/wlh/offer/tmp/carry_runs/eval_ppo_curve.py"
+  ],
+  "start_utc": "2026-11-22T09:09:17.793433+00:00"
+}

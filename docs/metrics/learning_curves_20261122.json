@@ -1,0 +1,666 @@
+{
+  "metric": "terminal box center <=0.12 m from target center (3D, last frame)",
+  "denominator": 128,
+  "evaluation_seeds": [
+    2027,
+    314159
+  ],
+  "episodes_per_seed": 64,
+  "warning": "Repeated checkpoint selection uses the same seeds; 128/128 is sample accuracy, not population certainty.",
+  "series": [
+    {
+      "id": "ppo_4gpu",
+      "label": "PPO · 四卡，8192 环境 · 从零训练",
+      "gpu": "historical four-GPU training; curve evaluated on cuda:2",
+      "points": [
+        {
+          "iteration": 0,
+          "terminal_128": 0,
+          "intermittent_128": 0,
+          "strict_128": 0,
+          "stage_128": {
+            "lifted_15cm": 0,
+            "airborne_transport_50cm": 0,
+            "both_touched_near_lift": 0,
+            "target_pose": 0,
+            "released_landed": 128,
+            "settled": 128,
+            "upright": 0,
+            "completed": 0
+          },
+          "median_goal_distance_3d_m": 1.525,
+          "seeds": [
+            {
+              "seed": 2027,
+              "terminal": 0,
+              "intermittent": 0,
+              "strict_both_hands": 0,
+              "source": "docs/metrics/learning_curve/ppo/iter0_seed2027_metrics.json",
+              "sha256": "1a09b6c8c9be56aaceb260834d90a1dd1c7dfebf84fd536ec7b794d0a59c9b63"
+            },
+            {
+              "seed": 314159,
+              "terminal": 0,
+              "intermittent": 0,
+              "strict_both_hands": 0,
+              "source": "docs/metrics/learning_curve/ppo/iter0_seed314159_metrics.json",
+              "sha256": "769c899f7ec7dfd46bf60055c9465b4e59fea7e6a42581db5082fdc1ffedceea"
+            }
+          ]
+        },
+        {
+          "iteration": 500,
+          "terminal_128": 0,
+          "intermittent_128": 0,
+          "strict_128": 0,
+          "stage_128": {
+            "lifted_15cm": 0,
+            "airborne_transport_50cm": 0,
+            "both_touched_near_lift": 0,
+            "target_pose": 0,
+            "released_landed": 127,
+            "settled": 128,
+            "upright": 127,
+            "completed": 0
+          },
+          "median_goal_distance_3d_m": 1.525,
+          "seeds": [
+            {
+              "seed": 2027,
+              "terminal": 0,
+              "intermittent": 0,
+              "strict_both_hands": 0,
+              "source": "docs/metrics/learning_curve/ppo/iter500_seed2027_metrics.json",
+              "sha256": "097e67348b3d402a51586dd606bc2b31f913be0809f7b4f243fbca7d8f24c58b"
+            },
+            {
+              "seed": 314159,
+              "terminal": 0,
+              "intermittent": 0,
+              "strict_both_hands": 0,
+              "source": "docs/metrics/learning_curve/ppo/iter500_seed314159_metrics.json",
+              "sha256": "2e5502ca307cf175cd2449f43ff7638b3c1bc83f54bf4ebd840c8c2c4a054e66"
+            }
+          ]
+        },
+        {
+          "iteration": 1000,
+          "terminal_128": 121,
+          "intermittent_128": 1,
+          "strict_128": 1,
+          "stage_128": {
+            "lifted_15cm": 126,
+            "airborne_transport_50cm": 126,
+            "both_touched_near_lift": 60,
+            "target_pose": 23,
+            "released_landed": 118,
+            "settled": 120,
+            "upright": 126,
+            "completed": 126
+          },
+          "median_goal_distance_3d_m": 0.0485,
+          "seeds": [
+            {
+              "seed": 2027,
+              "terminal": 59,
+              "intermittent": 1,
+              "strict_both_hands": 1,
+              "source": "docs/metrics/learning_curve/ppo/iter1000_seed2027_metrics.json",
+              "sha256": "6e08900f74b582433cf82de692ad9959fed7437a47722d2e570367a4184ddd69"
+            },
+            {
+              "seed": 314159,
+              "terminal": 62,
+              "intermittent": 0,
+              "strict_both_hands": 0,
+              "source": "docs/metrics/learning_curve/ppo/iter1000_seed314159_metrics.json",
+              "sha256": "1264be993c117adb0c0ece2424659f3acb671e793e5682fb2ae046ca7e138bac"
+            }
+          ]
+        },
+        {
+          "iteration": 1500,
+          "terminal_128": 119,
+          "intermittent_128": 11,
+          "strict_128": 9,
+          "stage_128": {
+            "lifted_15cm": 125,
+            "airborne_transport_50cm": 125,
+            "both_touched_near_lift": 22,
+            "target_pose": 103,
+            "released_landed": 128,
+            "settled": 126,
+            "upright": 125,
+            "completed": 125
+          },
+          "median_goal_distance_3d_m": 0.0538,
+          "seeds": [
+            {
+              "seed": 2027,
+              "terminal": 59,
+              "intermittent": 4,
+              "strict_both_hands": 4,
+              "source": "docs/metrics/learning_curve/ppo/iter1500_seed2027_metrics.json",
+              "sha256": "17eea32bac8bbcceafc12b971aada0c8fa60e68e6d8fb6c338e58a60dcaa5f38"
+            },
+            {
+              "seed": 314159,
+              "terminal": 60,
+              "intermittent": 7,
+              "strict_both_hands": 5,
+              "source": "docs/metrics/learning_curve/ppo/iter1500_seed314159_metrics.json",
+              "sha256": "732b68f1fba1ab7e7074787b28a238460671d5dd0f12d1ebdad7d4ab14d5297d"
+            }
+          ]
+        },
+        {
+          "iteration": 2000,
+          "terminal_128": 127,
+          "intermittent_128": 1,
+          "strict_128": 0,
+          "stage_128": {
+            "lifted_15cm": 127,
+            "airborne_transport_50cm": 127,
+            "both_touched_near_lift": 1,
+            "target_pose": 127,
+            "released_landed": 128,
+            "settled": 127,
+            "upright": 128,
+            "completed": 127
+          },
+          "median_goal_distance_3d_m": 0.0398,
+          "seeds": [
+            {
+              "seed": 2027,
+              "terminal": 64,
+              "intermittent": 0,
+              "strict_both_hands": 0,
+              "source": "docs/metrics/learning_curve/ppo/iter2000_seed2027_metrics.json",
+              "sha256": "c19c0b6b4a8aa8516daa4b1834ce057fb3ad755790941b3f7d03cf5d6da53d39"
+            },
+            {
+              "seed": 314159,
+              "terminal": 63,
+              "intermittent": 1,
+              "strict_both_hands": 0,
+              "source": "docs/metrics/learning_curve/ppo/iter2000_seed314159_metrics.json",
+              "sha256": "8a1b4dd05303ca43694bf4963377ebe31a4c0acfb2c2a0ce3b4161be37053a36"
+            }
+          ]
+        },
+        {
+          "iteration": 2500,
+          "terminal_128": 127,
+          "intermittent_128": 124,
+          "strict_128": 19,
+          "stage_128": {
+            "lifted_15cm": 127,
+            "airborne_transport_50cm": 127,
+            "both_touched_near_lift": 127,
+            "target_pose": 127,
+            "released_landed": 128,
+            "settled": 125,
+            "upright": 127,
+            "completed": 127
+          },
+          "median_goal_distance_3d_m": 0.0305,
+          "seeds": [
+            {
+              "seed": 2027,
+              "terminal": 64,
+              "intermittent": 63,
+              "strict_both_hands": 8,
+              "source": "docs/metrics/learning_curve/ppo/iter2500_seed2027_metrics.json",
+              "sha256": "af4283614b465b5976981c492f5140560cb12eaf0671a1c85543a5308dda5f01"
+            },
+            {
+              "seed": 314159,
+              "terminal": 63,
+              "intermittent": 61,
+              "strict_both_hands": 11,
+              "source": "docs/metrics/learning_curve/ppo/iter2500_seed314159_metrics.json",
+              "sha256": "c30ca1b7c96687d57cd525fb55ee57741f126da5a26ce6df0134801086f78bd7"
+            }
+          ]
+        },
+        {
+          "iteration": 3000,
+          "terminal_128": 126,
+          "intermittent_128": 126,
+          "strict_128": 13,
+          "stage_128": {
+            "lifted_15cm": 126,
+            "airborne_transport_50cm": 126,
+            "both_touched_near_lift": 126,
+            "target_pose": 126,
+            "released_landed": 128,
+            "settled": 128,
+            "upright": 126,
+            "completed": 126
+          },
+          "median_goal_distance_3d_m": 0.0293,
+          "seeds": [
+            {
+              "seed": 2027,
+              "terminal": 64,
+              "intermittent": 64,
+              "strict_both_hands": 5,
+              "source": "docs/metrics/learning_curve/ppo/iter3000_seed2027_metrics.json",
+              "sha256": "ffe94be1f99108b71ae8595f001759a8e4e21ff6ba35865e8ef588b4b3781aff"
+            },
+            {
+              "seed": 314159,
+              "terminal": 62,
+              "intermittent": 62,
+              "strict_both_hands": 8,
+              "source": "docs/metrics/learning_curve/ppo/iter3000_seed314159_metrics.json",
+              "sha256": "50221abf16e6d06d23364c8938cff2a96a5a7e40b0da3ec1696ff42a492b819d"
+            }
+          ]
+        },
+        {
+          "iteration": 3500,
+          "terminal_128": 127,
+          "intermittent_128": 112,
+          "strict_128": 16,
+          "stage_128": {
+            "lifted_15cm": 127,
+            "airborne_transport_50cm": 127,
+            "both_touched_near_lift": 112,
+            "target_pose": 127,
+            "released_landed": 128,
+            "settled": 127,
+            "upright": 127,
+            "completed": 127
+          },
+          "median_goal_distance_3d_m": 0.0288,
+          "seeds": [
+            {
+              "seed": 2027,
+              "terminal": 64,
+              "intermittent": 56,
+              "strict_both_hands": 8,
+              "source": "docs/metrics/learning_curve/ppo/iter3500_seed2027_metrics.json",
+              "sha256": "7b931a73084a8493c92078c0d318af0ae804419ba0836a69f52f21fde337e506"
+            },
+            {
+              "seed": 314159,
+              "terminal": 63,
+              "intermittent": 56,
+              "strict_both_hands": 8,
+              "source": "docs/metrics/learning_curve/ppo/iter3500_seed314159_metrics.json",
+              "sha256": "e728c5ac6297baa7683017c5571f423ad6c62a4d6c10602b91cea58229969c02"
+            }
+          ]
+        },
+        {
+          "iteration": 3999,
+          "terminal_128": 127,
+          "intermittent_128": 124,
+          "strict_128": 52,
+          "stage_128": {
+            "lifted_15cm": 127,
+            "airborne_transport_50cm": 127,
+            "both_touched_near_lift": 127,
+            "target_pose": 127,
+            "released_landed": 128,
+            "settled": 125,
+            "upright": 127,
+            "completed": 127
+          },
+          "median_goal_distance_3d_m": 0.0308,
+          "seeds": [
+            {
+              "seed": 2027,
+              "terminal": 64,
+              "intermittent": 62,
+              "strict_both_hands": 22,
+              "source": "docs/metrics/learning_curve/ppo/iter3999_seed2027_metrics.json",
+              "sha256": "f1b8f480087da01390f1ac44f09d953401343cc34a8d41d3c81bb8422f104697"
+            },
+            {
+              "seed": 314159,
+              "terminal": 63,
+              "intermittent": 62,
+              "strict_both_hands": 30,
+              "source": "docs/metrics/learning_curve/ppo/iter3999_seed314159_metrics.json",
+              "sha256": "c6f9c89a5b1a40d3cde5a9c4242705f7dee1a635f33f5398b17f7033c7306c57"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "supermimic_1gpu",
+      "label": "SuperMimic · 单卡，4096 环境 · 第 1000 轮续训",
+      "gpu": "cuda:6 training; curve evaluated on cuda:3",
+      "points": [
+        {
+          "iteration": 1000,
+          "terminal_128": 125,
+          "intermittent_128": 106,
+          "strict_128": 0,
+          "stage_128": {
+            "lifted_15cm": 127,
+            "airborne_transport_50cm": 127,
+            "both_touched_near_lift": 127,
+            "target_pose": 118,
+            "released_landed": 126,
+            "settled": 114,
+            "upright": 127,
+            "completed": 125
+          },
+          "median_goal_distance_3d_m": 0.0458,
+          "seeds": [
+            {
+              "seed": 2027,
+              "terminal": 64,
+              "intermittent": 54,
+              "strict_both_hands": 0,
+              "source": "docs/metrics/learning_curve/single/iter1000_seed2027_gpu3_metrics.json",
+              "sha256": "040e2de415a417e63350c6a4e464ff714d66b87586a51a8b21540fe128038811"
+            },
+            {
+              "seed": 314159,
+              "terminal": 61,
+              "intermittent": 52,
+              "strict_both_hands": 0,
+              "source": "docs/metrics/learning_curve/single/iter1000_seed314159_gpu3_metrics.json",
+              "sha256": "7e9a8fd8670a2d82db1a974c214d70cecf43e098fd24505ea127c01ffdaa905d"
+            }
+          ]
+        },
+        {
+          "iteration": 1100,
+          "terminal_128": 108,
+          "intermittent_128": 86,
+          "strict_128": 0,
+          "stage_128": {
+            "lifted_15cm": 127,
+            "airborne_transport_50cm": 127,
+            "both_touched_near_lift": 127,
+            "target_pose": 88,
+            "released_landed": 127,
+            "settled": 120,
+            "upright": 127,
+            "completed": 127
+          },
+          "median_goal_distance_3d_m": 0.0618,
+          "seeds": [
+            {
+              "seed": 2027,
+              "terminal": 54,
+              "intermittent": 44,
+              "strict_both_hands": 0,
+              "source": "docs/metrics/learning_curve/single/iter1100_seed2027_metrics.json",
+              "sha256": "6e67748c012837b91c8904448cc67085fc4b422a76f01fc5fe79acef423ea644"
+            },
+            {
+              "seed": 314159,
+              "terminal": 54,
+              "intermittent": 42,
+              "strict_both_hands": 0,
+              "source": "docs/metrics/learning_curve/single/iter1100_seed314159_metrics.json",
+              "sha256": "9e63713faac97350a8888a8d4c9467b502da7c46bd841af721cd39bd66cacacb"
+            }
+          ]
+        },
+        {
+          "iteration": 1200,
+          "terminal_128": 127,
+          "intermittent_128": 111,
+          "strict_128": 0,
+          "stage_128": {
+            "lifted_15cm": 128,
+            "airborne_transport_50cm": 128,
+            "both_touched_near_lift": 128,
+            "target_pose": 115,
+            "released_landed": 127,
+            "settled": 123,
+            "upright": 128,
+            "completed": 128
+          },
+          "median_goal_distance_3d_m": 0.0615,
+          "seeds": [
+            {
+              "seed": 2027,
+              "terminal": 63,
+              "intermittent": 55,
+              "strict_both_hands": 0,
+              "source": "docs/metrics/learning_curve/single/iter1200_seed2027_metrics.json",
+              "sha256": "d98d88db4e591068ff981eb729bc0ac05877f790130b7c5d3e040cc5623daebf"
+            },
+            {
+              "seed": 314159,
+              "terminal": 64,
+              "intermittent": 56,
+              "strict_both_hands": 0,
+              "source": "docs/metrics/learning_curve/single/iter1200_seed314159_metrics.json",
+              "sha256": "d431209921b5aebaabfb3728a753c6d74ea2617277a3b129fc7fd61fed50dbf1"
+            }
+          ],
+          "same_gpu_confirm_128": 124,
+          "confirmation_sources": [
+            {
+              "seed": 2027,
+              "terminal": 61,
+              "intermittent": 53,
+              "strict_both_hands": 0,
+              "source": "docs/metrics/learning_curve/single/iter1200_seed2027_confirm_metrics.json",
+              "sha256": "924f6264063e02efbecbed1a36fe8ddc2f6e25960a0de745fdebaf09536223f3"
+            },
+            {
+              "seed": 314159,
+              "terminal": 63,
+              "intermittent": 56,
+              "strict_both_hands": 0,
+              "source": "docs/metrics/learning_curve/single/iter1200_seed314159_confirm_metrics.json",
+              "sha256": "e16e9fba311883c358eb75d2e98a2b3ef9db57605084b542bdc464e75cf73adf"
+            }
+          ],
+          "third_seed_64": 63,
+          "third_seed_source": {
+            "path": "docs/metrics/learning_curve/single/iter1200_seed161803_heldout_metrics.json",
+            "sha256": "a49733ae1d7e890487294ca77b036de47e844684ad098160a4f3accec5bc46d2"
+          }
+        },
+        {
+          "iteration": 1300,
+          "terminal_128": 128,
+          "intermittent_128": 102,
+          "strict_128": 0,
+          "stage_128": {
+            "lifted_15cm": 128,
+            "airborne_transport_50cm": 128,
+            "both_touched_near_lift": 128,
+            "target_pose": 114,
+            "released_landed": 127,
+            "settled": 116,
+            "upright": 128,
+            "completed": 128
+          },
+          "median_goal_distance_3d_m": 0.0428,
+          "seeds": [
+            {
+              "seed": 2027,
+              "terminal": 64,
+              "intermittent": 53,
+              "strict_both_hands": 0,
+              "source": "docs/metrics/learning_curve/single/iter1300_seed2027_metrics.json",
+              "sha256": "46207882b7ab294cfef99365c0bee49853e468dbcebaaa9c6de9981dcb18bfa1"
+            },
+            {
+              "seed": 314159,
+              "terminal": 64,
+              "intermittent": 49,
+              "strict_both_hands": 0,
+              "source": "docs/metrics/learning_curve/single/iter1300_seed314159_metrics.json",
+              "sha256": "89d1503645c3bcbd6926f4f2c8bb106db3f62e6d65eb626d4ef60f1d4e1cf596"
+            }
+          ],
+          "same_gpu_confirm_128": 128,
+          "confirmation_sources": [
+            {
+              "seed": 2027,
+              "terminal": 64,
+              "intermittent": 51,
+              "strict_both_hands": 0,
+              "source": "docs/metrics/learning_curve/single/iter1300_seed2027_confirm_metrics.json",
+              "sha256": "2a1a73cfd436119e45174ca5accb02371542020ff902f7891333a0e607219248"
+            },
+            {
+              "seed": 314159,
+              "terminal": 64,
+              "intermittent": 53,
+              "strict_both_hands": 0,
+              "source": "docs/metrics/learning_curve/single/iter1300_seed314159_confirm_metrics.json",
+              "sha256": "81376bfc5e0f2cb47160f25953660dfeb67fb4f115e1e81c1ce84129d50a6ddb"
+            }
+          ],
+          "third_seed_64": 64,
+          "third_seed_source": {
+            "path": "docs/metrics/learning_curve/single/iter1300_seed161803_heldout_metrics.json",
+            "sha256": "f5b0429dce458cc5c71db736c327c888375dd477e38ea73c749fcdb656e185a0"
+          }
+        }
+      ]
+    },
+    {
+      "id": "supermimic_4gpu",
+      "label": "SuperMimic · 四卡，8192 环境 · 从零训练",
+      "gpu": "cuda:1,4,5,7 training; curve evaluated on cuda:2",
+      "points": [
+        {
+          "iteration": 500,
+          "terminal_128": 42,
+          "intermittent_128": 1,
+          "strict_128": 0,
+          "stage_128": {
+            "lifted_15cm": 124,
+            "airborne_transport_50cm": 113,
+            "both_touched_near_lift": 124,
+            "target_pose": 1,
+            "released_landed": 78,
+            "settled": 58,
+            "upright": 118,
+            "completed": 82
+          },
+          "median_goal_distance_3d_m": 0.1701,
+          "seeds": [
+            {
+              "seed": 2027,
+              "terminal": 23,
+              "intermittent": 1,
+              "strict_both_hands": 0,
+              "source": "docs/metrics/learning_curve/four/iter500_seed2027_metrics.json",
+              "sha256": "8acf137a8c1a38a6a2e35786c6351ff663503317c97520e61430801e3a811e31"
+            },
+            {
+              "seed": 314159,
+              "terminal": 19,
+              "intermittent": 0,
+              "strict_both_hands": 0,
+              "source": "docs/metrics/learning_curve/four/iter500_seed314159_metrics.json",
+              "sha256": "e29249fd194d4dfb20c178a38eb4ded66b2f300ce17bcc29aabfceff8834da69"
+            }
+          ]
+        },
+        {
+          "iteration": 1000,
+          "terminal_128": 124,
+          "intermittent_128": 102,
+          "strict_128": 0,
+          "stage_128": {
+            "lifted_15cm": 127,
+            "airborne_transport_50cm": 127,
+            "both_touched_near_lift": 127,
+            "target_pose": 119,
+            "released_landed": 128,
+            "settled": 111,
+            "upright": 127,
+            "completed": 127
+          },
+          "median_goal_distance_3d_m": 0.0452,
+          "seeds": [
+            {
+              "seed": 2027,
+              "terminal": 61,
+              "intermittent": 50,
+              "strict_both_hands": 0,
+              "source": "docs/metrics/learning_curve/four/iter1000_seed2027_metrics.json",
+              "sha256": "4cc6092e42830f81e1e0d6c84d71a1c64524408168a28eb3b230610bbb4845b4"
+            },
+            {
+              "seed": 314159,
+              "terminal": 63,
+              "intermittent": 52,
+              "strict_both_hands": 0,
+              "source": "docs/metrics/learning_curve/four/iter1000_seed314159_metrics.json",
+              "sha256": "d939ac3070b8898971f64af4a51408eaef368450cc06fc02e71b4ac6f0c253ee"
+            }
+          ]
+        },
+        {
+          "iteration": 1500,
+          "terminal_128": 128,
+          "intermittent_128": 127,
+          "strict_128": 7,
+          "stage_128": {
+            "lifted_15cm": 128,
+            "airborne_transport_50cm": 128,
+            "both_touched_near_lift": 128,
+            "target_pose": 127,
+            "released_landed": 128,
+            "settled": 128,
+            "upright": 128,
+            "completed": 128
+          },
+          "median_goal_distance_3d_m": 0.0342,
+          "seeds": [
+            {
+              "seed": 2027,
+              "terminal": 64,
+              "intermittent": 64,
+              "strict_both_hands": 2,
+              "source": "docs/metrics/learning_curve/four/iter1500_seed2027_metrics.json",
+              "sha256": "1ae9bdb366847bdeec187d676068f062c5554f13c8a4895d61c09a22599a54e7"
+            },
+            {
+              "seed": 314159,
+              "terminal": 64,
+              "intermittent": 63,
+              "strict_both_hands": 5,
+              "source": "docs/metrics/learning_curve/four/iter1500_seed314159_metrics.json",
+              "sha256": "0a20002b228aa756a88b9086f45584d96a52b56d132f3927b7ece23d18aeabe8"
+            }
+          ],
+          "same_gpu_confirm_128": 128,
+          "confirmation_sources": [
+            {
+              "seed": 2027,
+              "terminal": 64,
+              "intermittent": 64,
+              "strict_both_hands": 1,
+              "source": "docs/metrics/learning_curve/four/iter1500_seed2027_confirm_metrics.json",
+              "sha256": "3491b3b0bdd8fb14ecc9aa6c560221da4c2ac80e434d829bc91e427656f352d5"
+            },
+            {
+              "seed": 314159,
+              "terminal": 64,
+              "intermittent": 64,
+              "strict_both_hands": 4,
+              "source": "docs/metrics/learning_curve/four/iter1500_seed314159_confirm_metrics.json",
+              "sha256": "e5a3b1320a9ff017152ee76e40710bb22d49fcd56a8c176db03528eaa0580ef2"
+            }
+          ],
+          "third_seed_64": 64,
+          "third_seed_source": {
+            "path": "docs/metrics/learning_curve/four/iter1500_seed161803_heldout_metrics.json",
+            "sha256": "b7e0b5d088061312653a64a345a8914b66d639b9c1cd43329826b431737346a8"
+          }
+        }
+      ],
+      "status": "target corroborated at iteration 1500"
+    }
+  ]
+}

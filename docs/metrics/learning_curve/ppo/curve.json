@@ -1,0 +1,241 @@
+{
+  "source": "/data4/DATA/wlh/offer/supermimic/logs/smtrack/G1-SMTrack-CarryPlace/ppo/2026-11-22_01-11-03_cp_ppo_v2_s0_4g",
+  "gpu_for_all_evaluations": 2,
+  "iterations": [
+    0,
+    500,
+    1000,
+    1500,
+    2000,
+    2500,
+    3000,
+    3500,
+    3999
+  ],
+  "seeds": [
+    2027,
+    314159
+  ],
+  "same_episodes_per_seed": 64,
+  "points": [
+    {
+      "iteration": 0,
+      "checkpoint": "/data4/DATA/wlh/offer/supermimic/logs/smtrack/G1-SMTrack-CarryPlace/ppo/2026-11-22_01-11-03_cp_ppo_v2_s0_4g/model_0.pt",
+      "results": [
+        {
+          "seed": 2027,
+          "terminal": 0,
+          "intermittent": 0,
+          "strict_both_hands": 0,
+          "seconds": 15.61
+        },
+        {
+          "seed": 314159,
+          "terminal": 0,
+          "intermittent": 0,
+          "strict_both_hands": 0,
+          "seconds": 15.16
+        }
+      ],
+      "terminal_128": 0,
+      "intermittent_128": 0,
+      "strict_128": 0,
+      "finished_utc": "2026-11-22T09:09:49.027037+00:00"
+    },
+    {
+      "iteration": 500,
+      "checkpoint": "/data4/DATA/wlh/offer/supermimic/logs/smtrack/G1-SMTrack-CarryPlace/ppo/2026-11-22_01-11-03_cp_ppo_v2_s0_4g/model_500.pt",
+      "results": [
+        {
+          "seed": 2027,
+          "terminal": 0,
+          "intermittent": 0,
+          "strict_both_hands": 0,
+          "seconds": 23.32
+        },
+        {
+          "seed": 314159,
+          "terminal": 0,
+          "intermittent": 0,
+          "strict_both_hands": 0,
+          "seconds": 20.47
+        }
+      ],
+      "terminal_128": 0,
+      "intermittent_128": 0,
+      "strict_128": 0,
+      "finished_utc": "2026-11-22T09:10:32.816816+00:00"
+    },
+    {
+      "iteration": 1000,
+      "checkpoint": "/data4/DATA/wlh/offer/supermimic/logs/smtrack/G1-SMTrack-CarryPlace/ppo/2026-11-22_01-11-03_cp_ppo_v2_s0_4g/model_1000.pt",
+      "results": [
+        {
+          "seed": 2027,
+          "terminal": 59,
+          "intermittent": 1,
+          "strict_both_hands": 1,
+          "seconds": 35.51
+        },
+        {
+          "seed": 314159,
+          "terminal": 62,
+          "intermittent": 0,
+          "strict_both_hands": 0,
+          "seconds": 34.55
+        }
+      ],
+      "terminal_128": 121,
+      "intermittent_128": 1,
+      "strict_128": 1,
+      "finished_utc": "2026-11-22T09:11:42.881358+00:00"
+    },
+    {
+      "iteration": 1500,
+      "checkpoint": "/data4/DATA/wlh/offer/supermimic/logs/smtrack/G1-SMTrack-CarryPlace/ppo/2026-11-22_01-11-03_cp_ppo_v2_s0_4g/model_1500.pt",
+      "results": [
+        {
+          "seed": 2027,
+          "terminal": 59,
+          "intermittent": 4,
+          "strict_both_hands": 4,
+          "seconds": 37.48
+        },
+        {
+          "seed": 314159,
+          "terminal": 60,
+          "intermittent": 7,
+          "strict_both_hands": 5,
+          "seconds": 32.66
+        }
+      ],
+      "terminal_128": 119,
+      "intermittent_128": 11,
+      "strict_128": 9,
+      "finished_utc": "2026-11-22T09:12:53.015148+00:00"
+    },
+    {
+      "iteration": 2000,
+      "checkpoint": "/data4/DATA/wlh/offer/supermimic/logs/smtrack/G1-SMTrack-CarryPlace/ppo/2026-11-22_01-11-03_cp_ppo_v2_s0_4g/model_2000.pt",
+      "results": [
+        {
+          "seed": 2027,
+          "terminal": 64,
+          "intermittent": 0,
+          "strict_both_hands": 0,
+          "seconds": 34.16
+        },
+        {
+          "seed": 314159,
+          "terminal": 63,
+          "intermittent": 1,
+          "strict_both_hands": 0,
+          "seconds": 34.11
+        }
+      ],
+      "terminal_128": 127,
+      "intermittent_128": 1,
+      "strict_128": 0,
+      "finished_utc": "2026-11-22T09:14:01.280133+00:00"
+    },
+    {
+      "iteration": 2500,
+      "checkpoint": "/data4/DATA/wlh/offer/supermimic/logs/smtrack/G1-SMTrack-CarryPlace/ppo/2026-11-22_01-11-03_cp_ppo_v2_s0_4g/model_2500.pt",
+      "results": [
+        {
+          "seed": 2027,
+          "terminal": 64,
+          "intermittent": 63,
+          "strict_both_hands": 8,
+          "seconds": 35.26
+        },
+        {
+          "seed": 314159,
+          "terminal": 63,
+          "intermittent": 61,
+          "strict_both_hands": 11,
+          "seconds": 32.84
+        }
+      ],
+      "terminal_128": 127,
+      "intermittent_128": 124,
+      "strict_128": 19,
+      "finished_utc": "2026-11-22T09:15:09.383063+00:00"
+    },
+    {
+      "iteration": 3000,
+      "checkpoint": "/data4/DATA/wlh/offer/supermimic/logs/smtrack/G1-SMTrack-CarryPlace/ppo/2026-11-22_01-11-03_cp_ppo_v2_s0_4g/model_3000.pt",
+      "results": [
+        {
+          "seed": 2027,
+          "terminal": 64,
+          "intermittent": 64,
+          "strict_both_hands": 5,
+          "seconds": 33.9
+        },
+        {
+          "seed": 314159,
+          "terminal": 62,
+          "intermittent": 62,
+          "strict_both_hands": 8,
+          "seconds": 33.5
+        }
+      ],
+      "terminal_128": 126,
+      "intermittent_128": 126,
+      "strict_128": 13,
+      "finished_utc": "2026-11-22T09:16:16.789178+00:00"
+    },
+    {
+      "iteration": 3500,
+      "checkpoint": "/data4/DATA/wlh/offer/supermimic/logs/smtrack/G1-SMTrack-CarryPlace/ppo/2026-11-22_01-11-03_cp_ppo_v2_s0_4g/model_3500.pt",
+      "results": [
+        {
+          "seed": 2027,
+          "terminal": 64,
+          "intermittent": 56,
+          "strict_both_hands": 8,
+          "seconds": 35.11
+        },
+        {
+          "seed": 314159,
+          "terminal": 63,
+          "intermittent": 56,
+          "strict_both_hands": 8,
+          "seconds": 32.19
+        }
+      ],
+      "terminal_128": 127,
+      "intermittent_128": 112,
+      "strict_128": 16,
+      "finished_utc": "2026-11-22T09:17:24.097083+00:00"
+    },
+    {
+      "iteration": 3999,
+      "checkpoint": "/data4/DATA/wlh/offer/supermimic/logs/smtrack/G1-SMTrack-CarryPlace/ppo/2026-11-22_01-11-03_cp_ppo_v2_s0_4g/model_3999.pt",
+      "results": [
+        {
+          "seed": 2027,
+          "terminal": 64,
+          "intermittent": 62,
+          "strict_both_hands": 22,
+          "seconds": 33.6
+        },
+        {
+          "seed": 314159,
+          "terminal": 63,
+          "intermittent": 62,
+          "strict_both_hands": 30,
+          "seconds": 33.25
+        }
+      ],
+      "terminal_128": 127,
+      "intermittent_128": 124,
+      "strict_128": 52,
+      "finished_utc": "2026-11-22T09:18:30.942809+00:00"
+    }
+  ],
+  "start_utc": "2026-11-22T09:09:18.252403+00:00",
+  "status": "completed",
+  "end_utc": "2026-11-22T09:18:30.944030+00:00"
+}

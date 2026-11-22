@@ -1,0 +1,11 @@
+{
+  "reason": "confirmed target; SIGTERM after SIGINT did not exit",
+  "train_pid": 397531,
+  "last_checkpoint_iteration": 1300,
+  "monitor_requested_sigint_utc": "2026-11-22T10:21:24.391294+00:00",
+  "sigterm_sent_after_utc": "2026-11-22T10:24:44+00:00",
+  "exit_confirmed_utc": "2026-11-22T10:26:21.512708+00:00",
+  "exit_confirmed_is_upper_bound": true,
+  "gpu_sampling_stopped_with_sigint": true,
+  "launcher_exit_code_unavailable": true
+}

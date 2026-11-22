@@ -1,0 +1,120 @@
+{
+  "seed": 0,
+  "num_steps_per_env": 3,
+  "max_iterations": 3000,
+  "obs_groups": {
+    "actor": [
+      "policy"
+    ],
+    "critic": [
+      "critic"
+    ]
+  },
+  "save_interval": 100,
+  "experiment_name": "smtrack_G1-SMTrack-CarryPlace_supermimic",
+  "run_name": "smcont_h32_ori12_from1000_s0_20261122b",
+  "logger": "tensorboard",
+  "wandb_project": "mjlab",
+  "wandb_tags": [],
+  "resume": false,
+  "load_run": ".*",
+  "load_checkpoint": "model_.*.pt",
+  "clip_actions": null,
+  "class_name": "SuperMimicRunner",
+  "log_interval": 50,
+  "env_steps_per_iter": 2.5,
+  "prefill_steps": 32,
+  "action_noise_std": 0.1,
+  "replay_steps_per_env": 1000,
+  "save_replay": false,
+  "lr_final_frac": 0.03,
+  "lr_cosine_frac": 0.78,
+  "lr_cosine_iters": 250000,
+  "reward_ref_offset": 0,
+  "clip_end": "stop",
+  "parity_check": true,
+  "parity_transitions": 200,
+  "parity_reward_tol": 0.001,
+  "parity_term_min_acc": 0.99,
+  "wm": {
+    "hidden_dims": [
+      2048,
+      2048,
+      2048
+    ],
+    "activation": "silu_ln",
+    "term_hidden_dims": [
+      256,
+      128
+    ],
+    "window_k": 8,
+    "num_batches": 10,
+    "batch_windows": 2048,
+    "learning_rate": 0.0002,
+    "betas": [
+      0.9,
+      0.999
+    ],
+    "eps": 1e-08,
+    "max_grad_norm": 1.0,
+    "freeze_normalizers_after": null
+  },
+  "policy": {
+    "horizon": 32,
+    "num_imagined": 4096,
+    "gamma": 0.99,
+    "learning_rate": 0.0002,
+    "betas": [
+      0.9,
+      0.95
+    ],
+    "eps": 1e-08,
+    "max_grad_norm": 1.0,
+    "elementwise_clip": 0.1,
+    "encoder_dims": [
+      2048,
+      1024,
+      512,
+      256
+    ],
+    "decoder_dims": [
+      2048,
+      1024,
+      512,
+      256
+    ],
+    "latent_dim": 32,
+    "activation": "elu",
+    "future_frames": 10,
+    "obs_history": 10,
+    "out_init_scale": 0.01
+  },
+  "critic": {
+    "hidden_dims": [
+      256,
+      128
+    ],
+    "activation": "elu",
+    "lam": 0.95,
+    "num_epochs": 5,
+    "num_mini_batches": 4,
+    "learning_rate": 0.0002,
+    "betas": [
+      0.9,
+      0.999
+    ],
+    "eps": 1e-08,
+    "max_grad_norm": 1.0,
+    "t_left_horizon": null
+  },
+  "memory": {
+    "imag_microbatches": 16,
+    "checkpoint_steps": false,
+    "compile": true,
+    "tf32": true
+  },
+  "algorithm": {
+    "class_name": "mjlab_g1.rl.supermimic.algorithm:SuperMimic",
+    "rnd_cfg": null
+  }
+}

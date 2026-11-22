@@ -1,0 +1,924 @@
+Setting seed: 1
+Setting seed: 2
+Setting seed: 3
+[train_track] G1-SMTrack-CarryPlace supermimic N=8192 world=4 iters=4000 seed=0 -> /data4/DATA/wlh/offer/supermimic/logs/smtrack/G1-SMTrack-CarryPlace/supermimic/2026-11-22_17-29-14_sm4g8192_h32_ori12_mb4_s0_20261122
+Setting seed: 0
+Warp 1.14.0 initialized:
+   CUDA Toolkit 12.9, Driver 12.4
+   Devices:
+     "cpu"      : "x86_64"
+     "cuda:0"   : "NVIDIA GeForce RTX 4090" (24 GiB, sm_89, mempool enabled)
+     "cuda:1"   : "NVIDIA GeForce RTX 4090" (24 GiB, sm_89, mempool enabled)
+     "cuda:2"   : "NVIDIA GeForce RTX 4090" (24 GiB, sm_89, mempool enabled)
+     "cuda:3"   : "NVIDIA GeForce RTX 4090" (24 GiB, sm_89, mempool enabled)
+   CUDA peer access:
+     Not supported
+   Kernel cache:
+     /data4/DATA/wlh/offer/tmp/xdg-cache/warp/1.14.0
+Warp 1.14.0 initialized:
+   CUDA Toolkit 12.9, Driver 12.4
+   Devices:
+     "cpu"      : "x86_64"
+     "cuda:0"   : "NVIDIA GeForce RTX 4090" (24 GiB, sm_89, mempool enabled)
+     "cuda:1"   : "NVIDIA GeForce RTX 4090" (24 GiB, sm_89, mempool enabled)
+     "cuda:2"   : "NVIDIA GeForce RTX 4090" (24 GiB, sm_89, mempool enabled)
+     "cuda:3"   : "NVIDIA GeForce RTX 4090" (24 GiB, sm_89, mempool enabled)
+   CUDA peer access:
+     Not supported
+   Kernel cache:
+     /data4/DATA/wlh/offer/tmp/xdg-cache/warp/1.14.0
+Warp 1.14.0 initialized:
+   CUDA Toolkit 12.9, Driver 12.4
+   Devices:
+     "cpu"      : "x86_64"
+     "cuda:0"   : "NVIDIA GeForce RTX 4090" (24 GiB, sm_89, mempool enabled)
+     "cuda:1"   : "NVIDIA GeForce RTX 4090" (24 GiB, sm_89, mempool enabled)
+     "cuda:2"   : "NVIDIA GeForce RTX 4090" (24 GiB, sm_89, mempool enabled)
+     "cuda:3"   : "NVIDIA GeForce RTX 4090" (24 GiB, sm_89, mempool enabled)
+   CUDA peer access:
+     Not supported
+   Kernel cache:
+     /data4/DATA/wlh/offer/tmp/xdg-cache/warp/1.14.0
+Warp 1.14.0 initialized:
+   CUDA Toolkit 12.9, Driver 12.4
+   Devices:
+     "cpu"      : "x86_64"
+     "cuda:0"   : "NVIDIA GeForce RTX 4090" (24 GiB, sm_89, mempool enabled)
+     "cuda:1"   : "NVIDIA GeForce RTX 4090" (24 GiB, sm_89, mempool enabled)
+     "cuda:2"   : "NVIDIA GeForce RTX 4090" (24 GiB, sm_89, mempool enabled)
+     "cuda:3"   : "NVIDIA GeForce RTX 4090" (24 GiB, sm_89, mempool enabled)
+   CUDA peer access:
+     Not supported
+   Kernel cache:
+     /data4/DATA/wlh/offer/tmp/xdg-cache/warp/1.14.0
+Module mujoco_warp._src.smooth cf7a289 load on device 'cuda:0' took 1.03 ms  (cached)
+Module mujoco_warp._src.collision_driver 621a3f9 load on device 'cuda:0' took 0.39 ms  (cached)
+Module _nxn_broadphase__locals__kernel_4ee3649d 4ee3649 load on device 'cuda:0' took 0.43 ms  (cached)
+Module ccd_kernel_builder__locals__ccd_kernel_19b9824b 19b9824 load on device 'cuda:0' took 0.56 ms  (cached)
+Module mujoco_warp._src.smooth cf7a289 load on device 'cuda:1' took 0.97 ms  (cached)
+Module mujoco_warp._src.smooth cf7a289 load on device 'cuda:2' took 0.93 ms  (cached)
+Module mujoco_warp._src.collision_driver 621a3f9 load on device 'cuda:1' took 0.31 ms  (cached)
+Module mujoco_warp._src.collision_driver 621a3f9 load on device 'cuda:2' took 0.32 ms  (cached)
+Module _nxn_broadphase__locals__kernel_4ee3649d 4ee3649 load on device 'cuda:2' took 0.34 ms  (cached)
+Module _nxn_broadphase__locals__kernel_4ee3649d 4ee3649 load on device 'cuda:1' took 0.35 ms  (cached)
+Module mujoco_warp._src.smooth cf7a289 load on device 'cuda:3' took 1.51 ms  (cached)
+Module mujoco_warp._src.collision_driver 621a3f9 load on device 'cuda:3' took 0.43 ms  (cached)
+Module ccd_kernel_builder__locals__ccd_kernel_f544fcd0 f544fcd load on device 'cuda:0' took 0.55 ms  (cached)
+Module _nxn_broadphase__locals__kernel_4ee3649d 4ee3649 load on device 'cuda:3' took 0.36 ms  (cached)
+Module ccd_kernel_builder__locals__ccd_kernel_19b9824b 19b9824 load on device 'cuda:2' took 0.63 ms  (cached)
+Module ccd_kernel_builder__locals__ccd_kernel_19b9824b 19b9824 load on device 'cuda:1' took 0.99 ms  (cached)
+Module ccd_kernel_builder__locals__ccd_kernel_19b9824b 19b9824 load on device 'cuda:3' took 0.67 ms  (cached)
+Module ccd_kernel_builder__locals__ccd_kernel_f544fcd0 f544fcd load on device 'cuda:2' took 0.59 ms  (cached)
+Module ccd_kernel_builder__locals__ccd_kernel_f544fcd0 f544fcd load on device 'cuda:1' took 0.67 ms  (cached)
+Module ccd_kernel_builder__locals__ccd_kernel_f544fcd0 f544fcd load on device 'cuda:3' took 0.58 ms  (cached)
+Module _primitive_narrowphase__locals__primitive_narrowphase_e6e7390c e6e7390 load on device 'cuda:0' took 0.48 ms  (cached)
+Module mujoco_warp._src.constraint e56f243 load on device 'cuda:0' took 0.65 ms  (cached)
+Module _efc_contact_init__locals__kernel_991c9928 991c992 load on device 'cuda:0' took 0.52 ms  (cached)
+Module _efc_contact_jac_sparse__locals__kernel_882c8742 882c874 load on device 'cuda:0' took 0.51 ms  (cached)
+Module _efc_contact_update__locals__kernel_59511347 5951134 load on device 'cuda:0' took 0.47 ms  (cached)
+Module _primitive_narrowphase__locals__primitive_narrowphase_e6e7390c e6e7390 load on device 'cuda:2' took 0.54 ms  (cached)
+Module _primitive_narrowphase__locals__primitive_narrowphase_e6e7390c e6e7390 load on device 'cuda:1' took 0.64 ms  (cached)
+Module mujoco_warp._src.constraint e56f243 load on device 'cuda:2' took 0.65 ms  (cached)
+Module mujoco_warp._src.sensor a993087 load on device 'cuda:0' took 0.77 ms  (cached)
+Module mujoco_warp._src.constraint e56f243 load on device 'cuda:1' took 0.89 ms  (cached)
+Module _primitive_narrowphase__locals__primitive_narrowphase_e6e7390c e6e7390 load on device 'cuda:3' took 0.70 ms  (cached)
+Module mujoco_warp._src.forward f5bfed4 load on device 'cuda:0' took 0.58 ms  (cached)
+Module _efc_contact_init__locals__kernel_991c9928 991c992 load on device 'cuda:2' took 0.42 ms  (cached)
+Module _efc_contact_init__locals__kernel_991c9928 991c992 load on device 'cuda:1' took 0.41 ms  (cached)
+Module mujoco_warp._src.passive cc48b2a load on device 'cuda:0' took 0.40 ms  (cached)
+Module _efc_contact_jac_sparse__locals__kernel_882c8742 882c874 load on device 'cuda:2' took 0.33 ms  (cached)
+Module _efc_contact_jac_sparse__locals__kernel_882c8742 882c874 load on device 'cuda:1' took 0.37 ms  (cached)
+Module mujoco_warp._src.constraint e56f243 load on device 'cuda:3' took 0.75 ms  (cached)
+Module _efc_contact_update__locals__kernel_59511347 5951134 load on device 'cuda:2' took 0.31 ms  (cached)
+Module mujoco_warp._src.forward 46b3f78 load on device 'cuda:0' took 0.48 ms  (cached)
+Module mujoco_warp._src.support d1e71d9 load on device 'cuda:0' took 0.28 ms  (cached)
+Module _efc_contact_update__locals__kernel_59511347 5951134 load on device 'cuda:1' took 0.36 ms  (cached)
+Module _solve_LD_sparse_fused__locals__kernel_b5f54982 4b36a3a load on device 'cuda:0' took 0.31 ms  (cached)
+Module _efc_contact_init__locals__kernel_991c9928 991c992 load on device 'cuda:3' took 0.32 ms  (cached)
+Module mujoco_warp._src.solver d53b47b load on device 'cuda:0' took 0.51 ms  (cached)
+Module _efc_contact_jac_sparse__locals__kernel_882c8742 882c874 load on device 'cuda:3' took 0.32 ms  (cached)
+Module solve_init_jaref__locals__kernel_df47addd df47add load on device 'cuda:0' took 0.30 ms  (cached)
+Module mul_m_sparse__locals___mul_m_sparse_0651ae8b 0651ae8 load on device 'cuda:0' took 0.39 ms  (cached)
+Module _efc_contact_update__locals__kernel_59511347 5951134 load on device 'cuda:3' took 0.40 ms  (cached)
+Module mujoco_warp._src.sensor a993087 load on device 'cuda:2' took 0.73 ms  (cached)
+Module update_constraint_efc__locals__kernel_060c7e30 060c7e3 load on device 'cuda:0' took 0.36 ms  (cached)
+Module update_constraint_gauss_cost__locals__kernel_5bfc650a 5bfc650 load on device 'cuda:0' took 0.31 ms  (cached)
+Module mujoco_warp._src.sensor a993087 load on device 'cuda:1' took 1.01 ms  (cached)
+Module mujoco_warp._src.forward f5bfed4 load on device 'cuda:2' took 0.56 ms  (cached)
+Module mujoco_warp._src.forward f5bfed4 load on device 'cuda:1' took 0.61 ms  (cached)
+Module mujoco_warp._src.passive cc48b2a load on device 'cuda:2' took 0.41 ms  (cached)
+Module mujoco_warp._src.passive cc48b2a load on device 'cuda:1' took 0.52 ms  (cached)
+Module mujoco_warp._src.forward 46b3f78 load on device 'cuda:2' took 0.51 ms  (cached)
+Module mujoco_warp._src.sensor a993087 load on device 'cuda:3' took 0.94 ms  (cached)
+Module mujoco_warp._src.support d1e71d9 load on device 'cuda:2' took 0.31 ms  (cached)
+Module _solve_LD_sparse_fused__locals__kernel_b5f54982 4b36a3a load on device 'cuda:2' took 0.33 ms  (cached)
+Module mujoco_warp._src.forward 46b3f78 load on device 'cuda:1' took 0.65 ms  (cached)
+Module mujoco_warp._src.support d1e71d9 load on device 'cuda:1' took 0.30 ms  (cached)
+Module mujoco_warp._src.forward f5bfed4 load on device 'cuda:3' took 0.57 ms  (cached)
+Module _solve_LD_sparse_fused__locals__kernel_b5f54982 4b36a3a load on device 'cuda:1' took 0.33 ms  (cached)
+Module mujoco_warp._src.solver d53b47b load on device 'cuda:2' took 0.65 ms  (cached)
+Module mujoco_warp._src.passive cc48b2a load on device 'cuda:3' took 0.45 ms  (cached)
+Module solve_init_jaref__locals__kernel_df47addd df47add load on device 'cuda:2' took 0.31 ms  (cached)
+Module mul_m_sparse__locals___mul_m_sparse_0651ae8b 0651ae8 load on device 'cuda:2' took 0.30 ms  (cached)
+Module mujoco_warp._src.solver d53b47b load on device 'cuda:1' took 0.69 ms  (cached)
+Module solve_init_jaref__locals__kernel_df47addd df47add load on device 'cuda:1' took 0.30 ms  (cached)
+Module mul_m_sparse__locals___mul_m_sparse_0651ae8b 0651ae8 load on device 'cuda:1' took 0.30 ms  (cached)
+Module mujoco_warp._src.forward 46b3f78 load on device 'cuda:3' took 0.65 ms  (cached)
+Module mujoco_warp._src.support d1e71d9 load on device 'cuda:3' took 0.31 ms  (cached)
+Module update_constraint_efc__locals__kernel_060c7e30 060c7e3 load on device 'cuda:2' took 0.38 ms  (cached)
+Module update_constraint_gauss_cost__locals__kernel_5bfc650a 5bfc650 load on device 'cuda:2' took 0.36 ms  (cached)
+Module _solve_LD_sparse_fused__locals__kernel_b5f54982 4b36a3a load on device 'cuda:3' took 0.38 ms  (cached)
+Module update_constraint_efc__locals__kernel_060c7e30 060c7e3 load on device 'cuda:1' took 0.42 ms  (cached)
+Module update_constraint_gauss_cost__locals__kernel_5bfc650a 5bfc650 load on device 'cuda:1' took 0.34 ms  (cached)
+Module mujoco_warp._src.solver d53b47b load on device 'cuda:3' took 0.72 ms  (cached)
+Module solve_init_jaref__locals__kernel_df47addd df47add load on device 'cuda:3' took 0.32 ms  (cached)
+Module mul_m_sparse__locals___mul_m_sparse_0651ae8b 0651ae8 load on device 'cuda:3' took 0.30 ms  (cached)
+Module update_constraint_efc__locals__kernel_060c7e30 060c7e3 load on device 'cuda:3' took 0.32 ms  (cached)
+Module update_constraint_gauss_cost__locals__kernel_5bfc650a 5bfc650 load on device 'cuda:3' took 0.30 ms  (cached)
+Module update_gradient_cholesky_blocked__locals__kernel_29a29cf7 7dc67d2 load on device 'cuda:0' took 131.54 ms  (cached)
+Module linesearch_jv_fused__locals__kernel_ee855540 ee85554 load on device 'cuda:0' took 0.42 ms  (cached)
+Module linesearch_prepare_gauss__locals__kernel_294e7814 294e781 load on device 'cuda:0' took 0.32 ms  (cached)
+Module update_constraint_efc__locals__kernel_7a23931f 7a23931 load on device 'cuda:0' took 0.32 ms  (cached)
+Module update_gradient_cholesky_blocked__locals__kernel_29a29cf7 7dc67d2 load on device 'cuda:2' took 131.47 ms  (cached)
+Module update_gradient_cholesky_blocked__locals__kernel_29a29cf7 7dc67d2 load on device 'cuda:1' took 128.69 ms  (cached)
+Module linesearch_jv_fused__locals__kernel_ee855540 ee85554 load on device 'cuda:2' took 0.42 ms  (cached)
+Module linesearch_jv_fused__locals__kernel_ee855540 ee85554 load on device 'cuda:1' took 0.40 ms  (cached)
+Module linesearch_prepare_gauss__locals__kernel_294e7814 294e781 load on device 'cuda:2' took 0.36 ms  (cached)
+Module linesearch_prepare_gauss__locals__kernel_294e7814 294e781 load on device 'cuda:1' took 0.32 ms  (cached)
+Module update_constraint_efc__locals__kernel_7a23931f 7a23931 load on device 'cuda:2' took 0.48 ms  (cached)
+Module update_constraint_efc__locals__kernel_7a23931f 7a23931 load on device 'cuda:1' took 0.36 ms  (cached)
+Module update_gradient_cholesky_blocked__locals__kernel_29a29cf7 7dc67d2 load on device 'cuda:3' took 139.53 ms  (cached)
+Module linesearch_jv_fused__locals__kernel_ee855540 ee85554 load on device 'cuda:3' took 0.57 ms  (cached)
+Module linesearch_prepare_gauss__locals__kernel_294e7814 294e781 load on device 'cuda:3' took 0.40 ms  (cached)
+Module update_constraint_efc__locals__kernel_7a23931f 7a23931 load on device 'cuda:3' took 0.53 ms  (cached)
+Module update_gradient_cholesky_blocked_skip_unchanged__locals__kernel_e8a39c03 0d3c869 load on device 'cuda:0' took 145.62 ms  (cached)
+Module mujoco_warp._src.derivative 212adeb load on device 'cuda:0' took 0.65 ms  (cached)
+Module reset_data__locals__reset_xfrc_applied_03030511 0303051 load on device 'cuda:0' took 0.49 ms  (cached)
+Module reset_data__locals__reset_qM_77e9abb2 77e9abb load on device 'cuda:0' took 0.29 ms  (cached)
+Module reset_data__locals__reset_mocap_6513201c 6513201 load on device 'cuda:0' took 0.26 ms  (cached)
+Module reset_data__locals__reset_contact_ce86818d ce86818 load on device 'cuda:0' took 0.26 ms  (cached)
+Module reset_data__locals__reset_nworld_1743ec1f 1743ec1 load on device 'cuda:0' took 0.29 ms  (cached)
+Module update_gradient_cholesky_blocked_skip_unchanged__locals__kernel_e8a39c03 0d3c869 load on device 'cuda:2' took 143.47 ms  (cached)
+Module mujoco_warp._src.derivative 212adeb load on device 'cuda:2' took 0.54 ms  (cached)
+Module update_gradient_cholesky_blocked_skip_unchanged__locals__kernel_e8a39c03 0d3c869 load on device 'cuda:1' took 177.60 ms  (cached)
+Module update_gradient_cholesky_blocked_skip_unchanged__locals__kernel_e8a39c03 0d3c869 load on device 'cuda:3' took 142.58 ms  (cached)
+Module reset_data__locals__reset_xfrc_applied_03030511 0303051 load on device 'cuda:2' took 0.40 ms  (cached)
+Module reset_data__locals__reset_qM_77e9abb2 77e9abb load on device 'cuda:2' took 0.28 ms  (cached)
+Module reset_data__locals__reset_mocap_6513201c 6513201 load on device 'cuda:2' took 0.26 ms  (cached)
+Module reset_data__locals__reset_contact_ce86818d ce86818 load on device 'cuda:2' took 0.24 ms  (cached)
+Module reset_data__locals__reset_nworld_1743ec1f 1743ec1 load on device 'cuda:2' took 0.25 ms  (cached)
+Module mujoco_warp._src.derivative 212adeb load on device 'cuda:1' took 0.55 ms  (cached)
+Module mujoco_warp._src.derivative 212adeb load on device 'cuda:3' took 0.66 ms  (cached)
+
++---------------------------------+
+|         Base Environment        |
++------------------------+--------+
+| Property               | Value  |
++------------------------+--------+
+| Number of environments | 2048   |
+| Environment device     | cuda:0 |
+| Environment seed       | 0      |
+| Physics step-size      | 0.005  |
+| Environment step-size  | 0.02   |
++------------------------+--------+
+
+[INFO] <EventManager> contains 1 active terms.
++-------------------------------------+
+| Active Event Terms in Mode: 'reset' |
++----------+--------------------------+
+|  Index   | Name                     |
++----------+--------------------------+
+|    0     | base_com                 |
+|    1     | encoder_bias             |
+|    2     | foot_friction            |
+|    3     | box_mass                 |
+|    4     | box_friction             |
++----------+--------------------------+
++-----------------------------+
+| Domain Randomization Fields |
++-------+---------------------+
+| Index | Field Name          |
++-------+---------------------+
+|   0   | body_ipos           |
+|   1   | body_subtreemass    |
+|   2   | dof_invweight0      |
+|   3   | body_invweight0     |
+|   4   | tendon_length0      |
+|   5   | tendon_invweight0   |
+|   6   | geom_friction       |
+|   7   | body_mass           |
+|   8   | body_inertia        |
++-------+---------------------+
+
+Module repeat_array_kernel_4f67a4c3 711f54c load on device 'cuda:0' took 0.43 ms  (cached)
+Module repeat_array_kernel_4f67a4c3 7224d07 load on device 'cuda:0' took 0.33 ms  (cached)
+Module repeat_array_kernel_4f67a4c3 b2885b0 load on device 'cuda:0' took 0.35 ms  (cached)
+Module reset_data__locals__reset_xfrc_applied_03030511 0303051 load on device 'cuda:1' took 0.38 ms  (cached)
+Module reset_data__locals__reset_qM_77e9abb2 77e9abb load on device 'cuda:1' took 0.27 ms  (cached)
+Module reset_data__locals__reset_mocap_6513201c 6513201 load on device 'cuda:1' took 0.26 ms  (cached)
+Module reset_data__locals__reset_contact_ce86818d ce86818 load on device 'cuda:1' took 0.25 ms  (cached)
+Module reset_data__locals__reset_nworld_1743ec1f 1743ec1 load on device 'cuda:1' took 0.25 ms  (cached)
+Module reset_data__locals__reset_xfrc_applied_03030511 0303051 load on device 'cuda:3' took 0.42 ms  (cached)
+Module reset_data__locals__reset_qM_77e9abb2 77e9abb load on device 'cuda:3' took 0.28 ms  (cached)
+Module reset_data__locals__reset_mocap_6513201c 6513201 load on device 'cuda:3' took 0.26 ms  (cached)
+Module reset_data__locals__reset_contact_ce86818d ce86818 load on device 'cuda:3' took 0.26 ms  (cached)
+Module reset_data__locals__reset_nworld_1743ec1f 1743ec1 load on device 'cuda:3' took 0.26 ms  (cached)
+[INFO] <CommandManager> contains 1 active terms.
++----------------------------------+
+|       Active Command Terms       |
++-------+--------+-----------------+
+| Index | Name   |       Type      |
++-------+--------+-----------------+
+|   0   | motion | SMMotionCommand |
++-------+--------+-----------------+
+
+
++---------------------------------+
+|         Base Environment        |
++------------------------+--------+
+| Property               | Value  |
++------------------------+--------+
+| Number of environments | 2048   |
+| Environment device     | cuda:2 |
+| Environment seed       | 2      |
+| Physics step-size      | 0.005  |
+| Environment step-size  | 0.02   |
++------------------------+--------+
+
+[INFO] <ActionManager> contains 1 active terms.
++---------------------------------+
+| Active Action Terms (shape: 29) |
++-------+-----------+-------------+
+| Index | Name      |   Dimension |
++-------+-----------+-------------+
+|   0   | joint_pos |          29 |
++-------+-----------+-------------+
+
+[INFO] <EventManager> contains 1 active terms.
++-------------------------------------+
+| Active Event Terms in Mode: 'reset' |
++----------+--------------------------+
+|  Index   | Name                     |
++----------+--------------------------+
+|    0     | base_com                 |
+|    1     | encoder_bias             |
+|    2     | foot_friction            |
+|    3     | box_mass                 |
+|    4     | box_friction             |
++----------+--------------------------+
++-----------------------------+
+| Domain Randomization Fields |
++-------+---------------------+
+| Index | Field Name          |
++-------+---------------------+
+|   0   | body_ipos           |
+|   1   | body_subtreemass    |
+|   2   | dof_invweight0      |
+|   3   | body_invweight0     |
+|   4   | tendon_length0      |
+|   5   | tendon_invweight0   |
+|   6   | geom_friction       |
+|   7   | body_mass           |
+|   8   | body_inertia        |
++-------+---------------------+
+
+Module repeat_array_kernel_4f67a4c3 711f54c load on device 'cuda:2' took 0.46 ms  (cached)
+Module repeat_array_kernel_4f67a4c3 7224d07 load on device 'cuda:2' took 0.35 ms  (cached)
+Module repeat_array_kernel_4f67a4c3 b2885b0 load on device 'cuda:2' took 0.35 ms  (cached)
+
++---------------------------------+
+|         Base Environment        |
++------------------------+--------+
+| Property               | Value  |
++------------------------+--------+
+| Number of environments | 2048   |
+| Environment device     | cuda:1 |
+| Environment seed       | 1      |
+| Physics step-size      | 0.005  |
+| Environment step-size  | 0.02   |
++------------------------+--------+
+
+[INFO] <EventManager> contains 1 active terms.
++-------------------------------------+
+| Active Event Terms in Mode: 'reset' |
++----------+--------------------------+
+|  Index   | Name                     |
++----------+--------------------------+
+|    0     | base_com                 |
+|    1     | encoder_bias             |
+|    2     | foot_friction            |
+|    3     | box_mass                 |
+|    4     | box_friction             |
++----------+--------------------------+
++-----------------------------+
+| Domain Randomization Fields |
++-------+---------------------+
+| Index | Field Name          |
++-------+---------------------+
+|   0   | body_ipos           |
+|   1   | body_subtreemass    |
+|   2   | dof_invweight0      |
+|   3   | body_invweight0     |
+|   4   | tendon_length0      |
+|   5   | tendon_invweight0   |
+|   6   | geom_friction       |
+|   7   | body_mass           |
+|   8   | body_inertia        |
++-------+---------------------+
+
+Module repeat_array_kernel_4f67a4c3 711f54c load on device 'cuda:1' took 0.46 ms  (cached)
+
+Module repeat_array_kernel_4f67a4c3 7224d07 load on device 'cuda:1' took 0.40 ms  (cached)
++---------------------------------+
+|         Base Environment        |
++------------------------+--------+
+| Property               | Value  |
++------------------------+--------+
+| Number of environments | 2048   |
+| Environment device     | cuda:3 |
+| Environment seed       | 3      |
+| Physics step-size      | 0.005  |
+| Environment step-size  | 0.02   |
++------------------------+--------+
+
+Module repeat_array_kernel_4f67a4c3 b2885b0 load on device 'cuda:1' took 0.34 ms  (cached)
+[INFO] <EventManager> contains 1 active terms.
++-------------------------------------+
+| Active Event Terms in Mode: 'reset' |
++----------+--------------------------+
+|  Index   | Name                     |
++----------+--------------------------+
+|    0     | base_com                 |
+|    1     | encoder_bias             |
+|    2     | foot_friction            |
+|    3     | box_mass                 |
+|    4     | box_friction             |
++----------+--------------------------+
++-----------------------------+
+| Domain Randomization Fields |
++-------+---------------------+
+| Index | Field Name          |
++-------+---------------------+
+|   0   | body_ipos           |
+|   1   | body_subtreemass    |
+|   2   | dof_invweight0      |
+|   3   | body_invweight0     |
+|   4   | tendon_length0      |
+|   5   | tendon_invweight0   |
+|   6   | geom_friction       |
+|   7   | body_mass           |
+|   8   | body_inertia        |
++-------+---------------------+
+
+[INFO] <CommandManager> contains 1 active terms.
++----------------------------------+
+|       Active Command Terms       |
++-------+--------+-----------------+
+| Index | Name   |       Type      |
++-------+--------+-----------------+
+|   0   | motion | SMMotionCommand |
++-------+--------+-----------------+
+
+Module repeat_array_kernel_4f67a4c3 711f54c load on device 'cuda:3' took 0.46 ms  (cached)
+[INFO] <ActionManager> contains 1 active terms.
++---------------------------------+
+| Active Action Terms (shape: 29) |
++-------+-----------+-------------+
+| Index | Name      |   Dimension |
++-------+-----------+-------------+
+|   0   | joint_pos |          29 |
++-------+-----------+-------------+
+
+Module repeat_array_kernel_4f67a4c3 7224d07 load on device 'cuda:3' took 0.35 ms  (cached)
+Module repeat_array_kernel_4f67a4c3 b2885b0 load on device 'cuda:3' took 0.43 ms  (cached)
+[INFO] <CommandManager> contains 1 active terms.
++----------------------------------+
+|       Active Command Terms       |
++-------+--------+-----------------+
+| Index | Name   |       Type      |
++-------+--------+-----------------+
+|   0   | motion | SMMotionCommand |
++-------+--------+-----------------+
+
+[INFO] <ActionManager> contains 1 active terms.
++---------------------------------+
+| Active Action Terms (shape: 29) |
++-------+-----------+-------------+
+| Index | Name      |   Dimension |
++-------+-----------+-------------+
+|   0   | joint_pos |          29 |
++-------+-----------+-------------+
+
+[INFO] <CommandManager> contains 1 active terms.
++----------------------------------+
+|       Active Command Terms       |
++-------+--------+-----------------+
+| Index | Name   |       Type      |
++-------+--------+-----------------+
+|   0   | motion | SMMotionCommand |
++-------+--------+-----------------+
+
+[INFO] <ActionManager> contains 1 active terms.
++---------------------------------+
+| Active Action Terms (shape: 29) |
++-------+-----------+-------------+
+| Index | Name      |   Dimension |
++-------+-----------+-------------+
+|   0   | joint_pos |          29 |
++-------+-----------+-------------+
+
+[INFO] <ObservationManager> contains 3 groups.
++------------------------------------------------------------------+
+| Active Observation Terms in Group: 'actor_hist' (shape: (1020,)) |
++---------+--------------------------+-----------------------------+
+|  Index  | Name                     |            Shape            |
++---------+--------------------------+-----------------------------+
+|    0    | joint_pos                |      (290,)  ← 10×(29,)     |
+|    1    | joint_vel                |      (290,)  ← 10×(29,)     |
+|    2    | base_ang_vel             |       (30,)  ← 10×(3,)      |
+|    3    | projected_gravity        |       (30,)  ← 10×(3,)      |
+|    4    | actions                  |      (290,)  ← 10×(29,)     |
+|    5    | box_pos_b                |       (30,)  ← 10×(3,)      |
+|    6    | box_rot6d_b              |       (60,)  ← 10×(6,)      |
++---------+--------------------------+-----------------------------+
++-----------------------------------------------------------------+
+| Active Observation Terms in Group: 'actor_goal' (shape: (730,)) |
++---------------------+-----------------+-------------------------+
+|        Index        | Name            |          Shape          |
++---------------------+-----------------+-------------------------+
+|          0          | goal            |          (730,)         |
++---------------------+-----------------+-------------------------+
++--------------------------------------------------------------+
+| Active Observation Terms in Group: 'critic' (shape: (1031,)) |
++-----------+------------------------------------+-------------+
+|   Index   | Name                               |    Shape    |
++-----------+------------------------------------+-------------+
+|     0     | command                            |    (58,)    |
+|     1     | motion_anchor_pos_b                |     (3,)    |
+|     2     | motion_anchor_ori_b                |     (6,)    |
+|     3     | body_pos                           |    (42,)    |
+|     4     | body_ori                           |    (84,)    |
+|     5     | base_lin_vel                       |     (3,)    |
+|     6     | base_ang_vel                       |     (3,)    |
+|     7     | joint_pos                          |    (29,)    |
+|     8     | joint_vel                          |    (29,)    |
+|     9     | actions                            |    (29,)    |
+|     10    | goal                               |    (730,)   |
+|     11    | box_state                          |    (15,)    |
++-----------+------------------------------------+-------------+
+
+[INFO] <TerminationManager> contains 6 active terms.
++-------------------------------+
+|    Active Termination Terms   |
++-------+------------+----------+
+| Index | Name       | Time Out |
++-------+------------+----------+
+|   0   | time_out   |   True   |
+|   1   | anchor_pos |  False   |
+|   2   | anchor_ori |  False   |
+|   3   | clip_end   |   True   |
+|   4   | nan        |   True   |
+|   5   | box_pos    |  False   |
++-------+------------+----------+
+
+[INFO] <RewardManager> contains 10 active terms.
++-----------------------------------------+
+|           Active Reward Terms           |
++-------+------------------------+--------+
+| Index | Name                   | Weight |
++-------+------------------------+--------+
+|   0   | motion_global_root_pos |    0.5 |
+|   1   | motion_global_root_ori |    0.5 |
+|   2   | motion_body_pos        |    1.0 |
+|   3   | motion_body_ori        |    1.0 |
+|   4   | motion_body_lin_vel    |    1.0 |
+|   5   | motion_body_ang_vel    |    1.0 |
+|   6   | action_rate_l2         |   -0.1 |
+|   7   | joint_limit            |   -2.0 |
+|   8   | box_pos                |    1.0 |
+|   9   | box_ori                |    0.5 |
++-------+------------------------+--------+
+
+[INFO] <NullCurriculumManager> (inactive)
+[INFO] <NullMetricsManager> (inactive)
+[INFO] <NullRecorderManager> (inactive)
+[INFO] <ObservationManager> contains 3 groups.
++------------------------------------------------------------------+
+| Active Observation Terms in Group: 'actor_hist' (shape: (1020,)) |
++---------+--------------------------+-----------------------------+
+|  Index  | Name                     |            Shape            |
++---------+--------------------------+-----------------------------+
+|    0    | joint_pos                |      (290,)  ← 10×(29,)     |
+|    1    | joint_vel                |      (290,)  ← 10×(29,)     |
+|    2    | base_ang_vel             |       (30,)  ← 10×(3,)      |
+|    3    | projected_gravity        |       (30,)  ← 10×(3,)      |
+|    4    | actions                  |      (290,)  ← 10×(29,)     |
+|    5    | box_pos_b                |       (30,)  ← 10×(3,)      |
+|    6    | box_rot6d_b              |       (60,)  ← 10×(6,)      |
++---------+--------------------------+-----------------------------+
++-----------------------------------------------------------------+
+| Active Observation Terms in Group: 'actor_goal' (shape: (730,)) |
++---------------------+-----------------+-------------------------+
+|        Index        | Name            |          Shape          |
++---------------------+-----------------+-------------------------+
+|          0          | goal            |          (730,)         |
++---------------------+-----------------+-------------------------+
++--------------------------------------------------------------+
+| Active Observation Terms in Group: 'critic' (shape: (1031,)) |
++-----------+------------------------------------+-------------+
+|   Index   | Name                               |    Shape    |
++-----------+------------------------------------+-------------+
+|     0     | command                            |    (58,)    |
+|     1     | motion_anchor_pos_b                |     (3,)    |
+|     2     | motion_anchor_ori_b                |     (6,)    |
+|     3     | body_pos                           |    (42,)    |
+|     4     | body_ori                           |    (84,)    |
+|     5     | base_lin_vel                       |     (3,)    |
+|     6     | base_ang_vel                       |     (3,)    |
+|     7     | joint_pos                          |    (29,)    |
+|     8     | joint_vel                          |    (29,)    |
+|     9     | actions                            |    (29,)    |
+|     10    | goal                               |    (730,)   |
+|     11    | box_state                          |    (15,)    |
++-----------+------------------------------------+-------------+
+
+[INFO] <TerminationManager> contains 6 active terms.
++-------------------------------+
+|    Active Termination Terms   |
++-------+------------+----------+
+| Index | Name       | Time Out |
++-------+------------+----------+
+|   0   | time_out   |   True   |
+|   1   | anchor_pos |  False   |
+|   2   | anchor_ori |  False   |
+|   3   | clip_end   |   True   |
+|   4   | nan        |   True   |
+|   5   | box_pos    |  False   |
++-------+------------+----------+
+
+[INFO] <RewardManager> contains 10 active terms.
++-----------------------------------------+
+|           Active Reward Terms           |
++-------+------------------------+--------+
+| Index | Name                   | Weight |
++-------+------------------------+--------+
+|   0   | motion_global_root_pos |    0.5 |
+|   1   | motion_global_root_ori |    0.5 |
+|   2   | motion_body_pos        |    1.0 |
+|   3   | motion_body_ori        |    1.0 |
+|   4   | motion_body_lin_vel    |    1.0 |
+|   5   | motion_body_ang_vel    |    1.0 |
+|   6   | action_rate_l2         |   -0.1 |
+|   7   | joint_limit            |   -2.0 |
+|   8   | box_pos                |    1.0 |
+|   9   | box_ori                |    0.5 |
++-------+------------------------+--------+
+
+[INFO] <NullCurriculumManager> (inactive)
+[INFO] <NullMetricsManager> (inactive)
+[INFO] <NullRecorderManager> (inactive)
+Module mujoco_warp._src.io 7ed51ae load on device 'cuda:2' took 1.24 ms  (cached)
+Module mujoco_warp._src.io 7ed51ae load on device 'cuda:0' took 1.46 ms  (cached)
+[INFO] <ObservationManager> contains 3 groups.
++------------------------------------------------------------------+
+| Active Observation Terms in Group: 'actor_hist' (shape: (1020,)) |
++---------+--------------------------+-----------------------------+
+|  Index  | Name                     |            Shape            |
++---------+--------------------------+-----------------------------+
+|    0    | joint_pos                |      (290,)  ← 10×(29,)     |
+|    1    | joint_vel                |      (290,)  ← 10×(29,)     |
+|    2    | base_ang_vel             |       (30,)  ← 10×(3,)      |
+|    3    | projected_gravity        |       (30,)  ← 10×(3,)      |
+|    4    | actions                  |      (290,)  ← 10×(29,)     |
+|    5    | box_pos_b                |       (30,)  ← 10×(3,)      |
+|    6    | box_rot6d_b              |       (60,)  ← 10×(6,)      |
++---------+--------------------------+-----------------------------+
++-----------------------------------------------------------------+
+| Active Observation Terms in Group: 'actor_goal' (shape: (730,)) |
++---------------------+-----------------+-------------------------+
+|        Index        | Name            |          Shape          |
++---------------------+-----------------+-------------------------+
+|          0          | goal            |          (730,)         |
++---------------------+-----------------+-------------------------+
++--------------------------------------------------------------+
+| Active Observation Terms in Group: 'critic' (shape: (1031,)) |
++-----------+------------------------------------+-------------+
+|   Index   | Name                               |    Shape    |
++-----------+------------------------------------+-------------+
+|     0     | command                            |    (58,)    |
+|     1     | motion_anchor_pos_b                |     (3,)    |
+|     2     | motion_anchor_ori_b                |     (6,)    |
+|     3     | body_pos                           |    (42,)    |
+|     4     | body_ori                           |    (84,)    |
+|     5     | base_lin_vel                       |     (3,)    |
+|     6     | base_ang_vel                       |     (3,)    |
+|     7     | joint_pos                          |    (29,)    |
+|     8     | joint_vel                          |    (29,)    |
+|     9     | actions                            |    (29,)    |
+|     10    | goal                               |    (730,)   |
+|     11    | box_state                          |    (15,)    |
++-----------+------------------------------------+-------------+
+
+[INFO] <TerminationManager> contains 6 active terms.
++-------------------------------+
+|    Active Termination Terms   |
++-------+------------+----------+
+| Index | Name       | Time Out |
++-------+------------+----------+
+|   0   | time_out   |   True   |
+|   1   | anchor_pos |  False   |
+|   2   | anchor_ori |  False   |
+|   3   | clip_end   |   True   |
+|   4   | nan        |   True   |
+|   5   | box_pos    |  False   |
++-------+------------+----------+
+
+[INFO] <RewardManager> contains 10 active terms.
++-----------------------------------------+
+|           Active Reward Terms           |
++-------+------------------------+--------+
+| Index | Name                   | Weight |
++-------+------------------------+--------+
+|   0   | motion_global_root_pos |    0.5 |
+|   1   | motion_global_root_ori |    0.5 |
+|   2   | motion_body_pos        |    1.0 |
+|   3   | motion_body_ori        |    1.0 |
+|   4   | motion_body_lin_vel    |    1.0 |
+|   5   | motion_body_ang_vel    |    1.0 |
+|   6   | action_rate_l2         |   -0.1 |
+|   7   | joint_limit            |   -2.0 |
+|   8   | box_pos                |    1.0 |
+|   9   | box_ori                |    0.5 |
++-------+------------------------+--------+
+
+[INFO] <NullCurriculumManager> (inactive)
+[INFO] <NullMetricsManager> (inactive)
+[INFO] <NullRecorderManager> (inactive)
+Module mujoco_warp._src.io 7ed51ae load on device 'cuda:1' took 1.21 ms  (cached)
+[INFO] <ObservationManager> contains 3 groups.
++------------------------------------------------------------------+
+| Active Observation Terms in Group: 'actor_hist' (shape: (1020,)) |
++---------+--------------------------+-----------------------------+
+|  Index  | Name                     |            Shape            |
++---------+--------------------------+-----------------------------+
+|    0    | joint_pos                |      (290,)  ← 10×(29,)     |
+|    1    | joint_vel                |      (290,)  ← 10×(29,)     |
+|    2    | base_ang_vel             |       (30,)  ← 10×(3,)      |
+|    3    | projected_gravity        |       (30,)  ← 10×(3,)      |
+|    4    | actions                  |      (290,)  ← 10×(29,)     |
+|    5    | box_pos_b                |       (30,)  ← 10×(3,)      |
+|    6    | box_rot6d_b              |       (60,)  ← 10×(6,)      |
++---------+--------------------------+-----------------------------+
++-----------------------------------------------------------------+
+| Active Observation Terms in Group: 'actor_goal' (shape: (730,)) |
++---------------------+-----------------+-------------------------+
+|        Index        | Name            |          Shape          |
++---------------------+-----------------+-------------------------+
+|          0          | goal            |          (730,)         |
++---------------------+-----------------+-------------------------+
++--------------------------------------------------------------+
+| Active Observation Terms in Group: 'critic' (shape: (1031,)) |
++-----------+------------------------------------+-------------+
+|   Index   | Name                               |    Shape    |
++-----------+------------------------------------+-------------+
+|     0     | command                            |    (58,)    |
+|     1     | motion_anchor_pos_b                |     (3,)    |
+|     2     | motion_anchor_ori_b                |     (6,)    |
+|     3     | body_pos                           |    (42,)    |
+|     4     | body_ori                           |    (84,)    |
+|     5     | base_lin_vel                       |     (3,)    |
+|     6     | base_ang_vel                       |     (3,)    |
+|     7     | joint_pos                          |    (29,)    |
+|     8     | joint_vel                          |    (29,)    |
+|     9     | actions                            |    (29,)    |
+|     10    | goal                               |    (730,)   |
+|     11    | box_state                          |    (15,)    |
++-----------+------------------------------------+-------------+
+
+[INFO] <TerminationManager> contains 6 active terms.
++-------------------------------+
+|    Active Termination Terms   |
++-------+------------+----------+
+| Index | Name       | Time Out |
++-------+------------+----------+
+|   0   | time_out   |   True   |
+|   1   | anchor_pos |  False   |
+|   2   | anchor_ori |  False   |
+|   3   | clip_end   |   True   |
+|   4   | nan        |   True   |
+|   5   | box_pos    |  False   |
++-------+------------+----------+
+
+[INFO] <RewardManager> contains 10 active terms.
++-----------------------------------------+
+|           Active Reward Terms           |
++-------+------------------------+--------+
+| Index | Name                   | Weight |
++-------+------------------------+--------+
+|   0   | motion_global_root_pos |    0.5 |
+|   1   | motion_global_root_ori |    0.5 |
+|   2   | motion_body_pos        |    1.0 |
+|   3   | motion_body_ori        |    1.0 |
+|   4   | motion_body_lin_vel    |    1.0 |
+|   5   | motion_body_ang_vel    |    1.0 |
+|   6   | action_rate_l2         |   -0.1 |
+|   7   | joint_limit            |   -2.0 |
+|   8   | box_pos                |    1.0 |
+|   9   | box_ori                |    0.5 |
++-------+------------------------+--------+
+
+[INFO] <NullCurriculumManager> (inactive)
+[INFO] <NullMetricsManager> (inactive)
+[INFO] <NullRecorderManager> (inactive)
+Module mujoco_warp._src.io 7ed51ae load on device 'cuda:3' took 1.07 ms  (cached)
+[SuperMimic] startup parity: parity/transitions=6.55e+04, parity/r_maxabs=6e-07, parity/term_events=1.87e+03, parity/term_pred_events=1.87e+03, parity/term_mismatch=0, parity/trunc_events=161, parity/trunc_mismatch=0, parity/r_motion_global_root_pos_maxabs=2.32e-07, parity/r_motion_global_root_ori_maxabs=9.78e-09, parity/r_motion_body_pos_maxabs=4.63e-07, parity/r_motion_body_ori_maxabs=1.12e-08, parity/r_motion_body_lin_vel_maxabs=3.81e-07, parity/r_motion_body_ang_vel_maxabs=9.31e-09, parity/r_action_rate_l2_maxabs=4.66e-10, parity/r_joint_limit_maxabs=4.66e-10, parity/r_box_pos_maxabs=1.86e-09, parity/r_box_ori_maxabs=4.42e-09, parity/obs_excess_max=4.47e-08[SuperMimic] startup parity: parity/transitions=6.55e+04, parity/r_maxabs=5.7e-07, parity/term_events=1.95e+03, parity/term_pred_events=1.95e+03, parity/term_mismatch=0, parity/trunc_events=144, parity/trunc_mismatch=0, parity/r_motion_global_root_pos_maxabs=2.24e-07, parity/r_motion_global_root_ori_maxabs=9.31e-09, parity/r_motion_body_pos_maxabs=5.03e-07, parity/r_motion_body_ori_maxabs=9.31e-09, parity/r_motion_body_lin_vel_maxabs=4.39e-07, parity/r_motion_body_ang_vel_maxabs=7.45e-09, parity/r_action_rate_l2_maxabs=4.66e-10, parity/r_joint_limit_maxabs=4.66e-10, parity/r_box_pos_maxabs=1.86e-09, parity/r_box_ori_maxabs=3.73e-09, parity/obs_excess_max=1.12e-08
+
+[SuperMimic] startup parity: parity/transitions=6.55e+04, parity/r_maxabs=6.26e-07, parity/term_events=1.86e+03, parity/term_pred_events=1.86e+03, parity/term_mismatch=0, parity/trunc_events=173, parity/trunc_mismatch=0, parity/r_motion_global_root_pos_maxabs=2.47e-07, parity/r_motion_global_root_ori_maxabs=1.02e-08, parity/r_motion_body_pos_maxabs=4.3e-07, parity/r_motion_body_ori_maxabs=9.31e-09, parity/r_motion_body_lin_vel_maxabs=4.7e-07, parity/r_motion_body_ang_vel_maxabs=7.45e-09, parity/r_action_rate_l2_maxabs=4.66e-10, parity/r_joint_limit_maxabs=4.66e-10, parity/r_box_pos_maxabs=1.86e-09, parity/r_box_ori_maxabs=4.19e-09, parity/obs_excess_max=1.12e-08
+[SuperMimic] startup parity: parity/transitions=6.55e+04, parity/r_maxabs=6.63e-07, parity/term_events=1.9e+03, parity/term_pred_events=1.9e+03, parity/term_mismatch=0, parity/trunc_events=152, parity/trunc_mismatch=0, parity/r_motion_global_root_pos_maxabs=2.61e-07, parity/r_motion_global_root_ori_maxabs=1.02e-08, parity/r_motion_body_pos_maxabs=4.83e-07, parity/r_motion_body_ori_maxabs=9.31e-09, parity/r_motion_body_lin_vel_maxabs=3.98e-07, parity/r_motion_body_ang_vel_maxabs=7.45e-09, parity/r_action_rate_l2_maxabs=4.66e-10, parity/r_joint_limit_maxabs=4.66e-10, parity/r_box_pos_maxabs=1.86e-09, parity/r_box_ori_maxabs=3.73e-09, parity/obs_excess_max=1.12e-08
+[rank0]:W1122 17:31:25.845000 506056 site-packages/torch/_dynamo/convert_frame.py:906] [11/8] torch._dynamo hit config.cache_size_limit (8)
+[rank0]:W1122 17:31:25.845000 506056 site-packages/torch/_dynamo/convert_frame.py:906] [11/8]    function: 'quat_apply_inverse' (/data4/DATA/wlh/offer/supermimic/src/mjlab_g1/rl/supermimic/geometry.py:66)
+[rank0]:W1122 17:31:25.845000 506056 site-packages/torch/_dynamo/convert_frame.py:906] [11/8]    last reason: 11/1: tensor 'L['q']' requires_grad mismatch. expected requires_grad=0
+[rank0]:W1122 17:31:25.845000 506056 site-packages/torch/_dynamo/convert_frame.py:906] [11/8] To log all recompilation reasons, use TORCH_LOGS="recompiles".
+[rank0]:W1122 17:31:25.845000 506056 site-packages/torch/_dynamo/convert_frame.py:906] [11/8] To diagnose recompilation issues, see https://pytorch.org/docs/main/torch.compiler_troubleshooting.html.
+[rank1]:W1122 17:31:54.562000 506057 site-packages/torch/_dynamo/convert_frame.py:906] [11/8] torch._dynamo hit config.cache_size_limit (8)
+[rank1]:W1122 17:31:54.562000 506057 site-packages/torch/_dynamo/convert_frame.py:906] [11/8]    function: 'quat_apply_inverse' (/data4/DATA/wlh/offer/supermimic/src/mjlab_g1/rl/supermimic/geometry.py:66)
+[rank1]:W1122 17:31:54.562000 506057 site-packages/torch/_dynamo/convert_frame.py:906] [11/8]    last reason: 11/1: tensor 'L['q']' requires_grad mismatch. expected requires_grad=0
+[rank1]:W1122 17:31:54.562000 506057 site-packages/torch/_dynamo/convert_frame.py:906] [11/8] To log all recompilation reasons, use TORCH_LOGS="recompiles".
+[rank1]:W1122 17:31:54.562000 506057 site-packages/torch/_dynamo/convert_frame.py:906] [11/8] To diagnose recompilation issues, see https://pytorch.org/docs/main/torch.compiler_troubleshooting.html.
+[rank3]:W1122 17:31:54.573000 506059 site-packages/torch/_dynamo/convert_frame.py:906] [11/8] torch._dynamo hit config.cache_size_limit (8)
+[rank3]:W1122 17:31:54.573000 506059 site-packages/torch/_dynamo/convert_frame.py:906] [11/8]    function: 'quat_apply_inverse' (/data4/DATA/wlh/offer/supermimic/src/mjlab_g1/rl/supermimic/geometry.py:66)
+[rank3]:W1122 17:31:54.573000 506059 site-packages/torch/_dynamo/convert_frame.py:906] [11/8]    last reason: 11/1: tensor 'L['q']' requires_grad mismatch. expected requires_grad=0
+[rank3]:W1122 17:31:54.573000 506059 site-packages/torch/_dynamo/convert_frame.py:906] [11/8] To log all recompilation reasons, use TORCH_LOGS="recompiles".
+[rank3]:W1122 17:31:54.573000 506059 site-packages/torch/_dynamo/convert_frame.py:906] [11/8] To diagnose recompilation issues, see https://pytorch.org/docs/main/torch.compiler_troubleshooting.html.
+[rank2]:W1122 17:31:54.578000 506058 site-packages/torch/_dynamo/convert_frame.py:906] [11/8] torch._dynamo hit config.cache_size_limit (8)
+[rank2]:W1122 17:31:54.578000 506058 site-packages/torch/_dynamo/convert_frame.py:906] [11/8]    function: 'quat_apply_inverse' (/data4/DATA/wlh/offer/supermimic/src/mjlab_g1/rl/supermimic/geometry.py:66)
+[rank2]:W1122 17:31:54.578000 506058 site-packages/torch/_dynamo/convert_frame.py:906] [11/8]    last reason: 11/1: tensor 'L['q']' requires_grad mismatch. expected requires_grad=0
+[rank2]:W1122 17:31:54.578000 506058 site-packages/torch/_dynamo/convert_frame.py:906] [11/8] To log all recompilation reasons, use TORCH_LOGS="recompiles".
+[rank2]:W1122 17:31:54.578000 506058 site-packages/torch/_dynamo/convert_frame.py:906] [11/8] To diagnose recompilation issues, see https://pytorch.org/docs/main/torch.compiler_troubleshooting.html.
+[SuperMimic] it 50 | env_steps 321536 | r/step 0.0708 | norm_ret 0.106 | ep_len 21.8 | wm 5.6912 | J 0.9529 | V 0.01614 | 621s
+[SuperMimic] it 100 | env_steps 577536 | r/step 0.0712 | norm_ret 0.120 | ep_len 25.8 | wm 3.8134 | J 1.0305 | V 0.00811 | 922s
+[SuperMimic] it 150 | env_steps 833536 | r/step 0.0721 | norm_ret 0.136 | ep_len 29.4 | wm 3.7433 | J 1.1410 | V 0.00883 | 1221s
+[SuperMimic] it 200 | env_steps 1089536 | r/step 0.0738 | norm_ret 0.151 | ep_len 33.2 | wm 3.6514 | J 1.3120 | V 0.01588 | 1519s
+[SuperMimic] it 250 | env_steps 1345536 | r/step 0.0729 | norm_ret 0.175 | ep_len 38.3 | wm 3.5954 | J 1.5171 | V 0.03522 | 1824s
+[SuperMimic] it 300 | env_steps 1601536 | r/step 0.0725 | norm_ret 0.192 | ep_len 44.3 | wm 3.4814 | J 1.8466 | V 0.05718 | 2156s
+[SuperMimic] it 350 | env_steps 1857536 | r/step 0.0755 | norm_ret 0.204 | ep_len 50.8 | wm 3.3442 | J 2.1005 | V 0.06529 | 2475s
+[SuperMimic] it 400 | env_steps 2113536 | r/step 0.0763 | norm_ret 0.220 | ep_len 56.4 | wm 3.1664 | J 2.3913 | V 0.08307 | 2794s
+[SuperMimic] it 450 | env_steps 2369536 | r/step 0.0749 | norm_ret 0.248 | ep_len 65.9 | wm 3.1312 | J 2.8213 | V 0.12160 | 3124s
+[SuperMimic] it 500 | env_steps 2625536 | r/step 0.0758 | norm_ret 0.282 | ep_len 75.6 | wm 3.0738 | J 3.2795 | V 0.15982 | 3454s
+[SuperMimic] it 550 | env_steps 2881536 | r/step 0.0755 | norm_ret 0.313 | ep_len 84.8 | wm 2.9669 | J 3.8476 | V 0.19430 | 3788s
+[SuperMimic] it 600 | env_steps 3137536 | r/step 0.0751 | norm_ret 0.342 | ep_len 97.9 | wm 2.9226 | J 4.2562 | V 0.19053 | 4113s
+[SuperMimic] it 650 | env_steps 3393536 | r/step 0.0783 | norm_ret 0.412 | ep_len 117.1 | wm 2.7878 | J 4.7862 | V 0.19332 | 4447s
+[SuperMimic] it 700 | env_steps 3649536 | r/step 0.0828 | norm_ret 0.477 | ep_len 159.4 | wm 2.5817 | J 5.2977 | V 0.17650 | 4765s
+[SuperMimic] it 750 | env_steps 3905536 | r/step 0.0842 | norm_ret 0.516 | ep_len 186.1 | wm 2.3842 | J 5.6326 | V 0.16318 | 5065s
+[SuperMimic] it 800 | env_steps 4161536 | r/step 0.0886 | norm_ret 0.532 | ep_len 184.4 | wm 2.2971 | J 5.9179 | V 0.13896 | 5367s
+[SuperMimic] it 850 | env_steps 4417536 | r/step 0.0911 | norm_ret 0.554 | ep_len 184.8 | wm 2.1267 | J 6.2163 | V 0.12112 | 5663s
+[SuperMimic] it 900 | env_steps 4673536 | r/step 0.0945 | norm_ret 0.575 | ep_len 184.0 | wm 1.9669 | J 6.4485 | V 0.09927 | 5962s
+[SuperMimic] it 950 | env_steps 4929536 | r/step 0.0964 | norm_ret 0.594 | ep_len 194.3 | wm 1.8030 | J 6.6297 | V 0.08046 | 6256s
+[SuperMimic] it 1000 | env_steps 5185536 | r/step 0.0981 | norm_ret 0.598 | ep_len 184.3 | wm 1.5562 | J 6.7280 | V 0.05935 | 6558s
+[SuperMimic] it 1050 | env_steps 5441536 | r/step 0.1000 | norm_ret 0.617 | ep_len 181.6 | wm 1.4141 | J 6.8345 | V 0.05920 | 6872s
+[SuperMimic] it 1100 | env_steps 5697536 | r/step 0.1012 | norm_ret 0.623 | ep_len 187.6 | wm 1.3183 | J 6.8793 | V 0.05579 | 7193s
+[SuperMimic] it 1150 | env_steps 5953536 | r/step 0.1012 | norm_ret 0.612 | ep_len 184.1 | wm 1.2520 | J 6.9828 | V 0.04973 | 7509s
+[SuperMimic] it 1200 | env_steps 6209536 | r/step 0.1038 | norm_ret 0.677 | ep_len 205.0 | wm 1.1668 | J 7.1442 | V 0.04348 | 7804s
+[SuperMimic] it 1250 | env_steps 6465536 | r/step 0.1040 | norm_ret 0.664 | ep_len 202.1 | wm 1.0959 | J 7.2191 | V 0.04259 | 8104s
+[SuperMimic] it 1300 | env_steps 6721536 | r/step 0.1045 | norm_ret 0.652 | ep_len 198.2 | wm 1.0303 | J 7.2229 | V 0.03813 | 8417s
+[SuperMimic] it 1350 | env_steps 6977536 | r/step 0.1046 | norm_ret 0.659 | ep_len 194.1 | wm 1.0153 | J 7.3311 | V 0.04158 | 8724s
+[SuperMimic] it 1400 | env_steps 7233536 | r/step 0.1059 | norm_ret 0.619 | ep_len 184.6 | wm 0.9740 | J 7.3595 | V 0.03740 | 9033s
+[SuperMimic] it 1450 | env_steps 7489536 | r/step 0.1049 | norm_ret 0.669 | ep_len 195.5 | wm 0.9440 | J 7.3523 | V 0.03754 | 9345s
+[SuperMimic] it 1500 | env_steps 7745536 | r/step 0.1062 | norm_ret 0.665 | ep_len 193.4 | wm 0.9353 | J 7.4239 | V 0.03770 | 9657s
+W1122 20:14:32.284000 504749 site-packages/torch/distributed/elastic/agent/server/api.py:719] Received Signals.SIGINT death signal, shutting down workers
+W1122 20:14:32.311000 504749 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 506056 closing signal SIGINT
+W1122 20:14:32.311000 504749 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 506057 closing signal SIGINT
+W1122 20:14:32.311000 504749 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 506058 closing signal SIGINT
+W1122 20:14:32.311000 504749 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 506059 closing signal SIGINT
+[rank2]: Traceback (most recent call last):
+[rank2]:   File "/data4/DATA/wlh/offer/supermimic/src/mjlab_g1/scripts/train_track.py", line 297, in <module>
+[rank2]:     main()
+[rank2]:   File "/data4/DATA/wlh/offer/supermimic/src/mjlab_g1/scripts/train_track.py", line 266, in main
+[rank2]:     runner.learn(num_learning_iterations=remaining, init_at_random_ep_len=False)
+[rank2]:   File "/data4/DATA/wlh/offer/supermimic/src/mjlab_g1/rl/supermimic/runner.py", line 102, in learn
+[rank2]:     rollout, m_actor = self.alg.actor_update()
+[rank2]:   File "/data4/DATA/wlh/offer/supermimic/src/mjlab_g1/rl/supermimic/algorithm.py", line 257, in actor_update
+[rank2]:     ro = self._imagine(
+[rank2]:   File "/data4/DATA/wlh/offer/supermimic/src/mjlab_g1/rl/supermimic/imagination.py", line 340, in imagine
+[rank2]:     g, a, s1, kin1_fields, phi1, r, terms, d, hist = step(
+[rank2]:   File "/data/wlh/miniconda3/envs/wan/lib/python3.10/site-packages/torch/_dynamo/eval_frame.py", line 574, in _fn
+[rank2]:     return fn(*args, **kwargs)
+[rank2]:   File "/data4/DATA/wlh/offer/supermimic/src/mjlab_g1/rl/supermimic/imagination.py", line 262, in _imagine_step
+[rank2]:     g = fns.goal(s, kin, lib, k, ref_offset)
+[rank2]:   File "/data4/DATA/wlh/offer/supermimic/src/mjlab_g1/rl/supermimic/imagination.py", line 266, in torch_dynamo_resume_in__imagine_step_at_262
+[rank2]:     phi1 = fns.wm_features(s1, kin1)
+[rank2]:   File "/data4/DATA/wlh/offer/supermimic/src/mjlab_g1/rl/supermimic/imagination.py", line 69, in <lambda>
+[rank2]:     wm_features=lambda s, kin: F.wm_features(s, kin, has_box),
+[rank2]:   File "/data4/DATA/wlh/offer/supermimic/src/mjlab_g1/rl/supermimic/features.py", line 268, in wm_features
+[rank2]:     q = quat_normalize(st.root_quat)
+[rank2]:   File "/data4/DATA/wlh/offer/supermimic/src/mjlab_g1/rl/supermimic/features.py", line 275, in torch_dynamo_resume_in_wm_features_at_268
+[rank2]:     rel_pos = quat_apply_inverse(yaw_b, _rows(kin.pos, tracked) - root.unsqueeze(-2))
+[rank2]:   File "/data4/DATA/wlh/offer/supermimic/src/mjlab_g1/rl/supermimic/features.py", line 282, in torch_dynamo_resume_in_wm_features_at_275
+[rank2]:     quat_apply_inverse(yaw, st.root_lin_vel),
+[rank2]:   File "/data4/DATA/wlh/offer/supermimic/src/mjlab_g1/rl/supermimic/features.py", line 283, in torch_dynamo_resume_in_wm_features_at_282
+[rank2]:     quat_apply_inverse(q, st.root_ang_vel),
+[rank2]:   File "/data4/DATA/wlh/offer/supermimic/src/mjlab_g1/rl/supermimic/features.py", line 289, in torch_dynamo_resume_in_wm_features_at_283
+[rank2]:     _rows(kin.pos, feet)[..., 2],
+[rank2]:   File "/data4/DATA/wlh/offer/supermimic/src/mjlab_g1/rl/supermimic/features.py", line 242, in _rows
+[rank2]:     def _rows(x: torch.Tensor, ids: tuple[int, ...]) -> torch.Tensor:
+[rank2]:   File "/data/wlh/miniconda3/envs/wan/lib/python3.10/site-packages/torch/_dynamo/eval_frame.py", line 745, in _fn
+[rank2]:     return fn(*args, **kwargs)
+[rank2]:   File "/data/wlh/miniconda3/envs/wan/lib/python3.10/site-packages/torch/_functorch/aot_autograd.py", line 1184, in forward
+[rank2]:     return compiled_fn(full_args)
+[rank2]:   File "/data/wlh/miniconda3/envs/wan/lib/python3.10/site-packages/torch/_functorch/_aot_autograd/runtime_wrappers.py", line 310, in runtime_wrapper
+[rank2]:     all_outs = call_func_at_runtime_with_args(
+[rank2]:   File "/data/wlh/miniconda3/envs/wan/lib/python3.10/site-packages/torch/_functorch/_aot_autograd/utils.py", line 126, in call_func_at_runtime_with_args
+[rank2]:     out = normalize_as_list(f(args))
+[rank2]:   File "/data/wlh/miniconda3/envs/wan/lib/python3.10/site-packages/torch/_functorch/_aot_autograd/utils.py", line 100, in g
+[rank2]:     return f(*args)
+[rank2]:   File "/data/wlh/miniconda3/envs/wan/lib/python3.10/site-packages/torch/autograd/function.py", line 575, in apply
+[rank2]:     return super().apply(*args, **kwargs)  # type: ignore[misc]
+[rank2]:   File "/data/wlh/miniconda3/envs/wan/lib/python3.10/site-packages/torch/_functorch/_aot_autograd/runtime_wrappers.py", line 1585, in forward
+[rank2]:     fw_outs = call_func_at_runtime_with_args(
+[rank2]:   File "/data/wlh/miniconda3/envs/wan/lib/python3.10/site-packages/torch/_functorch/_aot_autograd/utils.py", line 120, in call_func_at_runtime_with_args
+[rank2]:     args = list(args)
+[rank2]: KeyboardInterrupt
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/data4/DATA/wlh/offer/supermimic/src/mjlab_g1/scripts/train_track.py", line 297, in <module>
+[rank0]:     main()
+[rank0]:   File "/data4/DATA/wlh/offer/supermimic/src/mjlab_g1/scripts/train_track.py", line 266, in main
+[rank0]:     runner.learn(num_learning_iterations=remaining, init_at_random_ep_len=False)
+[rank0]:   File "/data4/DATA/wlh/offer/supermimic/src/mjlab_g1/rl/supermimic/runner.py", line 102, in learn
+[rank0]:     rollout, m_actor = self.alg.actor_update()
+[rank0]:   File "/data4/DATA/wlh/offer/supermimic/src/mjlab_g1/rl/supermimic/algorithm.py", line 257, in actor_update
+[rank0]:     ro = self._imagine(
+[rank0]:   File "/data4/DATA/wlh/offer/supermimic/src/mjlab_g1/rl/supermimic/imagination.py", line 340, in imagine
+[rank0]:     g, a, s1, kin1_fields, phi1, r, terms, d, hist = step(
+[rank0]:   File "/data/wlh/miniconda3/envs/wan/lib/python3.10/site-packages/torch/_dynamo/eval_frame.py", line 574, in _fn
+[rank0]:     return fn(*args, **kwargs)
+[rank0]:   File "/data4/DATA/wlh/offer/supermimic/src/mjlab_g1/rl/supermimic/imagination.py", line 262, in _imagine_step
+[rank0]:     g = fns.goal(s, kin, lib, k, ref_offset)
+[rank0]:   File "/data4/DATA/wlh/offer/supermimic/src/mjlab_g1/rl/supermimic/imagination.py", line 262, in torch_dynamo_resume_in__imagine_step_at_262
+[rank0]:     g = fns.goal(s, kin, lib, k, ref_offset)
+[rank0]:   File "/data/wlh/miniconda3/envs/wan/lib/python3.10/site-packages/torch/_dynamo/eval_frame.py", line 745, in _fn
+[rank0]:     return fn(*args, **kwargs)
+[rank0]:   File "/data/wlh/miniconda3/envs/wan/lib/python3.10/site-packages/torch/_functorch/aot_autograd.py", line 1184, in forward
+[rank0]:     return compiled_fn(full_args)
+[rank0]:   File "/data/wlh/miniconda3/envs/wan/lib/python3.10/site-packages/torch/_functorch/_aot_autograd/runtime_wrappers.py", line 310, in runtime_wrapper
+[rank0]:     all_outs = call_func_at_runtime_with_args(
+[rank0]:   File "/data/wlh/miniconda3/envs/wan/lib/python3.10/site-packages/torch/_functorch/_aot_autograd/utils.py", line 126, in call_func_at_runtime_with_args
+[rank0]:     out = normalize_as_list(f(args))
+[rank0]:   File "/data/wlh/miniconda3/envs/wan/lib/python3.10/site-packages/torch/_functorch/_aot_autograd/utils.py", line 100, in g
+[rank0]:     return f(*args)
+[rank0]:   File "/data/wlh/miniconda3/envs/wan/lib/python3.10/site-packages/torch/autograd/function.py", line 575, in apply
+[rank0]:     return super().apply(*args, **kwargs)  # type: ignore[misc]
+[rank0]:   File "/data/wlh/miniconda3/envs/wan/lib/python3.10/site-packages/torch/_functorch/_aot_autograd/runtime_wrappers.py", line 1585, in forward
+[rank0]:     fw_outs = call_func_at_runtime_with_args(
+[rank0]:   File "/data/wlh/miniconda3/envs/wan/lib/python3.10/site-packages/torch/_functorch/_aot_autograd/utils.py", line 126, in call_func_at_runtime_with_args
+[rank0]:     out = normalize_as_list(f(args))
+[rank0]:   File "/data/wlh/miniconda3/envs/wan/lib/python3.10/site-packages/torch/_functorch/_aot_autograd/runtime_wrappers.py", line 490, in wrapper
+[rank0]:     return compiled_fn(runtime_args)
+[rank0]:   File "/data/wlh/miniconda3/envs/wan/lib/python3.10/site-packages/torch/_functorch/_aot_autograd/runtime_wrappers.py", line 672, in inner_fn
+[rank0]:     outs = compiled_fn(args)
+[rank0]:   File "/data/wlh/miniconda3/envs/wan/lib/python3.10/site-packages/torch/_inductor/output_code.py", line 466, in __call__
+[rank0]:     return self.current_callable(inputs)
+[rank0]:   File "/data/wlh/miniconda3/envs/wan/lib/python3.10/site-packages/torch/_inductor/utils.py", line 2128, in run
+[rank0]:     return model(new_inputs)
+[rank0]:   File "/data4/DATA/wlh/offer/tmp/torchinductor/3n/c3ncfothwznslllqrjzlajm6w2rjihs5eusmbr2znhlqfbxwer5t.py", line 8423, in call
+[rank0]:     buf247 = reinterpret_tensor(buf305, (256, 2, 3), (90, 3, 1), 72)  # alias
+[rank0]: KeyboardInterrupt
+[rank1]: Traceback (most recent call last):
+[rank1]:   File "/data4/DATA/wlh/offer/supermimic/src/mjlab_g1/scripts/train_track.py", line 297, in <module>
+[rank1]:     main()
+[rank1]:   File "/data4/DATA/wlh/offer/supermimic/src/mjlab_g1/scripts/train_track.py", line 266, in main
+[rank1]:     runner.learn(num_learning_iterations=remaining, init_at_random_ep_len=False)
+[rank1]:   File "/data4/DATA/wlh/offer/supermimic/src/mjlab_g1/rl/supermimic/runner.py", line 102, in learn
+[rank1]:     rollout, m_actor = self.alg.actor_update()
+[rank1]:   File "/data4/DATA/wlh/offer/supermimic/src/mjlab_g1/rl/supermimic/algorithm.py", line 262, in actor_update
+[rank1]:     loss.backward()
+[rank1]:   File "/data/wlh/miniconda3/envs/wan/lib/python3.10/site-packages/torch/_tensor.py", line 626, in backward
+[rank1]:     torch.autograd.backward(
+[rank1]:   File "/data/wlh/miniconda3/envs/wan/lib/python3.10/site-packages/torch/autograd/__init__.py", line 347, in backward
+[rank1]:     _engine_run_backward(
+[rank1]:   File "/data/wlh/miniconda3/envs/wan/lib/python3.10/site-packages/torch/autograd/graph.py", line 823, in _engine_run_backward
+[rank1]:     return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+[rank1]: KeyboardInterrupt
+[rank0]:[W1122 20:14:36.828295505 ProcessGroupNCCL.cpp:1496] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
+W1122 20:15:02.312000 504749 site-packages/torch/distributed/elastic/multiprocessing/api.py:916] Unable to shutdown process 506059 via Signals.SIGINT, forcefully exiting via Signals.SIGKILL
+Traceback (most recent call last):
+  File "/data/wlh/miniconda3/envs/wan/bin/torchrun", line 7, in <module>
+    sys.exit(main())
+  File "/data/wlh/miniconda3/envs/wan/lib/python3.10/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+    return f(*args, **kwargs)
+  File "/data/wlh/miniconda3/envs/wan/lib/python3.10/site-packages/torch/distributed/run.py", line 918, in main
+    run(args)
+  File "/data/wlh/miniconda3/envs/wan/lib/python3.10/site-packages/torch/distributed/run.py", line 909, in run
+    elastic_launch(
+  File "/data/wlh/miniconda3/envs/wan/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 138, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/data/wlh/miniconda3/envs/wan/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 260, in launch_agent
+    result = agent.run()
+  File "/data/wlh/miniconda3/envs/wan/lib/python3.10/site-packages/torch/distributed/elastic/metrics/api.py", line 137, in wrapper
+    result = f(*args, **kwargs)
+  File "/data/wlh/miniconda3/envs/wan/lib/python3.10/site-packages/torch/distributed/elastic/agent/server/api.py", line 711, in run
+    result = self._invoke_run(role)
+  File "/data/wlh/miniconda3/envs/wan/lib/python3.10/site-packages/torch/distributed/elastic/agent/server/api.py", line 870, in _invoke_run
+    time.sleep(monitor_interval)
+  File "/data/wlh/miniconda3/envs/wan/lib/python3.10/site-packages/torch/distributed/elastic/multiprocessing/api.py", line 84, in _terminate_process_handler
+    raise SignalException(f"Process {os.getpid()} got signal: {sigval}", sigval=sigval)
+torch.distributed.elastic.multiprocessing.api.SignalException: Process 504749 got signal: 2

@@ -1,0 +1,43 @@
+{
+  "pid": 504743,
+  "start_utc": "2026-11-22T09:28:46.845298+00:00",
+  "name": "sm4g8192_h32_ori12_mb4_s0_20261122",
+  "gpu_list": [
+    1,
+    4,
+    5,
+    7
+  ],
+  "global_num_envs": 8192,
+  "envs_per_gpu": 2048,
+  "seed": 0,
+  "from_scratch": true,
+  "max_iterations": 4000,
+  "save_interval": 500,
+  "horizon": 32,
+  "box_ori_std": 1.2,
+  "global_num_imagined": 4096,
+  "imag_microbatches_per_rank": 4,
+  "imagined_per_microbatch_per_rank": 256,
+  "lr_cosine_iters": 250000,
+  "master_addr": "127.0.0.1",
+  "master_port": 29641,
+  "command": [
+    "bash",
+    "scripts/run_carry_experiment.sh",
+    "supermimic",
+    "1,4,5,7",
+    "8192",
+    "4000",
+    "sm4g8192_h32_ori12_mb4_s0_20261122",
+    "--imag-microbatches",
+    "4",
+    "--lr-cosine-iters",
+    "250000",
+    "--imagination-horizon",
+    "32",
+    "--box-ori-std",
+    "1.2"
+  ],
+  "supersedes": "sm4g8192_h32_ori12_s0_20261122"
+}

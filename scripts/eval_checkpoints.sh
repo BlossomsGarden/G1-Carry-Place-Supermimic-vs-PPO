@@ -17,7 +17,7 @@ if [[ -n ${CARRY_ENV_SH:-} ]]; then source "$CARRY_ENV_SH"; fi
 cd "$repo"
 checkpoint=${5:-checkpoints/$learner/$model}
 if [[ ! -f $checkpoint ]] || (( $(wc -c < "$checkpoint") < 1000000 )); then
-  echo "Missing model bytes at $checkpoint; install Git LFS and run: git lfs pull" >&2
+  echo "Missing model bytes at $checkpoint; download the checkpoint from Hugging Face (see checkpoints/README.md)" >&2
   exit 1
 fi
 export PYTHONPATH="$repo/src${PYTHONPATH:+:$PYTHONPATH}"

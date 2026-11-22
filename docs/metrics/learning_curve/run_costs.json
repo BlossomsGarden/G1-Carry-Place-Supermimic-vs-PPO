@@ -1,0 +1,98 @@
+{
+  "status": "final",
+  "measurement": "Whole-device nvidia-smi memory used, sampled approximately every 2 s",
+  "runs": {
+    "single": {
+      "run_name": "smcont_h32_ori12_from1000_s0_20261122b",
+      "training_gpus": [
+        6
+      ],
+      "global_num_envs": 4096,
+      "num_training_gpus": 1,
+      "start_utc": "2026-11-22T09:00:06+00:00",
+      "end_utc": "2026-11-22T10:26:21.512708+00:00",
+      "wall_elapsed_s": 5175.5,
+      "gpu_hours_to_date": 1.438,
+      "sample_count": 2325,
+      "gpu_peak_used_mib": {
+        "6": 11934
+      },
+      "last_log": {
+        "iteration": 1300,
+        "train_loop_elapsed_s": 4609,
+        "rank0_env_steps": 13574144,
+        "global_env_steps": 13574144
+      },
+      "steady_real_env_steps_per_s_last_100plus_iters": 685.4,
+      "training_exit_code": null,
+      "training_terminal": true,
+      "wall_elapsed_is_upper_bound": true,
+      "controlled_stop": {
+        "reason": "confirmed target; SIGTERM after SIGINT did not exit",
+        "train_pid": 397531,
+        "last_checkpoint_iteration": 1300,
+        "monitor_requested_sigint_utc": "2026-11-22T10:21:24.391294+00:00",
+        "sigterm_sent_after_utc": "2026-11-22T10:24:44+00:00",
+        "exit_confirmed_utc": "2026-11-22T10:26:21.512708+00:00",
+        "exit_confirmed_is_upper_bound": true,
+        "gpu_sampling_stopped_with_sigint": true,
+        "launcher_exit_code_unavailable": true
+      },
+      "monitor_status": "target corroborated at iteration 1300",
+      "original_checkpoint_baseline": {
+        "iteration": 1000,
+        "terminal_128": 125,
+        "intermittent_128": 106,
+        "strict_128": 0,
+        "eval_gpu": 3
+      },
+      "best_continuation_checkpoint": {
+        "iteration": 1300,
+        "terminal_128": 128,
+        "intermittent_128": 102,
+        "strict_128": 0
+      }
+    },
+    "four": {
+      "run_name": "sm4g8192_h32_ori12_mb4_s0_20261122",
+      "training_gpus": [
+        1,
+        4,
+        5,
+        7
+      ],
+      "global_num_envs": 8192,
+      "num_training_gpus": 4,
+      "start_utc": "2026-11-22T09:28:46+00:00",
+      "end_utc": "2026-11-22T12:15:13+00:00",
+      "wall_elapsed_s": 9987.0,
+      "gpu_hours_to_date": 11.097,
+      "sample_count": 4733,
+      "gpu_peak_used_mib": {
+        "1": 6524,
+        "4": 6536,
+        "5": 6536,
+        "7": 6536
+      },
+      "last_log": {
+        "iteration": 1500,
+        "train_loop_elapsed_s": 9657,
+        "rank0_env_steps": 7745536,
+        "global_env_steps": 30982144
+      },
+      "steady_real_env_steps_per_s_last_100plus_iters": 3282.1,
+      "training_exit_code": 1,
+      "training_terminal": true,
+      "wall_elapsed_is_upper_bound": false,
+      "controlled_stop": null,
+      "monitor_status": "target corroborated at iteration 1500",
+      "original_checkpoint_baseline": null,
+      "best_continuation_checkpoint": {
+        "iteration": 1500,
+        "terminal_128": 128,
+        "intermittent_128": 127,
+        "strict_128": 7
+      }
+    }
+  }
+}

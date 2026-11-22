@@ -3,8 +3,11 @@ from __future__ import annotations
 
 import unittest
 
-import torch
-from rsl_rl.algorithms.ppo import PPO
+try:
+    import torch
+    from rsl_rl.algorithms.ppo import PPO
+except ImportError as error:
+    raise unittest.SkipTest(f"Optional PPO training dependencies unavailable: {error}") from error
 
 
 class PpoResumeLearningRateTest(unittest.TestCase):

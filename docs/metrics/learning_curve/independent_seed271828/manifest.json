@@ -1,0 +1,45 @@
+{
+  "role": "post-selection robustness check; not used for checkpoint selection or stop rule",
+  "seed": 271828,
+  "physical_gpu": 2,
+  "episodes_per_method": 64,
+  "threshold": "last-frame 3D box-center distance <= 0.12 m",
+  "runs": [
+    {
+      "id": "ppo",
+      "checkpoint": "/data4/DATA/wlh/offer/supermimic/logs/smtrack/G1-SMTrack-CarryPlace/ppo/2026-11-22_01-11-03_cp_ppo_v2_s0_4g/model_3999.pt",
+      "episodes": 64,
+      "terminal": 64,
+      "intermittent": 64,
+      "strict_both_hands": 20,
+      "sources": {
+        "ppo_metrics.json": "c63d8fbbe65364516fb015e88ff4ad3005c3a7a1b1f9d238714493478f0045d0",
+        "ppo_eval.json": "3d526e21b5295dfa7ae27b17b516ae3a5f98b2609f8f85e7e2c83cd7c875e99d"
+      }
+    },
+    {
+      "id": "sm_single",
+      "checkpoint": "/data4/DATA/wlh/offer/supermimic/logs/smtrack/G1-SMTrack-CarryPlace/supermimic/2026-11-22_17-00-12_smcont_h32_ori12_from1000_s0_20261122b/model_1300.pt",
+      "episodes": 64,
+      "terminal": 64,
+      "intermittent": 45,
+      "strict_both_hands": 0,
+      "sources": {
+        "sm_single_metrics.json": "555d7a5751e75bab280d5822628336d3f733266d26796a8530d69572e4639977",
+        "sm_single_eval.json": "a5b11a6a1e9b62cb5018becc7c5baec5cbaa8b2923f0853585e39ccb0169d03e"
+      }
+    },
+    {
+      "id": "sm_four",
+      "checkpoint": "/data4/DATA/wlh/offer/supermimic/logs/smtrack/G1-SMTrack-CarryPlace/supermimic/2026-11-22_17-29-14_sm4g8192_h32_ori12_mb4_s0_20261122/model_1500.pt",
+      "episodes": 64,
+      "terminal": 64,
+      "intermittent": 64,
+      "strict_both_hands": 6,
+      "sources": {
+        "sm_four_metrics.json": "5620190af1f28fb8125e57655b8f7f03c23975c11782771de79931d3589acc5f",
+        "sm_four_eval.json": "d924f366d2b97307c92a23e7661258df4dd29d32a4783cf6441e4d53392d650e"
+      }
+    }
+  ]
+}

@@ -8,7 +8,7 @@ runs/
 logs/
 wandb/
 *.pt
-!checkpoints/**/*.pt
+*.partial
 *.pth
 *.onnx
 *.npz
@@ -21,3 +21,4 @@ wandb/
 !assets/ppo3999_seed314159_episode59_rollout.npz
 !assets/sm2000_seed314159_episode47_rollout.npz
 !assets/sm4096_h32_ori12_iter1000_seed161803_episode0_physical.npz
+!assets/sm4gpu1500_seed161803_episode10_physical.npz

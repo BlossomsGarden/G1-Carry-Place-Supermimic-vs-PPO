@@ -2,23 +2,38 @@
 
 **一条 10 秒的抱箱示范，能否教会 G1 走过去、双手抱起、搬到另一处并放稳？** 我把 SUGAR CarryBox 的一条轨迹接进 **mjlab + MuJoCo**，在相同任务上对照“真实物理采样 + PPO-Sim”与“世界模型 + 可微分想象更新”的 SuperMimic 实现。先看箱子最终是否到目标附近，再分别看取搬放过程与持续双手抓握；代码、单条示范和真实物理评测证据都在这里。
 
-| 🎞️ 示范：希望机器人怎样动 | ⚡ SuperMimic：看似搬放成功 | 🦾 PPO：连续双手抱箱成功 |
-|:---:|:---:|:---:|
-| <img src="assets/demo_reference.gif" width="280" alt="SUGAR 运动学参考轨迹，非训练策略"> | <img src="assets/demo_sm_intermit.gif" width="280" alt="SuperMimic 真物理策略，间歇持物成功，严格双手失败"> | <img src="assets/demo_ppo_strict.gif" width="280" alt="PPO 真物理策略，连续双手持物成功"> |
-| [完整 MP4](assets/carry_place_reference_098.mp4) · **仅运动学指定姿态** | [完整 MP4](assets/sm4096_h32_ori12_iter1000_seed161803_episode0_physical.mp4) · **间歇持物通过 / 连续双手失败** | [完整 MP4](assets/ppo3999_seed314159_episode59_physical.mp4) · **严格连续双手通过** |
+| 🎞️ 运动学参考 | ⚡ 单卡 SuperMimic：间歇持物 | 🚀 四卡 SuperMimic：严格成功一集 | 🦾 PPO：严格成功一集 |
+|:---:|:---:|:---:|:---:|
+| <img src="assets/demo_reference.gif" width="230" alt="SUGAR 运动学参考轨迹，非训练策略"> | <img src="assets/demo_sm_intermit.gif" width="230" alt="单卡 SuperMimic 真物理策略，间歇持物成功，严格双手失败"> | <img src="assets/demo_sm4gpu_strict.gif" width="230" alt="四卡 SuperMimic 第 1500 轮真实物理回放，严格双手成功的一集"> | <img src="assets/demo_ppo_strict.gif" width="230" alt="PPO 真物理策略，连续双手持物成功的一集"> |
+| [完整 MP4](assets/carry_place_reference_098.mp4) · **非训练策略** | [完整 MP4](assets/sm4096_h32_ori12_iter1000_seed161803_episode0_physical.mp4) · **间歇通过 / 连续失败** | [完整 MP4](assets/sm4gpu1500_seed161803_episode10_physical.mp4) · **严格通过；主双种子仅 7/128** | [完整 MP4](assets/ppo3999_seed314159_episode59_physical.mp4) · **严格双手通过** |
 
-> **别被视频角标误导：**SuperMimic 视频标着 `STRICT FAILURE`，指原评测器要求“整个搬运段双手一刻不能松”的指标不通过；该片段**确实**举起并离地净搬运 1.526 m、到位放下。取搬放结果与持续稳定夹持是两个问题。[四个可播放案例与逐帧解释](docs/DEMOS.md) · [地面假接触核查](assets/sm4096_h32_ori12_iter1000_seed161803_episode0_floor_audit.png)
+> **别被视频角标误导：**单卡 SuperMimic 视频标着 `STRICT FAILURE`，指原评测器要求“整个搬运段双手一刻不能松”的指标不通过；该片段**确实**举起并离地净搬运 1.526 m、到位放下。新四卡视频在另一批物理回放中严格通过，但单集画面不代表批量成功率。[五个可播放案例与逐帧解释](docs/DEMOS.md) · [新四卡关键帧](assets/sm4gpu1500_seed161803_episode10_physical.png)
 
-## ✨ 30 秒看结论：四组中最好的 SuperMimic 与 PPO
+## ✨ 30 秒看结论：单卡、四卡 SuperMimic 与 PPO
 
 | 训练器 / 选中权重 | GPU / 同时仿真环境 | 训练至权重 / 完整训练 | 真实交互总量 | 稳态真实环境步/秒 | 训练峰值显存 | **主指标：终点箱体到位** | 过程：间歇持物 | 过程：连续双手 |
 |---|---|---:|---:|---:|---|---:|---:|---:|
-| **最佳 SuperMimic：H32 / 朝向 std 1.2，第 1,000 轮** | 1 × RTX 4090 / 4,096 | **3.75 h / 3.76 h** | 1,037 万 | 776 | 11,754 MiB | **124/128 = 96.9%** | 110/128 = 85.9% | 0/128 |
-| **PPO-Sim：第 3,999 轮** | 4 × RTX 4090 / 8,192（每卡 2,048） | **2.58 h / 2.58 h** | 7.864 亿 | 86,216 | 6,288 / 4,922 / 4,922 / 4,922 MiB | **127/128 = 99.2%** | 127/128 = 99.2% | 53/128 = 41.4% |
+| **SuperMimic 单卡续训 H32 / std 1.2，第 1,300 轮（复测通过）**<br>🤗 [ckpt](https://huggingface.co/BlossomsGarden/G1-Carry-Place-Supermimic-vs-PPO/blob/main/checkpoints/supermimic_continued/model_1300.pt) | 1 × RTX 4090 / 4,096 | **5.04 h / ≤5.19 h** | 1,357.4 万 | 685 | 6：11,934 MiB | **128/128 = 100.0%**（同卡复测 128/128 = 100.0%） | 102/128 = 79.7% | 0/128 = 0.0% |
+| **PPO-Sim：第 3,999 轮**<br>🤗 [ckpt](https://huggingface.co/BlossomsGarden/G1-Carry-Place-Supermimic-vs-PPO/blob/main/checkpoints/ppo/model_3999.pt) | 4 × RTX 4090 / 8,192（每卡 2,048） | **2.58 h / 2.58 h** | 7.864 亿 | 86,216 | 6,288 / 4,922 / 4,922 / 4,922 MiB | **127/128 = 99.2%** | 127/128 = 99.2% | 53/128 = 41.4% |
+| **SuperMimic 四卡 H32 / std 1.2，第 1,500 轮（复测达标，已停训）**<br>🤗 [ckpt](https://huggingface.co/BlossomsGarden/G1-Carry-Place-Supermimic-vs-PPO/blob/main/checkpoints/supermimic_4gpu/model_1500.pt) | 4 × RTX 4090 / 8,192（每卡 2,048） | **2.69 h / 2.77 h** | 3,098.2 万 | 3,282 | 1：6,524；4：6,536；5：6,536；7：6,536 MiB | **128/128 = 100.0%**（同卡复测 128/128 = 100.0%） | 127/128 = 99.2% | 7/128 = 5.5% |
 
-**主指标只判位置**：每条物理回放的最后一帧，箱中心与目标中心的三维距离 ≤ **0.12 m** 则记 1，否则记 0；不要求箱体朝向、静止、放手或双手接触。表内两方法用相同种子 2027、314159 各 64 条**历史物理回放重新计分**，并非新的训练或新的 GPU rollout；过程指标沿用同批回放的几何校正结果。最佳 SuperMimic 第三个种子又到位 64/64，三种子共 **188/192 = 97.9%**，但连续双手仍是 **0/192**。因此到位率接近不等于完成稳定抓握。PPO 原始未校正严格成绩为 51/128，几何校正后为 53/128；两方法训练 GPU 数、网络和真实数据预算不同，不能据此声称同等质量的算法效率优势。显存为训练期间每 2 秒采样的整卡已用量峰值。[逐集新旧指标、源文件哈希与失败分析 →](docs/RESULTS.md)
+**主指标只判位置**：每条物理回放的最后一帧，箱中心与目标中心的三维距离 ≤ **0.12 m** 则记 1，否则记 0；不要求箱体朝向、静止、放手或双手接触。各行均以种子 2027、314159 各 64 条计算；原始权重的历史行使用旧物理回放重新计分，续训/四卡新行使用新物理回放，**不同批次不可逐集拼接**。原四组配方最佳 SuperMimic 权重的第三个种子到位 64/64，三种子共 **188/192 = 97.9%**，但连续双手仍是 **0/192**。因此到位率接近不等于完成稳定抓握。PPO 原始未校正严格成绩为 51/128，几何校正后为 53/128；两方法训练 GPU 数、网络和真实数据预算不同，不能据此声称同等质量的算法效率优势。显存为训练期间每 2 秒采样的整卡已用量峰值。[逐集新旧指标、源文件哈希与失败分析 →](docs/RESULTS.md)
 
-另用原权重启动 [新一批 256 集独立物理复评](docs/RESULTS.md#新做的-256-集独立物理复评训练未继续)：SuperMimic 到位 **124/128**、间歇持物 **107/128**、连续双手 **0/128**；PPO 分别 **127/128、127/128、53/128**。历史与新批次的终点计数一致，过程事件存在小幅接触数值波动；续训已按要求停止，**这里没有新增训练权重或训练成绩**。
+**评测卡交叉检查**：单卡第 1,300 轮权重也在 PPO/四卡评测使用的 GPU 2 上复跑，两种子终点依然 **128/128**，但间歇持物为 **98/128**（原 GPU 3 首测 102/128）；同种子跨卡重跑不是独立训练种子。[逐集复核](docs/metrics/learning_curve/single_gpu2_1300_crosscheck/)。
+
+**停训后新增一个未用于选权重的种子 271828**：PPO、单卡和四卡 SuperMimic 的终点均 **64/64**，连续双手分别为 **20/64、0/64、6/64**；三套方法的取放质量不能只凭箱子到位判定。[三份同卡逐集物理复评](docs/metrics/learning_curve/independent_seed271828/)。
+
+<img src="assets/terminal_success_learning_curves.svg" width="100%" alt="PPO、单卡 SuperMimic 和四卡 SuperMimic 的终点箱体到位率对比；未完成评测的曲线不填虚构数据">
+
+**别只读最上方蓝线**：PPO 第 2,000 轮已到位 **127/128**，举升和空中搬运也各 **127/128**；但举升附近双手都碰到箱子的只有 **1/128**，间歇持物也仅 **1/128**。到第 2,500 轮到位仍为 127/128，间歇持物已提高到 **124/128**。[逐阶段核查](docs/RESULTS.md#ppo-的逐检查点终点学习曲线)。
+
+**逐检查点学习曲线**：PPO 已完成 0–3,999 轮九个检查点的物理复评；单卡从第 1,000 轮权重继续训练，第 1,100 轮到位退化，第 1,200 轮**初测 127/128、同卡复测 124/128**，第 1,300 轮**初测和同卡复测均 128/128，第三种子 64/64**，于是停训。四卡 H32/std1.2 从零训练，第 500 / 1,000 / 1,500 轮分别到位 **42 / 124 / 128（每点 128 集）**；第 1,500 轮同卡复测 **128/128**、第三种子 **64/64**，按预定规则停训。未测的轮次不插值；**轮次是策略更新次数，不是对数据集跑过的 epoch**，方法间每轮真实环境步数不同。[逐检查点评测账本](docs/metrics/learning_curve/LIVE_REPORT.md) · [曲线逐集证据](docs/metrics/learning_curves_20261122.json) · [训练成本原始采样汇总](docs/metrics/learning_curve/run_costs.json) · [续训与四卡配置](docs/REPRODUCE.md#2026-11-22单卡续训与四卡-supermimic)。
+
+**怎样比较训练成本？**四卡 SuperMimic 达到这次样本到位率用了 **3,098.2 万次真实交互、11.10 GPU·h**；PPO 全程用了 **7.864 亿次真实交互、10.30 GPU·h**。前者仿真交互约少 **25.4 倍**，训练卡时却略多；且连续双手成功率 **7/128 vs 53/128**。单看箱体终点 128/128，既不能断言总体成功率 100%，也不能断言两种算法达到了相同的操作质量。[过程阶段、失败成因和统计边界](docs/RESULTS.md)。
+
+**为什么要复测？**同卡、同权重、同种子、相同初始随机化和首动作的另两次物理回放仍得到 **64/64 与 60/64**；分叉从第一次仿真步开始。[复测探针与逐集证据](docs/RESULTS.md#2026-11-22-单卡续训不能因一次-127128-就停)。
+
+此前另用原权重启动 [新一批 256 集独立物理复评](docs/RESULTS.md#新做的-256-集独立物理复评训练未继续)：SuperMimic 到位 **124/128**、间歇持物 **107/128**、连续双手 **0/128**；PPO 分别 **127/128、127/128、53/128**。那批新复评发生在本轮续训之前，勿与现在的训练曲线逐集拼接。
 
 ## 🧪 四个 SuperMimic 配方：单卡 4,096 环境
 
@@ -64,10 +79,12 @@ flowchart LR
 # 仓库根目录，已进入具备上述依赖的 Linux conda 环境
 python scripts/verify_report.py
 python scripts/rescore_terminal_placement.py  # 重新评分旧物理回放，不需要 GPU
-git lfs pull                          # 首次克隆后下载两份原权重
+hf download BlossomsGarden/G1-Carry-Place-Supermimic-vs-PPO --include 'checkpoints/*/model_*.pt' --local-dir .  # 首次克隆后下载四份归档权重
 export PYTHONPATH=src MUJOCO_GL=disable
 python -m unittest discover -s tests -p 'test_carryplace_eval.py' -v
 bash scripts/eval_checkpoints.sh supermimic 0 2027 64  # 另跑新的 64 集物理评测
+# 同 learner、同种子使用固定输出名；比较下一权重前请先另存（见 REPRODUCE.md）
+bash scripts/eval_checkpoints.sh supermimic 0 2027 64 checkpoints/supermimic_4gpu/model_1500.pt
 bash scripts/eval_checkpoints.sh ppo 0 2027 64
 
 # 历史 PPO 配方：4 卡 × 2,048 环境 = 全局 8,192
@@ -80,7 +97,7 @@ CARRY_SAVE_INTERVAL=100 bash scripts/run_carry_experiment.sh \
   --imag-microbatches 16 --lr-cosine-iters 250000 --imagination-horizon 32 --box-ori-std 1.2
 ~~~
 
-两份 [checkpoint 与原始 agent 配置](checkpoints/README.md) 已随仓库通过 Git LFS 提供；直接评测脚本默认选择仓库权重，也支持第 5 个参数指定外部 checkpoint。两条从头训练各耗时数小时；重训、64 集随机化物理评测与完整命令见 [REPRODUCE.md](docs/REPRODUCE.md)。`scripts/verify_report.py` 和 `scripts/rescore_terminal_placement.py` 只处理归档数据，不伪装成新的训练或 GPU 实验。
+四份 [checkpoint](checkpoints/README.md) 托管在 [Hugging Face 模型仓库](https://huggingface.co/BlossomsGarden/G1-Carry-Place-Supermimic-vs-PPO)，GitHub 保留各自的原始 `params/agent.json`；评测脚本默认选择原始权重，第 5 个参数可选择续训或四卡权重。两条从头训练各耗时数小时；重训、64 集随机化物理评测与完整命令见 [REPRODUCE.md](docs/REPRODUCE.md)。`scripts/verify_report.py` 和 `scripts/rescore_terminal_placement.py` 只处理归档数据，不伪装成新的训练或 GPU 实验。
 
 ## 🔎 踩坑与下一步
 

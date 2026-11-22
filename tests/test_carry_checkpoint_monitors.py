@@ -4,6 +4,12 @@ from pathlib import Path
 import tempfile
 import unittest
 
+ROOT = Path(__file__).resolve().parents[1]
+LEGACY = (ROOT / "scripts/finalize_carry_training.py",
+          ROOT / "scripts/monitor_carry_aux.py")
+if not all(path.is_file() for path in LEGACY):
+    raise unittest.SkipTest("Legacy curriculum monitors are not shipped in this repository")
+
 from scripts import finalize_carry_training as finalizer
 from scripts import monitor_carry_aux as auxiliary
 

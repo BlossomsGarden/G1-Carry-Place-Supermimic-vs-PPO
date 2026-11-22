@@ -1,0 +1,8 @@
+{
+  "world_size": 4,
+  "global_num_envs": 8192,
+  "envs_per_rank": 2048,
+  "visible_devices": "1,4,5,7",
+  "imagined_per_rank": 1024,
+  "wm_batch_windows_per_rank": 512
+}

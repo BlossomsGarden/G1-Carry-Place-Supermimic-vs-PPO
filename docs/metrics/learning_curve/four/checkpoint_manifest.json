@@ -1,0 +1,20 @@
+[
+  {
+    "iteration": 500,
+    "absolute_path": "/data4/DATA/wlh/offer/supermimic/logs/smtrack/G1-SMTrack-CarryPlace/supermimic/2026-11-22_17-29-14_sm4g8192_h32_ori12_mb4_s0_20261122/model_500.pt",
+    "bytes": 223743098,
+    "mtime_unix": 1795343215.581054
+  },
+  {
+    "iteration": 1000,
+    "absolute_path": "/data4/DATA/wlh/offer/supermimic/logs/smtrack/G1-SMTrack-CarryPlace/supermimic/2026-11-22_17-29-14_sm4g8192_h32_ori12_mb4_s0_20261122/model_1000.pt",
+    "bytes": 223743321,
+    "mtime_unix": 1795346319.6687458
+  },
+  {
+    "iteration": 1500,
+    "absolute_path": "/data4/DATA/wlh/offer/supermimic/logs/smtrack/G1-SMTrack-CarryPlace/supermimic/2026-11-22_17-29-14_sm4g8192_h32_ori12_mb4_s0_20261122/model_1500.pt",
+    "bytes": 223743321,
+    "mtime_unix": 1795349418.9011614
+  }
+]
