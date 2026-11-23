@@ -662,5 +662,1158 @@
       ],
       "status": "target corroborated at iteration 1500"
     }
-  ]
+  ],
+  "rerun_series_100_iteration": {
+    "metric": "terminal box center <=0.12 m from target center (3D, last frame)",
+    "evaluation_seeds": [
+      2027,
+      314159
+    ],
+    "episodes_per_seed": 64,
+    "last_plotted_iteration_cap": 2000,
+    "note": "All points from the new runs; old historical series are preserved in the series key. The original PPO monitor copied a SuperMimic result and failed; PPO was retrained to iteration 3999 (exit 0), and its 0-2000 checkpoints were re-evaluated with independent output paths on the listed GPUs. Fixed seeds repeated across checkpoints are not an independent blind test.",
+    "series": [
+      {
+        "id": "ppo_4gpu",
+        "label": "PPO · 4 卡 × 2048 环境",
+        "color": "#2563C8",
+        "run": "ppo4gpu_every100_20261122",
+        "training_gpus": [
+          4,
+          5,
+          6,
+          7
+        ],
+        "evaluation_gpus": [
+          1,
+          4,
+          5,
+          6,
+          7
+        ],
+        "monitor_status": "all requested PPO checkpoints evaluated",
+        "points": [
+          {
+            "iteration": 0,
+            "terminal_128": 0,
+            "seeds": [
+              {
+                "seed": 2027,
+                "terminal": 0,
+                "terminal_episode_bits": "0000000000000000000000000000000000000000000000000000000000000000",
+                "sha256": "042888e97f914474ab95198cf3cc2e5a721d878312d980312759d8ffcbc98339",
+                "source": "/data4/DATA/wlh/offer/tmp/carry_runs/ppo4gpu_every100_20261122_evaluations/iter0_seed2027_metrics.json"
+              },
+              {
+                "seed": 314159,
+                "terminal": 0,
+                "terminal_episode_bits": "0000000000000000000000000000000000000000000000000000000000000000",
+                "sha256": "7c43acb47e8ac1599216cda5f43492b4a6c0216523460418f2297623ca564172",
+                "source": "/data4/DATA/wlh/offer/tmp/carry_runs/ppo4gpu_every100_20261122_evaluations/iter0_seed314159_metrics.json"
+              }
+            ],
+            "checkpoint": "/data4/DATA/wlh/offer/supermimic/logs/smtrack/G1-SMTrack-CarryPlace/ppo/2026-11-23_03-23-00_ppo4gpu_every100_20261122/model_0.pt",
+            "intermittent_128": 0,
+            "strict_128": 0
+          },
+          {
+            "iteration": 100,
+            "terminal_128": 0,
+            "seeds": [
+              {
+                "seed": 2027,
+                "terminal": 0,
+                "terminal_episode_bits": "0000000000000000000000000000000000000000000000000000000000000000",
+                "sha256": "7a0ac596ef65ce149b2e4042d02f5a0d4a09c321e50bd5a0b58b529e575ff949",
+                "source": "/data4/DATA/wlh/offer/tmp/carry_runs/ppo4gpu_every100_20261122_evaluations/iter100_seed2027_metrics.json"
+              },
+              {
+                "seed": 314159,
+                "terminal": 0,
+                "terminal_episode_bits": "0000000000000000000000000000000000000000000000000000000000000000",
+                "sha256": "bbcea9db1171e61783fea7ac2e6cbc3204c0662f4ce475f8eaab469dc0d7bfd7",
+                "source": "/data4/DATA/wlh/offer/tmp/carry_runs/ppo4gpu_every100_20261122_evaluations/iter100_seed314159_metrics.json"
+              }
+            ],
+            "checkpoint": "/data4/DATA/wlh/offer/supermimic/logs/smtrack/G1-SMTrack-CarryPlace/ppo/2026-11-23_03-23-00_ppo4gpu_every100_20261122/model_100.pt",
+            "intermittent_128": 0,
+            "strict_128": 0
+          },
+          {
+            "iteration": 200,
+            "terminal_128": 0,
+            "seeds": [
+              {
+                "seed": 2027,
+                "terminal": 0,
+                "terminal_episode_bits": "0000000000000000000000000000000000000000000000000000000000000000",
+                "sha256": "4162151c8201fb800b769a4fa8d08f99820bbfe62bf0b0653e1c8d2dedf665e8",
+                "source": "/data4/DATA/wlh/offer/tmp/carry_runs/ppo4gpu_every100_20261122_evaluations/iter200_seed2027_metrics.json"
+              },
+              {
+                "seed": 314159,
+                "terminal": 0,
+                "terminal_episode_bits": "0000000000000000000000000000000000000000000000000000000000000000",
+                "sha256": "0494553419f4020fda92997bd7eb240f775857ded7f7bf57156aefa98ad5b7d1",
+                "source": "/data4/DATA/wlh/offer/tmp/carry_runs/ppo4gpu_every100_20261122_evaluations/iter200_seed314159_metrics.json"
+              }
+            ],
+            "checkpoint": "/data4/DATA/wlh/offer/supermimic/logs/smtrack/G1-SMTrack-CarryPlace/ppo/2026-11-23_03-23-00_ppo4gpu_every100_20261122/model_200.pt",
+            "intermittent_128": 0,
+            "strict_128": 0
+          },
+          {
+            "iteration": 300,
+            "terminal_128": 0,
+            "seeds": [
+              {
+                "seed": 2027,
+                "terminal": 0,
+                "terminal_episode_bits": "0000000000000000000000000000000000000000000000000000000000000000",
+                "sha256": "cd33e05b62fb6134dae549764d04fd7f74080bbf9c5a6ff83924b8fc7cf87df8",
+                "source": "/data4/DATA/wlh/offer/tmp/carry_runs/ppo4gpu_every100_20261122_evaluations/iter300_seed2027_metrics.json"
+              },
+              {
+                "seed": 314159,
+                "terminal": 0,
+                "terminal_episode_bits": "0000000000000000000000000000000000000000000000000000000000000000",
+                "sha256": "f5b89b5cbc4ba3ec693375eaefe811015cf354482186d73420f02054f2417c8f",
+                "source": "/data4/DATA/wlh/offer/tmp/carry_runs/ppo4gpu_every100_20261122_evaluations/iter300_seed314159_metrics.json"
+              }
+            ],
+            "checkpoint": "/data4/DATA/wlh/offer/supermimic/logs/smtrack/G1-SMTrack-CarryPlace/ppo/2026-11-23_03-23-00_ppo4gpu_every100_20261122/model_300.pt",
+            "intermittent_128": 0,
+            "strict_128": 0
+          },
+          {
+            "iteration": 400,
+            "terminal_128": 0,
+            "seeds": [
+              {
+                "seed": 2027,
+                "terminal": 0,
+                "terminal_episode_bits": "0000000000000000000000000000000000000000000000000000000000000000",
+                "sha256": "d0f71e93e234bfb6092dcac828ad358bb1d59c1bb6e44571c8400ab17132ed5f",
+                "source": "/data4/DATA/wlh/offer/tmp/carry_runs/ppo4gpu_every100_20261122_evaluations/iter400_seed2027_metrics.json"
+              },
+              {
+                "seed": 314159,
+                "terminal": 0,
+                "terminal_episode_bits": "0000000000000000000000000000000000000000000000000000000000000000",
+                "sha256": "01661694266c10eaf7713b35050565043339c0c427ba8db0fe827cec3ee849f8",
+                "source": "/data4/DATA/wlh/offer/tmp/carry_runs/ppo4gpu_every100_20261122_evaluations/iter400_seed314159_metrics.json"
+              }
+            ],
+            "checkpoint": "/data4/DATA/wlh/offer/supermimic/logs/smtrack/G1-SMTrack-CarryPlace/ppo/2026-11-23_03-23-00_ppo4gpu_every100_20261122/model_400.pt",
+            "intermittent_128": 0,
+            "strict_128": 0
+          },
+          {
+            "iteration": 500,
+            "terminal_128": 0,
+            "seeds": [
+              {
+                "seed": 2027,
+                "terminal": 0,
+                "terminal_episode_bits": "0000000000000000000000000000000000000000000000000000000000000000",
+                "sha256": "ae99738a631b040cdd91235c9a0ffe05d5b4d381fa681dd479528392256900e2",
+                "source": "/data4/DATA/wlh/offer/tmp/carry_runs/ppo4gpu_every100_20261122_evaluations/iter500_seed2027_metrics.json"
+              },
+              {
+                "seed": 314159,
+                "terminal": 0,
+                "terminal_episode_bits": "0000000000000000000000000000000000000000000000000000000000000000",
+                "sha256": "867a755083c843c8db4c18bc2225864b89ee8f8a83b8213d5c74fd2e6ef5f52d",
+                "source": "/data4/DATA/wlh/offer/tmp/carry_runs/ppo4gpu_every100_20261122_evaluations/iter500_seed314159_metrics.json"
+              }
+            ],
+            "checkpoint": "/data4/DATA/wlh/offer/supermimic/logs/smtrack/G1-SMTrack-CarryPlace/ppo/2026-11-23_03-23-00_ppo4gpu_every100_20261122/model_500.pt",
+            "intermittent_128": 0,
+            "strict_128": 0
+          },
+          {
+            "iteration": 600,
+            "terminal_128": 0,
+            "seeds": [
+              {
+                "seed": 2027,
+                "terminal": 0,
+                "terminal_episode_bits": "0000000000000000000000000000000000000000000000000000000000000000",
+                "sha256": "e53a9bf34c4cfae709499729f36d453a83b9993320360f1c3d0213ccf947bc13",
+                "source": "/data4/DATA/wlh/offer/tmp/carry_runs/ppo4gpu_every100_20261122_evaluations/iter600_seed2027_metrics.json"
+              },
+              {
+                "seed": 314159,
+                "terminal": 0,
+                "terminal_episode_bits": "0000000000000000000000000000000000000000000000000000000000000000",
+                "sha256": "9d9b03de57238bc39e641f218652053b6581fe56d59309b97e3e9e83d2345333",
+                "source": "/data4/DATA/wlh/offer/tmp/carry_runs/ppo4gpu_every100_20261122_evaluations/iter600_seed314159_metrics.json"
+              }
+            ],
+            "checkpoint": "/data4/DATA/wlh/offer/supermimic/logs/smtrack/G1-SMTrack-CarryPlace/ppo/2026-11-23_03-23-00_ppo4gpu_every100_20261122/model_600.pt",
+            "intermittent_128": 0,
+            "strict_128": 0
+          },
+          {
+            "iteration": 700,
+            "terminal_128": 10,
+            "seeds": [
+              {
+                "seed": 2027,
+                "terminal": 5,
+                "terminal_episode_bits": "0001000000000000000101000000000000000000000000000100000010000000",
+                "sha256": "d45fe70cb991949467ea8ee8769d7097bc9e422b8f5fa0ec2881594e13e49cea",
+                "source": "/data4/DATA/wlh/offer/tmp/carry_runs/ppo4gpu_every100_20261122_evaluations/iter700_seed2027_metrics.json"
+              },
+              {
+                "seed": 314159,
+                "terminal": 5,
+                "terminal_episode_bits": "0001000000000000100001001000000000000000000000000000000000000100",
+                "sha256": "11d8de9c475c3ada865075e82f7a3438a00e559d2ee3e2953f8b1c30268272ca",
+                "source": "/data4/DATA/wlh/offer/tmp/carry_runs/ppo4gpu_every100_20261122_evaluations/iter700_seed314159_metrics.json"
+              }
+            ],
+            "checkpoint": "/data4/DATA/wlh/offer/supermimic/logs/smtrack/G1-SMTrack-CarryPlace/ppo/2026-11-23_03-23-00_ppo4gpu_every100_20261122/model_700.pt",
+            "intermittent_128": 10,
+            "strict_128": 10
+          },
+          {
+            "iteration": 800,
+            "terminal_128": 106,
+            "seeds": [
+              {
+                "seed": 2027,
+                "terminal": 53,
+                "terminal_episode_bits": "1011111011110110111101111101111111111101111111111101111010111011",
+                "sha256": "bfa241636d15501685c896d3f903eee83a314578c7c3ba3f025f397be5bc50f0",
+                "source": "/data4/DATA/wlh/offer/tmp/carry_runs/ppo4gpu_every100_20261122_evaluations/iter800_seed2027_metrics.json"
+              },
+              {
+                "seed": 314159,
+                "terminal": 53,
+                "terminal_episode_bits": "0101110111110110111111111101111101111011001101111111111111111111",
+                "sha256": "131f338b8d0a5f03280faf7a08ff064cb552d516e0464a774acc3a29648bfb3d",
+                "source": "/data4/DATA/wlh/offer/tmp/carry_runs/ppo4gpu_every100_20261122_evaluations/iter800_seed314159_metrics.json"
+              }
+            ],
+            "checkpoint": "/data4/DATA/wlh/offer/supermimic/logs/smtrack/G1-SMTrack-CarryPlace/ppo/2026-11-23_03-23-00_ppo4gpu_every100_20261122/model_800.pt",
+            "intermittent_128": 104,
+            "strict_128": 104
+          },
+          {
+            "iteration": 900,
+            "terminal_128": 109,
+            "seeds": [
+              {
+                "seed": 2027,
+                "terminal": 56,
+                "terminal_episode_bits": "1111111111111111110111111101111111111101101110111110011110111111",
+                "sha256": "c85abf03c9b9b23cbf789a0fff84e7b4163dab854f358dfcc3328486f5bc5cc6",
+                "source": "/data4/DATA/wlh/offer/tmp/carry_runs/ppo4gpu_every100_20261122_evaluations/iter900_seed2027_metrics.json"
+              },
+              {
+                "seed": 314159,
+                "terminal": 53,
+                "terminal_episode_bits": "1111110111111010111111111011111111111001110101111111111110001111",
+                "sha256": "94103b1dced87fd4e88324627288865d00ee980a0912b0efca8a1e90cf706d11",
+                "source": "/data4/DATA/wlh/offer/tmp/carry_runs/ppo4gpu_every100_20261122_evaluations/iter900_seed314159_metrics.json"
+              }
+            ],
+            "checkpoint": "/data4/DATA/wlh/offer/supermimic/logs/smtrack/G1-SMTrack-CarryPlace/ppo/2026-11-23_03-23-00_ppo4gpu_every100_20261122/model_900.pt",
+            "intermittent_128": 103,
+            "strict_128": 103
+          },
+          {
+            "iteration": 1000,
+            "terminal_128": 122,
+            "seeds": [
+              {
+                "seed": 2027,
+                "terminal": 60,
+                "terminal_episode_bits": "1111101111111111111101111111111111111111111111011111111101111111",
+                "sha256": "9d9882134faaecfcd2685702a1eed65d8c376651b302eed3ad3a843c7e101907",
+                "source": "/data4/DATA/wlh/offer/tmp/carry_runs/ppo4gpu_every100_20261122_evaluations/iter1000_seed2027_metrics.json"
+              },
+              {
+                "seed": 314159,
+                "terminal": 62,
+                "terminal_episode_bits": "1111110111111111111111110111111111111111111111111111111111111111",
+                "sha256": "e2b2fa18533705dbe468c7684e71423bf62c7ebeb532b5277cc98bf04f610f8d",
+                "source": "/data4/DATA/wlh/offer/tmp/carry_runs/ppo4gpu_every100_20261122_evaluations/iter1000_seed314159_metrics.json"
+              }
+            ],
+            "checkpoint": "/data4/DATA/wlh/offer/supermimic/logs/smtrack/G1-SMTrack-CarryPlace/ppo/2026-11-23_03-23-00_ppo4gpu_every100_20261122/model_1000.pt",
+            "intermittent_128": 113,
+            "strict_128": 113
+          },
+          {
+            "iteration": 1100,
+            "terminal_128": 122,
+            "seeds": [
+              {
+                "seed": 2027,
+                "terminal": 61,
+                "terminal_episode_bits": "1111101111111110111111111111111111111111111111110111111111111111",
+                "sha256": "9d9e04b00d3380ea70713e9c78c3521a4be6e8e871791b44e3b8a93c26a7e3df",
+                "source": "/data4/DATA/wlh/offer/tmp/carry_runs/ppo4gpu_every100_20261122_evaluations/iter1100_seed2027_metrics.json"
+              },
+              {
+                "seed": 314159,
+                "terminal": 61,
+                "terminal_episode_bits": "1111111111111011101111111111110111111111111111111111111111111111",
+                "sha256": "de308638907de53605744b94c22c87b4ba6ff69c089c2088c90b1cd294ee592a",
+                "source": "/data4/DATA/wlh/offer/tmp/carry_runs/ppo4gpu_every100_20261122_evaluations/iter1100_seed314159_metrics.json"
+              }
+            ],
+            "checkpoint": "/data4/DATA/wlh/offer/supermimic/logs/smtrack/G1-SMTrack-CarryPlace/ppo/2026-11-23_03-23-00_ppo4gpu_every100_20261122/model_1100.pt",
+            "intermittent_128": 76,
+            "strict_128": 76
+          },
+          {
+            "iteration": 1200,
+            "terminal_128": 117,
+            "seeds": [
+              {
+                "seed": 2027,
+                "terminal": 57,
+                "terminal_episode_bits": "1111101111111111111011110110111111111111111111111111110111001111",
+                "sha256": "7701f38df48885af13b353eba9dc320123458895fba2249f9b17dd9b2b73dd00",
+                "source": "/data4/DATA/wlh/offer/tmp/carry_runs/ppo4gpu_every100_20261122_evaluations/iter1200_seed2027_metrics.json"
+              },
+              {
+                "seed": 314159,
+                "terminal": 60,
+                "terminal_episode_bits": "1111111111011111111111111111110111111111111111111111100111111111",
+                "sha256": "dd138d8879ec9a0f79f6183f0fbd37cc6718827c9926b7f00283cce2e5f9297a",
+                "source": "/data4/DATA/wlh/offer/tmp/carry_runs/ppo4gpu_every100_20261122_evaluations/iter1200_seed314159_metrics.json"
+              }
+            ],
+            "checkpoint": "/data4/DATA/wlh/offer/supermimic/logs/smtrack/G1-SMTrack-CarryPlace/ppo/2026-11-23_03-23-00_ppo4gpu_every100_20261122/model_1200.pt",
+            "intermittent_128": 81,
+            "strict_128": 81
+          },
+          {
+            "iteration": 1300,
+            "terminal_128": 120,
+            "seeds": [
+              {
+                "seed": 2027,
+                "terminal": 60,
+                "terminal_episode_bits": "1011101111111111011111111111101111111111111111111111111111111111",
+                "sha256": "aae96be0cb7a7cceb0de8d1a6939ce26b83bc6c96428fe00eb71e3270ebbbe51",
+                "source": "/data4/DATA/wlh/offer/tmp/carry_runs/ppo4gpu_every100_20261122_evaluations/iter1300_seed2027_metrics.json"
+              },
+              {
+                "seed": 314159,
+                "terminal": 60,
+                "terminal_episode_bits": "1111111111111111111111111111110110111111111111111111101101111111",
+                "sha256": "e1f6455db330ee2d1c2eb67ede96155ca09e958f45a5c634b9519d5ccd55273d",
+                "source": "/data4/DATA/wlh/offer/tmp/carry_runs/ppo4gpu_every100_20261122_evaluations/iter1300_seed314159_metrics.json"
+              }
+            ],
+            "checkpoint": "/data4/DATA/wlh/offer/supermimic/logs/smtrack/G1-SMTrack-CarryPlace/ppo/2026-11-23_03-23-00_ppo4gpu_every100_20261122/model_1300.pt",
+            "intermittent_128": 112,
+            "strict_128": 112
+          },
+          {
+            "iteration": 1400,
+            "terminal_128": 120,
+            "seeds": [
+              {
+                "seed": 2027,
+                "terminal": 59,
+                "terminal_episode_bits": "1111101111111111111110111111110111111111111111111011111111111101",
+                "sha256": "8b9220b451633109453e15eb59d1a344016b07ac1bc760a08c31dfcc90c00f9f",
+                "source": "/data4/DATA/wlh/offer/tmp/carry_runs/ppo4gpu_every100_20261122_evaluations/iter1400_seed2027_metrics.json"
+              },
+              {
+                "seed": 314159,
+                "terminal": 61,
+                "terminal_episode_bits": "1111111111111110111111111111111111111111011111111111111101111111",
+                "sha256": "b50957339e5c2d567013e1a3a9374160eb6a1a6b3393626494adf92ff745333c",
+                "source": "/data4/DATA/wlh/offer/tmp/carry_runs/ppo4gpu_every100_20261122_evaluations/iter1400_seed314159_metrics.json"
+              }
+            ],
+            "checkpoint": "/data4/DATA/wlh/offer/supermimic/logs/smtrack/G1-SMTrack-CarryPlace/ppo/2026-11-23_03-23-00_ppo4gpu_every100_20261122/model_1400.pt",
+            "intermittent_128": 113,
+            "strict_128": 113
+          },
+          {
+            "iteration": 1500,
+            "terminal_128": 123,
+            "seeds": [
+              {
+                "seed": 2027,
+                "terminal": 61,
+                "terminal_episode_bits": "1111101111111111111111111011111111111111111111111111111101111111",
+                "sha256": "5e174267123c2fe2c1673f286b66a604f4bc52c0ae51bfe405fc178e0af0bb41",
+                "source": "/data4/DATA/wlh/offer/tmp/carry_runs/ppo4gpu_every100_20261122_evaluations/iter1500_seed2027_metrics.json"
+              },
+              {
+                "seed": 314159,
+                "terminal": 62,
+                "terminal_episode_bits": "1111111111111111101111111111111111111111111111111111111111111110",
+                "sha256": "a7ddf4a35c536ebb5e966cbd1ce47cdec3cab57743b1b499e088446d4fc2d989",
+                "source": "/data4/DATA/wlh/offer/tmp/carry_runs/ppo4gpu_every100_20261122_evaluations/iter1500_seed314159_metrics.json"
+              }
+            ],
+            "checkpoint": "/data4/DATA/wlh/offer/supermimic/logs/smtrack/G1-SMTrack-CarryPlace/ppo/2026-11-23_03-23-00_ppo4gpu_every100_20261122/model_1500.pt",
+            "intermittent_128": 122,
+            "strict_128": 122
+          },
+          {
+            "iteration": 1600,
+            "terminal_128": 127,
+            "seeds": [
+              {
+                "seed": 2027,
+                "terminal": 63,
+                "terminal_episode_bits": "1111101111111111111111111111111111111111111111111111111111111111",
+                "sha256": "2a26c1f110ae55c3a5a1233fd3ee1422dfd1e413b41a56b8f82cb2dae5a207dc",
+                "source": "/data4/DATA/wlh/offer/tmp/carry_runs/ppo4gpu_every100_20261122_evaluations/iter1600_seed2027_metrics.json"
+              },
+              {
+                "seed": 314159,
+                "terminal": 64,
+                "terminal_episode_bits": "1111111111111111111111111111111111111111111111111111111111111111",
+                "sha256": "d6257b300fd7dcf739cfd962fc79dd3114e6727f58173ec2c9ab0c696df99e9d",
+                "source": "/data4/DATA/wlh/offer/tmp/carry_runs/ppo4gpu_every100_20261122_evaluations/iter1600_seed314159_metrics.json"
+              }
+            ],
+            "checkpoint": "/data4/DATA/wlh/offer/supermimic/logs/smtrack/G1-SMTrack-CarryPlace/ppo/2026-11-23_03-23-00_ppo4gpu_every100_20261122/model_1600.pt",
+            "intermittent_128": 121,
+            "strict_128": 121
+          },
+          {
+            "iteration": 1700,
+            "terminal_128": 125,
+            "seeds": [
+              {
+                "seed": 2027,
+                "terminal": 61,
+                "terminal_episode_bits": "1111101111101111111111111111111111111111111111111101111111111111",
+                "sha256": "19947ab00844e500f5d5f4bac6dfa064af443c5ed28b9102ee64c4b30fe88ce8",
+                "source": "/data4/DATA/wlh/offer/tmp/carry_runs/ppo4gpu_every100_20261122_evaluations/iter1700_seed2027_metrics.json"
+              },
+              {
+                "seed": 314159,
+                "terminal": 64,
+                "terminal_episode_bits": "1111111111111111111111111111111111111111111111111111111111111111",
+                "sha256": "c9c2414a53e09b5d81605ad42888876343c80b50c9a027eac75100a755231912",
+                "source": "/data4/DATA/wlh/offer/tmp/carry_runs/ppo4gpu_every100_20261122_evaluations/iter1700_seed314159_metrics.json"
+              }
+            ],
+            "checkpoint": "/data4/DATA/wlh/offer/supermimic/logs/smtrack/G1-SMTrack-CarryPlace/ppo/2026-11-23_03-23-00_ppo4gpu_every100_20261122/model_1700.pt",
+            "intermittent_128": 123,
+            "strict_128": 119
+          },
+          {
+            "iteration": 1800,
+            "terminal_128": 125,
+            "seeds": [
+              {
+                "seed": 2027,
+                "terminal": 64,
+                "terminal_episode_bits": "1111111111111111111111111111111111111111111111111111111111111111",
+                "sha256": "771ec06e414147a8298afe821998f9c35391b41dc92ef547559dabe247ec3cbe",
+                "source": "/data4/DATA/wlh/offer/tmp/carry_runs/ppo4gpu_every100_20261122_evaluations/iter1800_seed2027_metrics.json"
+              },
+              {
+                "seed": 314159,
+                "terminal": 61,
+                "terminal_episode_bits": "1111111111111111111111111111110111111111011101111111111111111111",
+                "sha256": "f85b8d2458ea154e65e5c38a573fade6a4dd9e3aa99c868f47a9e0860fcf5ee2",
+                "source": "/data4/DATA/wlh/offer/tmp/carry_runs/ppo4gpu_every100_20261122_evaluations/iter1800_seed314159_metrics.json"
+              }
+            ],
+            "checkpoint": "/data4/DATA/wlh/offer/supermimic/logs/smtrack/G1-SMTrack-CarryPlace/ppo/2026-11-23_03-23-00_ppo4gpu_every100_20261122/model_1800.pt",
+            "intermittent_128": 126,
+            "strict_128": 126
+          },
+          {
+            "iteration": 1900,
+            "terminal_128": 116,
+            "seeds": [
+              {
+                "seed": 2027,
+                "terminal": 59,
+                "terminal_episode_bits": "1111111111111111111111100011111111111111111111111111101111111101",
+                "sha256": "c45bbc2f627ec883ffbcb4c125ebe0ab39d5e77292743e117435d1e96039fe8f",
+                "source": "/data4/DATA/wlh/offer/tmp/carry_runs/ppo4gpu_every100_20261122_evaluations/iter1900_seed2027_metrics.json"
+              },
+              {
+                "seed": 314159,
+                "terminal": 57,
+                "terminal_episode_bits": "1111011111111111111111101101110111110111011111111111111111111011",
+                "sha256": "d267f346f8b22f52f569810eb9790b3a6225f2f2c6053655dfa4f58ad904bddc",
+                "source": "/data4/DATA/wlh/offer/tmp/carry_runs/ppo4gpu_every100_20261122_evaluations/iter1900_seed314159_metrics.json"
+              }
+            ],
+            "checkpoint": "/data4/DATA/wlh/offer/supermimic/logs/smtrack/G1-SMTrack-CarryPlace/ppo/2026-11-23_03-23-00_ppo4gpu_every100_20261122/model_1900.pt",
+            "intermittent_128": 115,
+            "strict_128": 109
+          },
+          {
+            "iteration": 2000,
+            "terminal_128": 122,
+            "seeds": [
+              {
+                "seed": 2027,
+                "terminal": 60,
+                "terminal_episode_bits": "1110111111111111111111011011111111111111111111111111111111110111",
+                "sha256": "21b2ae61eaf96d4dfd48e6e4421913ccb7f82a9361ddb66bde15a39c7de34c2a",
+                "source": "/data4/DATA/wlh/offer/tmp/carry_runs/ppo4gpu_every100_20261122_evaluations/iter2000_seed2027_metrics.json"
+              },
+              {
+                "seed": 314159,
+                "terminal": 62,
+                "terminal_episode_bits": "1111111111111111111111111101101111111111111111111111111111111111",
+                "sha256": "b84d12a80c4256a395363ac5f867680238b7d238cfa524be129372146b09d9d9",
+                "source": "/data4/DATA/wlh/offer/tmp/carry_runs/ppo4gpu_every100_20261122_evaluations/iter2000_seed314159_metrics.json"
+              }
+            ],
+            "checkpoint": "/data4/DATA/wlh/offer/supermimic/logs/smtrack/G1-SMTrack-CarryPlace/ppo/2026-11-23_03-23-00_ppo4gpu_every100_20261122/model_2000.pt",
+            "intermittent_128": 122,
+            "strict_128": 110
+          }
+        ],
+        "points_after_chart_limit": 0
+      },
+      {
+        "id": "supermimic_1gpu",
+        "label": "SuperMimic · 1 卡 × 4096 环境",
+        "color": "#D94F76",
+        "run": "sm1gpu_h32_ori12_every100_v2_20261122",
+        "training_gpus": [
+          1
+        ],
+        "evaluation_gpus": [
+          3
+        ],
+        "monitor_status": "budget complete without corroborated 128/128",
+        "points": [
+          {
+            "iteration": 100,
+            "terminal_128": 0,
+            "seeds": [
+              {
+                "seed": 2027,
+                "terminal": 0,
+                "terminal_episode_bits": "0000000000000000000000000000000000000000000000000000000000000000",
+                "sha256": "191f884480edabf6bdb81ee64235547d4408b4dc1cab367360a965f969deb468",
+                "source": "/data4/DATA/wlh/offer/tmp/carry_runs/sm1gpu_h32_ori12_every100_v2_20261122_evaluations/iter100_seed2027_metrics.json"
+              },
+              {
+                "seed": 314159,
+                "terminal": 0,
+                "terminal_episode_bits": "0000000000000000000000000000000000000000000000000000000000000000",
+                "sha256": "e704a369f21c58a54f1ab3922fae6dc3314f6474b89efa61bdf0502048950aa6",
+                "source": "/data4/DATA/wlh/offer/tmp/carry_runs/sm1gpu_h32_ori12_every100_v2_20261122_evaluations/iter100_seed314159_metrics.json"
+              }
+            ],
+            "checkpoint": "/data4/DATA/wlh/offer/supermimic/logs/smtrack/G1-SMTrack-CarryPlace/supermimic/2026-11-23_01-08-32_sm1gpu_h32_ori12_every100_v2_20261122/model_100.pt",
+            "intermittent_128": 0,
+            "strict_128": 0
+          },
+          {
+            "iteration": 200,
+            "terminal_128": 0,
+            "seeds": [
+              {
+                "seed": 2027,
+                "terminal": 0,
+                "terminal_episode_bits": "0000000000000000000000000000000000000000000000000000000000000000",
+                "sha256": "3d25a66947a2e476b156a978c6085a249b260a28bb62069ac0b60be48b0214fe",
+                "source": "/data4/DATA/wlh/offer/tmp/carry_runs/sm1gpu_h32_ori12_every100_v2_20261122_evaluations/iter200_seed2027_metrics.json"
+              },
+              {
+                "seed": 314159,
+                "terminal": 0,
+                "terminal_episode_bits": "0000000000000000000000000000000000000000000000000000000000000000",
+                "sha256": "9093f3624a5f505338a0de3a8edc585f36881ee4ffa7203b255c348cae5abb79",
+                "source": "/data4/DATA/wlh/offer/tmp/carry_runs/sm1gpu_h32_ori12_every100_v2_20261122_evaluations/iter200_seed314159_metrics.json"
+              }
+            ],
+            "checkpoint": "/data4/DATA/wlh/offer/supermimic/logs/smtrack/G1-SMTrack-CarryPlace/supermimic/2026-11-23_01-08-32_sm1gpu_h32_ori12_every100_v2_20261122/model_200.pt",
+            "intermittent_128": 0,
+            "strict_128": 0
+          },
+          {
+            "iteration": 300,
+            "terminal_128": 0,
+            "seeds": [
+              {
+                "seed": 2027,
+                "terminal": 0,
+                "terminal_episode_bits": "0000000000000000000000000000000000000000000000000000000000000000",
+                "sha256": "00d6637598a29aa0e59a86edab10a31b6e6bf782fa3e20e5d19c5117f6ecc3fa",
+                "source": "/data4/DATA/wlh/offer/tmp/carry_runs/sm1gpu_h32_ori12_every100_v2_20261122_evaluations/iter300_seed2027_metrics.json"
+              },
+              {
+                "seed": 314159,
+                "terminal": 0,
+                "terminal_episode_bits": "0000000000000000000000000000000000000000000000000000000000000000",
+                "sha256": "7cfb50b1638f5b26ca047d80f2b3dfd5045528010936d2f112f259d24b07ce64",
+                "source": "/data4/DATA/wlh/offer/tmp/carry_runs/sm1gpu_h32_ori12_every100_v2_20261122_evaluations/iter300_seed314159_metrics.json"
+              }
+            ],
+            "checkpoint": "/data4/DATA/wlh/offer/supermimic/logs/smtrack/G1-SMTrack-CarryPlace/supermimic/2026-11-23_01-08-32_sm1gpu_h32_ori12_every100_v2_20261122/model_300.pt",
+            "intermittent_128": 0,
+            "strict_128": 0
+          },
+          {
+            "iteration": 400,
+            "terminal_128": 0,
+            "seeds": [
+              {
+                "seed": 2027,
+                "terminal": 0,
+                "terminal_episode_bits": "0000000000000000000000000000000000000000000000000000000000000000",
+                "sha256": "d51e4a1cabfd09c3ef4e774fd1bf3180bed4c9d8515e87f565510199768aef73",
+                "source": "/data4/DATA/wlh/offer/tmp/carry_runs/sm1gpu_h32_ori12_every100_v2_20261122_evaluations/iter400_seed2027_metrics.json"
+              },
+              {
+                "seed": 314159,
+                "terminal": 0,
+                "terminal_episode_bits": "0000000000000000000000000000000000000000000000000000000000000000",
+                "sha256": "24a214bcc2153a80b4bd609f15870fa6fff748aecedf1b9218dd29c3106f2916",
+                "source": "/data4/DATA/wlh/offer/tmp/carry_runs/sm1gpu_h32_ori12_every100_v2_20261122_evaluations/iter400_seed314159_metrics.json"
+              }
+            ],
+            "checkpoint": "/data4/DATA/wlh/offer/supermimic/logs/smtrack/G1-SMTrack-CarryPlace/supermimic/2026-11-23_01-08-32_sm1gpu_h32_ori12_every100_v2_20261122/model_400.pt",
+            "intermittent_128": 0,
+            "strict_128": 0
+          },
+          {
+            "iteration": 500,
+            "terminal_128": 48,
+            "seeds": [
+              {
+                "seed": 2027,
+                "terminal": 23,
+                "terminal_episode_bits": "0100000101100100000000000000111000000010100111010100110010111110",
+                "sha256": "317fb1427259435f548248ea0b17f0c76e8bcf19ed7889a2a0021345e5335c07",
+                "source": "/data4/DATA/wlh/offer/tmp/carry_runs/sm1gpu_h32_ori12_every100_v2_20261122_evaluations/iter500_seed2027_metrics.json"
+              },
+              {
+                "seed": 314159,
+                "terminal": 25,
+                "terminal_episode_bits": "0000110000101100100001011100000111000010011000010100110101001011",
+                "sha256": "ae367a882861723f77db100d746a802f237f3c02c3ca70e1ad336f04a61dbcc2",
+                "source": "/data4/DATA/wlh/offer/tmp/carry_runs/sm1gpu_h32_ori12_every100_v2_20261122_evaluations/iter500_seed314159_metrics.json"
+              }
+            ],
+            "checkpoint": "/data4/DATA/wlh/offer/supermimic/logs/smtrack/G1-SMTrack-CarryPlace/supermimic/2026-11-23_01-08-32_sm1gpu_h32_ori12_every100_v2_20261122/model_500.pt",
+            "intermittent_128": 7,
+            "strict_128": 0
+          },
+          {
+            "iteration": 600,
+            "terminal_128": 55,
+            "seeds": [
+              {
+                "seed": 2027,
+                "terminal": 24,
+                "terminal_episode_bits": "0000000010000100111001110100101000110001101111110010000100000010",
+                "sha256": "e841a01c748ec032cf7cb06251a2a96ec55d7f1226b7e080ed02eaaee1dbe85f",
+                "source": "/data4/DATA/wlh/offer/tmp/carry_runs/sm1gpu_h32_ori12_every100_v2_20261122_evaluations/iter600_seed2027_metrics.json"
+              },
+              {
+                "seed": 314159,
+                "terminal": 31,
+                "terminal_episode_bits": "0101011100000100011011101101001010101000011011101010001110100101",
+                "sha256": "2f825b2e01833c5fd7c83dec03a3113e46735e43a3519552b1bf88d7220ccdcf",
+                "source": "/data4/DATA/wlh/offer/tmp/carry_runs/sm1gpu_h32_ori12_every100_v2_20261122_evaluations/iter600_seed314159_metrics.json"
+              }
+            ],
+            "checkpoint": "/data4/DATA/wlh/offer/supermimic/logs/smtrack/G1-SMTrack-CarryPlace/supermimic/2026-11-23_01-08-32_sm1gpu_h32_ori12_every100_v2_20261122/model_600.pt",
+            "intermittent_128": 7,
+            "strict_128": 0
+          },
+          {
+            "iteration": 700,
+            "terminal_128": 111,
+            "seeds": [
+              {
+                "seed": 2027,
+                "terminal": 57,
+                "terminal_episode_bits": "1101111111101111110111111111111111111111111101111111001011111111",
+                "sha256": "69a89ab8986cc5954551ffac78c06950212739418263778fb2b387e000f9000d",
+                "source": "/data4/DATA/wlh/offer/tmp/carry_runs/sm1gpu_h32_ori12_every100_v2_20261122_evaluations/iter700_seed2027_metrics.json"
+              },
+              {
+                "seed": 314159,
+                "terminal": 54,
+                "terminal_episode_bits": "0101001111111111111111111010111011111111111111101111111111110011",
+                "sha256": "65ea7142e4fd5ff7638341589bb4a9596d7a545ab010315eae3a5951c80f9473",
+                "source": "/data4/DATA/wlh/offer/tmp/carry_runs/sm1gpu_h32_ori12_every100_v2_20261122_evaluations/iter700_seed314159_metrics.json"
+              }
+            ],
+            "checkpoint": "/data4/DATA/wlh/offer/supermimic/logs/smtrack/G1-SMTrack-CarryPlace/supermimic/2026-11-23_01-08-32_sm1gpu_h32_ori12_every100_v2_20261122/model_700.pt",
+            "intermittent_128": 24,
+            "strict_128": 2
+          },
+          {
+            "iteration": 800,
+            "terminal_128": 104,
+            "seeds": [
+              {
+                "seed": 2027,
+                "terminal": 49,
+                "terminal_episode_bits": "1111111111110101111111101111010011111101111000110111101111010011",
+                "sha256": "706bdabb287b119f227245ca87cd2f2656f88ac29a892ab09c74b057c7a654dc",
+                "source": "/data4/DATA/wlh/offer/tmp/carry_runs/sm1gpu_h32_ori12_every100_v2_20261122_evaluations/iter800_seed2027_metrics.json"
+              },
+              {
+                "seed": 314159,
+                "terminal": 55,
+                "terminal_episode_bits": "1101111111111111111111100110111111111111011001111111111110011111",
+                "sha256": "4b5d9629945724808ff1bf09a4e5a300514a96f57cb889a0507bd887ba7fd92c",
+                "source": "/data4/DATA/wlh/offer/tmp/carry_runs/sm1gpu_h32_ori12_every100_v2_20261122_evaluations/iter800_seed314159_metrics.json"
+              }
+            ],
+            "checkpoint": "/data4/DATA/wlh/offer/supermimic/logs/smtrack/G1-SMTrack-CarryPlace/supermimic/2026-11-23_01-08-32_sm1gpu_h32_ori12_every100_v2_20261122/model_800.pt",
+            "intermittent_128": 38,
+            "strict_128": 2
+          },
+          {
+            "iteration": 900,
+            "terminal_128": 59,
+            "seeds": [
+              {
+                "seed": 2027,
+                "terminal": 27,
+                "terminal_episode_bits": "0010100111000001001110001011100000110100100110100110001001011100",
+                "sha256": "0f426c5c4d8878af2dc070fc329d6753f9e90fb9412968ecd072416dca8d1f1d",
+                "source": "/data4/DATA/wlh/offer/tmp/carry_runs/sm1gpu_h32_ori12_every100_v2_20261122_evaluations/iter900_seed2027_metrics.json"
+              },
+              {
+                "seed": 314159,
+                "terminal": 32,
+                "terminal_episode_bits": "1100011110000100111010000001011000110101001010011110111101100110",
+                "sha256": "9276e7a677daa543bc6a4b9d65630442a41de9291e76784bddfe21fa6a966fee",
+                "source": "/data4/DATA/wlh/offer/tmp/carry_runs/sm1gpu_h32_ori12_every100_v2_20261122_evaluations/iter900_seed314159_metrics.json"
+              }
+            ],
+            "checkpoint": "/data4/DATA/wlh/offer/supermimic/logs/smtrack/G1-SMTrack-CarryPlace/supermimic/2026-11-23_01-08-32_sm1gpu_h32_ori12_every100_v2_20261122/model_900.pt",
+            "intermittent_128": 26,
+            "strict_128": 0
+          },
+          {
+            "iteration": 1000,
+            "terminal_128": 126,
+            "seeds": [
+              {
+                "seed": 2027,
+                "terminal": 64,
+                "terminal_episode_bits": "1111111111111111111111111111111111111111111111111111111111111111",
+                "sha256": "792017b1d0d995c0671b8410968d938ddaded52120550e1ce769abb13a28dd61",
+                "source": "/data4/DATA/wlh/offer/tmp/carry_runs/sm1gpu_h32_ori12_every100_v2_20261122_evaluations/iter1000_seed2027_metrics.json"
+              },
+              {
+                "seed": 314159,
+                "terminal": 62,
+                "terminal_episode_bits": "1111111111111111111111111110111111110111111111111111111111111111",
+                "sha256": "369adb95ae35ce321d7688709fc707eda70188d6a386666e9128d67ae202a6b7",
+                "source": "/data4/DATA/wlh/offer/tmp/carry_runs/sm1gpu_h32_ori12_every100_v2_20261122_evaluations/iter1000_seed314159_metrics.json"
+              }
+            ],
+            "checkpoint": "/data4/DATA/wlh/offer/supermimic/logs/smtrack/G1-SMTrack-CarryPlace/supermimic/2026-11-23_01-08-32_sm1gpu_h32_ori12_every100_v2_20261122/model_1000.pt",
+            "intermittent_128": 29,
+            "strict_128": 0
+          },
+          {
+            "iteration": 1100,
+            "terminal_128": 123,
+            "seeds": [
+              {
+                "seed": 2027,
+                "terminal": 61,
+                "terminal_episode_bits": "1111111101111111111111111111111111111111111111011111111110111111",
+                "sha256": "0e34f01754bf1229bc917497a1ad92d08982dd1f109f5c4be4e1e1cd9698488d",
+                "source": "/data4/DATA/wlh/offer/tmp/carry_runs/sm1gpu_h32_ori12_every100_v2_20261122_evaluations/iter1100_seed2027_metrics.json"
+              },
+              {
+                "seed": 314159,
+                "terminal": 62,
+                "terminal_episode_bits": "1111111101111111111111111111111111111111111111111011111111111111",
+                "sha256": "194c9395672353925c21af366022b2a063cf3656ec778d4e62095bf7302567c9",
+                "source": "/data4/DATA/wlh/offer/tmp/carry_runs/sm1gpu_h32_ori12_every100_v2_20261122_evaluations/iter1100_seed314159_metrics.json"
+              }
+            ],
+            "checkpoint": "/data4/DATA/wlh/offer/supermimic/logs/smtrack/G1-SMTrack-CarryPlace/supermimic/2026-11-23_01-08-32_sm1gpu_h32_ori12_every100_v2_20261122/model_1100.pt",
+            "intermittent_128": 85,
+            "strict_128": 0
+          },
+          {
+            "iteration": 1200,
+            "terminal_128": 127,
+            "seeds": [
+              {
+                "seed": 2027,
+                "terminal": 63,
+                "terminal_episode_bits": "1111111111111111110111111111111111111111111111111111111111111111",
+                "sha256": "6f020a33577d5f0a4839104d9826c8762e2ff4276691d34871aae4288e57ca83",
+                "source": "/data4/DATA/wlh/offer/tmp/carry_runs/sm1gpu_h32_ori12_every100_v2_20261122_evaluations/iter1200_seed2027_metrics.json"
+              },
+              {
+                "seed": 314159,
+                "terminal": 64,
+                "terminal_episode_bits": "1111111111111111111111111111111111111111111111111111111111111111",
+                "sha256": "7d82784794e59d8f217424fbe65126ecc18cb3306fcae02c3ee7015976fe70bd",
+                "source": "/data4/DATA/wlh/offer/tmp/carry_runs/sm1gpu_h32_ori12_every100_v2_20261122_evaluations/iter1200_seed314159_metrics.json"
+              }
+            ],
+            "checkpoint": "/data4/DATA/wlh/offer/supermimic/logs/smtrack/G1-SMTrack-CarryPlace/supermimic/2026-11-23_01-08-32_sm1gpu_h32_ori12_every100_v2_20261122/model_1200.pt",
+            "intermittent_128": 104,
+            "strict_128": 0
+          },
+          {
+            "iteration": 1300,
+            "terminal_128": 127,
+            "seeds": [
+              {
+                "seed": 2027,
+                "terminal": 63,
+                "terminal_episode_bits": "1111111111111111111111111111111101111111111111111111111111111111",
+                "sha256": "7ec0f2593c416c5c8bf47831d34268ab5b4ea80ee89ebeebb35bb23a7985a03a",
+                "source": "/data4/DATA/wlh/offer/tmp/carry_runs/sm1gpu_h32_ori12_every100_v2_20261122_evaluations/iter1300_seed2027_metrics.json"
+              },
+              {
+                "seed": 314159,
+                "terminal": 64,
+                "terminal_episode_bits": "1111111111111111111111111111111111111111111111111111111111111111",
+                "sha256": "baf7388a9fa201432d8b7b80e825edb7d29a73febd0d1e5b137ecd9e86b3f356",
+                "source": "/data4/DATA/wlh/offer/tmp/carry_runs/sm1gpu_h32_ori12_every100_v2_20261122_evaluations/iter1300_seed314159_metrics.json"
+              }
+            ],
+            "checkpoint": "/data4/DATA/wlh/offer/supermimic/logs/smtrack/G1-SMTrack-CarryPlace/supermimic/2026-11-23_01-08-32_sm1gpu_h32_ori12_every100_v2_20261122/model_1300.pt",
+            "intermittent_128": 115,
+            "strict_128": 0
+          },
+          {
+            "iteration": 1400,
+            "terminal_128": 127,
+            "seeds": [
+              {
+                "seed": 2027,
+                "terminal": 63,
+                "terminal_episode_bits": "1111111111111111111111111111111111111111111111111111111110111111",
+                "sha256": "cd5ea7a90bf2294b8133d502d3a0c7e4b5bd3735f1d6ee6a3f0ea4cb16419770",
+                "source": "/data4/DATA/wlh/offer/tmp/carry_runs/sm1gpu_h32_ori12_every100_v2_20261122_evaluations/iter1400_seed2027_metrics.json"
+              },
+              {
+                "seed": 314159,
+                "terminal": 64,
+                "terminal_episode_bits": "1111111111111111111111111111111111111111111111111111111111111111",
+                "sha256": "8840a886cfb4a8bcad416d718ff0cdcd5c5ea3f08c3fd81d959afade885c5609",
+                "source": "/data4/DATA/wlh/offer/tmp/carry_runs/sm1gpu_h32_ori12_every100_v2_20261122_evaluations/iter1400_seed314159_metrics.json"
+              }
+            ],
+            "checkpoint": "/data4/DATA/wlh/offer/supermimic/logs/smtrack/G1-SMTrack-CarryPlace/supermimic/2026-11-23_01-08-32_sm1gpu_h32_ori12_every100_v2_20261122/model_1400.pt",
+            "intermittent_128": 126,
+            "strict_128": 0
+          },
+          {
+            "iteration": 1500,
+            "terminal_128": 126,
+            "seeds": [
+              {
+                "seed": 2027,
+                "terminal": 63,
+                "terminal_episode_bits": "1111111110111111111111111111111111111111111111111111111111111111",
+                "sha256": "0281421c0c656c4e4301d42bb9cdb578febad9ae5c81a7b03788776101bf5fba",
+                "source": "/data4/DATA/wlh/offer/tmp/carry_runs/sm1gpu_h32_ori12_every100_v2_20261122_evaluations/iter1500_seed2027_metrics.json"
+              },
+              {
+                "seed": 314159,
+                "terminal": 63,
+                "terminal_episode_bits": "1111111111111111111111111111110111111111111111111111111111111111",
+                "sha256": "ea3c049ac79b6ee499bc530463c35793fd0b8f6047233466bf734a5a67f5ae6f",
+                "source": "/data4/DATA/wlh/offer/tmp/carry_runs/sm1gpu_h32_ori12_every100_v2_20261122_evaluations/iter1500_seed314159_metrics.json"
+              }
+            ],
+            "checkpoint": "/data4/DATA/wlh/offer/supermimic/logs/smtrack/G1-SMTrack-CarryPlace/supermimic/2026-11-23_01-08-32_sm1gpu_h32_ori12_every100_v2_20261122/model_1500.pt",
+            "intermittent_128": 118,
+            "strict_128": 0
+          }
+        ],
+        "points_after_chart_limit": 0
+      },
+      {
+        "id": "supermimic_4gpu",
+        "label": "SuperMimic · 4 卡 × 2048 环境",
+        "color": "#079680",
+        "run": "sm4gpu_h32_ori12_every100_20261122",
+        "training_gpus": [
+          4,
+          5,
+          6,
+          7
+        ],
+        "evaluation_gpus": [
+          3
+        ],
+        "monitor_status": "target corroborated at iteration 1100",
+        "points": [
+          {
+            "iteration": 100,
+            "terminal_128": 0,
+            "seeds": [
+              {
+                "seed": 2027,
+                "terminal": 0,
+                "terminal_episode_bits": "0000000000000000000000000000000000000000000000000000000000000000",
+                "sha256": "b49a68fb2d9f3683786ece0f4172b4ca2f3b2b623ccab8b0acbea6905425b39c",
+                "source": "/data4/DATA/wlh/offer/tmp/carry_runs/sm4gpu_h32_ori12_every100_20261122_evaluations/iter100_seed2027_metrics.json"
+              },
+              {
+                "seed": 314159,
+                "terminal": 0,
+                "terminal_episode_bits": "0000000000000000000000000000000000000000000000000000000000000000",
+                "sha256": "a5764e81279ea136945e9ea46a456bc7e0f4f3bab1b6b9d3805455ce302907d2",
+                "source": "/data4/DATA/wlh/offer/tmp/carry_runs/sm4gpu_h32_ori12_every100_20261122_evaluations/iter100_seed314159_metrics.json"
+              }
+            ],
+            "checkpoint": "/data4/DATA/wlh/offer/supermimic/logs/smtrack/G1-SMTrack-CarryPlace/supermimic/2026-11-23_01-19-36_sm4gpu_h32_ori12_every100_20261122/model_100.pt",
+            "intermittent_128": 0,
+            "strict_128": 0
+          },
+          {
+            "iteration": 200,
+            "terminal_128": 0,
+            "seeds": [
+              {
+                "seed": 2027,
+                "terminal": 0,
+                "terminal_episode_bits": "0000000000000000000000000000000000000000000000000000000000000000",
+                "sha256": "53bfbe6bf0fa7d55c4ae511ce9b0ab55bc9e02a68b69f129c28aa96c2920f57c",
+                "source": "/data4/DATA/wlh/offer/tmp/carry_runs/sm4gpu_h32_ori12_every100_20261122_evaluations/iter200_seed2027_metrics.json"
+              },
+              {
+                "seed": 314159,
+                "terminal": 0,
+                "terminal_episode_bits": "0000000000000000000000000000000000000000000000000000000000000000",
+                "sha256": "0b6af7eb907b5034c56333c523974a486db2841311f76f15c116f9ac00af8d12",
+                "source": "/data4/DATA/wlh/offer/tmp/carry_runs/sm4gpu_h32_ori12_every100_20261122_evaluations/iter200_seed314159_metrics.json"
+              }
+            ],
+            "checkpoint": "/data4/DATA/wlh/offer/supermimic/logs/smtrack/G1-SMTrack-CarryPlace/supermimic/2026-11-23_01-19-36_sm4gpu_h32_ori12_every100_20261122/model_200.pt",
+            "intermittent_128": 0,
+            "strict_128": 0
+          },
+          {
+            "iteration": 300,
+            "terminal_128": 0,
+            "seeds": [
+              {
+                "seed": 2027,
+                "terminal": 0,
+                "terminal_episode_bits": "0000000000000000000000000000000000000000000000000000000000000000",
+                "sha256": "04f20b0814239484eccfd75b4a1f4bfb2df71ecc2e2d659074185d5aa2f15f46",
+                "source": "/data4/DATA/wlh/offer/tmp/carry_runs/sm4gpu_h32_ori12_every100_20261122_evaluations/iter300_seed2027_metrics.json"
+              },
+              {
+                "seed": 314159,
+                "terminal": 0,
+                "terminal_episode_bits": "0000000000000000000000000000000000000000000000000000000000000000",
+                "sha256": "9c43dbb84b5cb6911f703944603559bd30f32170fbe87a12bb144c5ed8cb5ffb",
+                "source": "/data4/DATA/wlh/offer/tmp/carry_runs/sm4gpu_h32_ori12_every100_20261122_evaluations/iter300_seed314159_metrics.json"
+              }
+            ],
+            "checkpoint": "/data4/DATA/wlh/offer/supermimic/logs/smtrack/G1-SMTrack-CarryPlace/supermimic/2026-11-23_01-19-36_sm4gpu_h32_ori12_every100_20261122/model_300.pt",
+            "intermittent_128": 0,
+            "strict_128": 0
+          },
+          {
+            "iteration": 400,
+            "terminal_128": 0,
+            "seeds": [
+              {
+                "seed": 2027,
+                "terminal": 0,
+                "terminal_episode_bits": "0000000000000000000000000000000000000000000000000000000000000000",
+                "sha256": "116e2791416b501129176583fa581b7e95dcb84ef7e0fa27390f33df18294cad",
+                "source": "/data4/DATA/wlh/offer/tmp/carry_runs/sm4gpu_h32_ori12_every100_20261122_evaluations/iter400_seed2027_metrics.json"
+              },
+              {
+                "seed": 314159,
+                "terminal": 0,
+                "terminal_episode_bits": "0000000000000000000000000000000000000000000000000000000000000000",
+                "sha256": "556078fc3fcad809f3853e971570adf0f2bf0da93f485ab0380540b229b0d292",
+                "source": "/data4/DATA/wlh/offer/tmp/carry_runs/sm4gpu_h32_ori12_every100_20261122_evaluations/iter400_seed314159_metrics.json"
+              }
+            ],
+            "checkpoint": "/data4/DATA/wlh/offer/supermimic/logs/smtrack/G1-SMTrack-CarryPlace/supermimic/2026-11-23_01-19-36_sm4gpu_h32_ori12_every100_20261122/model_400.pt",
+            "intermittent_128": 0,
+            "strict_128": 0
+          },
+          {
+            "iteration": 500,
+            "terminal_128": 17,
+            "seeds": [
+              {
+                "seed": 2027,
+                "terminal": 8,
+                "terminal_episode_bits": "1000000010010000000000000000000000010001000001000001100000000000",
+                "sha256": "4eca0bc91afe9b921a71d0bbfdd5d1a8144c010ec578ea6b9167ffb933231312",
+                "source": "/data4/DATA/wlh/offer/tmp/carry_runs/sm4gpu_h32_ori12_every100_20261122_evaluations/iter500_seed2027_metrics.json"
+              },
+              {
+                "seed": 314159,
+                "terminal": 9,
+                "terminal_episode_bits": "0000000011000000000100000001000000000000010010010000100000000100",
+                "sha256": "50d009eb31bd6019c26489b3a2fd5c12e796fd6dbf15c4b3b75bf8735402c699",
+                "source": "/data4/DATA/wlh/offer/tmp/carry_runs/sm4gpu_h32_ori12_every100_20261122_evaluations/iter500_seed314159_metrics.json"
+              }
+            ],
+            "checkpoint": "/data4/DATA/wlh/offer/supermimic/logs/smtrack/G1-SMTrack-CarryPlace/supermimic/2026-11-23_01-19-36_sm4gpu_h32_ori12_every100_20261122/model_500.pt",
+            "intermittent_128": 6,
+            "strict_128": 1
+          },
+          {
+            "iteration": 600,
+            "terminal_128": 100,
+            "seeds": [
+              {
+                "seed": 2027,
+                "terminal": 54,
+                "terminal_episode_bits": "1111111111111010101111111111111111110111111011101111111110010110",
+                "sha256": "5daa728074cf5ae0e90a9b0fdb1fb3f52e12c4cc5a6e6438c44eb1f60e667de8",
+                "source": "/data4/DATA/wlh/offer/tmp/carry_runs/sm4gpu_h32_ori12_every100_20261122_evaluations/iter600_seed2027_metrics.json"
+              },
+              {
+                "seed": 314159,
+                "terminal": 46,
+                "terminal_episode_bits": "1011111111111111001101110111111111010010111101001111101100001011",
+                "sha256": "78d2a1b815f69c8a5aa7ae5aa5e9729a3715c35f5f1d9a8ed9820f11f3c1e778",
+                "source": "/data4/DATA/wlh/offer/tmp/carry_runs/sm4gpu_h32_ori12_every100_20261122_evaluations/iter600_seed314159_metrics.json"
+              }
+            ],
+            "checkpoint": "/data4/DATA/wlh/offer/supermimic/logs/smtrack/G1-SMTrack-CarryPlace/supermimic/2026-11-23_01-19-36_sm4gpu_h32_ori12_every100_20261122/model_600.pt",
+            "intermittent_128": 0,
+            "strict_128": 0
+          },
+          {
+            "iteration": 700,
+            "terminal_128": 95,
+            "seeds": [
+              {
+                "seed": 2027,
+                "terminal": 49,
+                "terminal_episode_bits": "1111101111010111111101101100110111111001111110001011111101111111",
+                "sha256": "9789e3d3f186c6d09f4359ab400e73bd286d2cdcda0a052ef5951632791ed895",
+                "source": "/data4/DATA/wlh/offer/tmp/carry_runs/sm4gpu_h32_ori12_every100_20261122_evaluations/iter700_seed2027_metrics.json"
+              },
+              {
+                "seed": 314159,
+                "terminal": 46,
+                "terminal_episode_bits": "1011001111011111111101101111000100111110101110101111110111100111",
+                "sha256": "e935dcd939b59d9cb5f72f03aff7aa82a16f4a9042048e79164709c9abde6d37",
+                "source": "/data4/DATA/wlh/offer/tmp/carry_runs/sm4gpu_h32_ori12_every100_20261122_evaluations/iter700_seed314159_metrics.json"
+              }
+            ],
+            "checkpoint": "/data4/DATA/wlh/offer/supermimic/logs/smtrack/G1-SMTrack-CarryPlace/supermimic/2026-11-23_01-19-36_sm4gpu_h32_ori12_every100_20261122/model_700.pt",
+            "intermittent_128": 29,
+            "strict_128": 0
+          },
+          {
+            "iteration": 800,
+            "terminal_128": 121,
+            "seeds": [
+              {
+                "seed": 2027,
+                "terminal": 61,
+                "terminal_episode_bits": "1111111111111111011111111111111111111111111111111110111111111101",
+                "sha256": "bf70eecdbe20db93966a38ab7a5b3ae1420bdb2e889c1a0da4cfd83c63ca78e1",
+                "source": "/data4/DATA/wlh/offer/tmp/carry_runs/sm4gpu_h32_ori12_every100_20261122_evaluations/iter800_seed2027_metrics.json"
+              },
+              {
+                "seed": 314159,
+                "terminal": 60,
+                "terminal_episode_bits": "1111111111111111111101111101111111111111111111101111111111110111",
+                "sha256": "69bcccc3e75df48a44b6d046da99c0c57ad30e98348fedb275dd09dc7be6e259",
+                "source": "/data4/DATA/wlh/offer/tmp/carry_runs/sm4gpu_h32_ori12_every100_20261122_evaluations/iter800_seed314159_metrics.json"
+              }
+            ],
+            "checkpoint": "/data4/DATA/wlh/offer/supermimic/logs/smtrack/G1-SMTrack-CarryPlace/supermimic/2026-11-23_01-19-36_sm4gpu_h32_ori12_every100_20261122/model_800.pt",
+            "intermittent_128": 93,
+            "strict_128": 0
+          },
+          {
+            "iteration": 900,
+            "terminal_128": 125,
+            "seeds": [
+              {
+                "seed": 2027,
+                "terminal": 63,
+                "terminal_episode_bits": "1111111111111111111111111111111011111111111111111111111111111111",
+                "sha256": "c9e9254e4ac5608d195bfd2bbd530814e2306741856be32914928f9264611910",
+                "source": "/data4/DATA/wlh/offer/tmp/carry_runs/sm4gpu_h32_ori12_every100_20261122_evaluations/iter900_seed2027_metrics.json"
+              },
+              {
+                "seed": 314159,
+                "terminal": 62,
+                "terminal_episode_bits": "1111111111111111111111111111111111111111011111011111111111111111",
+                "sha256": "ff261c84c4fab051df43951c48955555a082cd7ea34b2f39e3425a64cedccfb0",
+                "source": "/data4/DATA/wlh/offer/tmp/carry_runs/sm4gpu_h32_ori12_every100_20261122_evaluations/iter900_seed314159_metrics.json"
+              }
+            ],
+            "checkpoint": "/data4/DATA/wlh/offer/supermimic/logs/smtrack/G1-SMTrack-CarryPlace/supermimic/2026-11-23_01-19-36_sm4gpu_h32_ori12_every100_20261122/model_900.pt",
+            "intermittent_128": 108,
+            "strict_128": 0
+          },
+          {
+            "iteration": 1000,
+            "terminal_128": 126,
+            "seeds": [
+              {
+                "seed": 2027,
+                "terminal": 63,
+                "terminal_episode_bits": "1111111111111111111111111111111111111111111111111111111111110111",
+                "sha256": "294907495b2c3ca688815d774bd103c383365cb92f9ede109d05573f67a8b6f6",
+                "source": "/data4/DATA/wlh/offer/tmp/carry_runs/sm4gpu_h32_ori12_every100_20261122_evaluations/iter1000_seed2027_metrics.json"
+              },
+              {
+                "seed": 314159,
+                "terminal": 63,
+                "terminal_episode_bits": "1111111111111111111111111111111111111111011111111111111111111111",
+                "sha256": "330fc8eead0689bbfa72d0c284ef2a404f557303abdff2f377a84dc448b3c3b5",
+                "source": "/data4/DATA/wlh/offer/tmp/carry_runs/sm4gpu_h32_ori12_every100_20261122_evaluations/iter1000_seed314159_metrics.json"
+              }
+            ],
+            "checkpoint": "/data4/DATA/wlh/offer/supermimic/logs/smtrack/G1-SMTrack-CarryPlace/supermimic/2026-11-23_01-19-36_sm4gpu_h32_ori12_every100_20261122/model_1000.pt",
+            "intermittent_128": 101,
+            "strict_128": 0
+          },
+          {
+            "iteration": 1100,
+            "terminal_128": 128,
+            "seeds": [
+              {
+                "seed": 2027,
+                "terminal": 64,
+                "terminal_episode_bits": "1111111111111111111111111111111111111111111111111111111111111111",
+                "sha256": "bf2eee56ca15573ba808a03863b6abf62f56426591186844a5568e6f11f2a3ea",
+                "source": "/data4/DATA/wlh/offer/tmp/carry_runs/sm4gpu_h32_ori12_every100_20261122_evaluations/iter1100_seed2027_metrics.json"
+              },
+              {
+                "seed": 314159,
+                "terminal": 64,
+                "terminal_episode_bits": "1111111111111111111111111111111111111111111111111111111111111111",
+                "sha256": "2a363e08c11d302768a622f5dd6948f94a9caab7124a473f65ed00948ff095db",
+                "source": "/data4/DATA/wlh/offer/tmp/carry_runs/sm4gpu_h32_ori12_every100_20261122_evaluations/iter1100_seed314159_metrics.json"
+              }
+            ],
+            "checkpoint": "/data4/DATA/wlh/offer/supermimic/logs/smtrack/G1-SMTrack-CarryPlace/supermimic/2026-11-23_01-19-36_sm4gpu_h32_ori12_every100_20261122/model_1100.pt",
+            "intermittent_128": 119,
+            "strict_128": 0,
+            "same_gpu_confirm_128": 128,
+            "third_seed_64": 64
+          }
+        ],
+        "points_after_chart_limit": 0
+      }
+    ]
+  }
 }

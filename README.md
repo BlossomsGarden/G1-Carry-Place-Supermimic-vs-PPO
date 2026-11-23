@@ -1,21 +1,26 @@
 # 🤖 G1 Carry & Place：SuperMimic vs PPO
 
-**一条 10 秒的抱箱示范，能否教会 G1 走过去、双手抱起、搬到另一处并放稳？** 我把 SUGAR CarryBox 的一条轨迹接进 **mjlab + MuJoCo**，在相同任务上对照“真实物理采样 + PPO-Sim”与“世界模型 + 可微分想象更新”的 SuperMimic 实现。先看箱子最终是否到目标附近，再分别看取搬放过程与持续双手抓握；代码、单条示范和真实物理评测证据都在这里。
+本仓库主要探究一个问题：
 
-| 🎞️ 运动学参考 | ⚡ 单卡 SuperMimic：间歇持物 | 🚀 四卡 SuperMimic：严格成功一集 | 🦾 PPO：严格成功一集 |
+**一条 10 秒的抱箱示范，能否教会 G1 走过去、双手抱起、搬到另一处并放稳？**
+
+仅在仿真环境 **mjlab + MuJoCo Warp** 中实现，使用 SUGAR CarryBox 的轨迹，评测时先看箱子最终是否到目标附近，再分别看取搬放过程与持续双手抓握。对比方法：
+-  **PPO-Sim**: 真实物理采样 + PPO
+-  **SuperMimic**: 世界模型 + 可微分想象更新
+
+| 训练轨迹 | SuperMimic <br>（间歇持物） | SuperMimic<br>（严格成功） | PPO <br>（严格成功） |
 |:---:|:---:|:---:|:---:|
 | <img src="assets/demo_reference.gif" width="230" alt="SUGAR 运动学参考轨迹，非训练策略"> | <img src="assets/demo_sm_intermit.gif" width="230" alt="单卡 SuperMimic 真物理策略，间歇持物成功，严格双手失败"> | <img src="assets/demo_sm4gpu_strict.gif" width="230" alt="四卡 SuperMimic 第 1500 轮真实物理回放，严格双手成功的一集"> | <img src="assets/demo_ppo_strict.gif" width="230" alt="PPO 真物理策略，连续双手持物成功的一集"> |
-| [完整 MP4](assets/carry_place_reference_098.mp4) · **非训练策略** | [完整 MP4](assets/sm4096_h32_ori12_iter1000_seed161803_episode0_physical.mp4) · **间歇通过 / 连续失败** | [完整 MP4](assets/sm4gpu1500_seed161803_episode10_physical.mp4) · **严格通过；主双种子仅 7/128** | [完整 MP4](assets/ppo3999_seed314159_episode59_physical.mp4) · **严格双手通过** |
 
-> **别被视频角标误导：**单卡 SuperMimic 视频标着 `STRICT FAILURE`，指原评测器要求“整个搬运段双手一刻不能松”的指标不通过；该片段**确实**举起并离地净搬运 1.526 m、到位放下。新四卡视频在另一批物理回放中严格通过，但单集画面不代表批量成功率。[五个可播放案例与逐帧解释](docs/DEMOS.md) · [新四卡关键帧](assets/sm4gpu1500_seed161803_episode10_physical.png)
+
 
 ## ✨ 30 秒看结论：单卡、四卡 SuperMimic 与 PPO
 
-| 训练器 / 选中权重 | GPU / 同时仿真环境 | 训练至权重 / 完整训练 | 真实交互总量 | 稳态真实环境步/秒 | 训练峰值显存 | **主指标：终点箱体到位** | 过程：间歇持物 | 过程：连续双手 |
-|---|---|---:|---:|---:|---|---:|---:|---:|
-| **SuperMimic 单卡续训 H32 / std 1.2，第 1,300 轮（复测通过）**<br>🤗 [ckpt](https://huggingface.co/BlossomsGarden/G1-Carry-Place-Supermimic-vs-PPO/blob/main/checkpoints/supermimic_continued/model_1300.pt) | 1 × RTX 4090 / 4,096 | **5.04 h / ≤5.19 h** | 1,357.4 万 | 685 | 6：11,934 MiB | **128/128 = 100.0%**（同卡复测 128/128 = 100.0%） | 102/128 = 79.7% | 0/128 = 0.0% |
-| **PPO-Sim：第 3,999 轮**<br>🤗 [ckpt](https://huggingface.co/BlossomsGarden/G1-Carry-Place-Supermimic-vs-PPO/blob/main/checkpoints/ppo/model_3999.pt) | 4 × RTX 4090 / 8,192（每卡 2,048） | **2.58 h / 2.58 h** | 7.864 亿 | 86,216 | 6,288 / 4,922 / 4,922 / 4,922 MiB | **127/128 = 99.2%** | 127/128 = 99.2% | 53/128 = 41.4% |
-| **SuperMimic 四卡 H32 / std 1.2，第 1,500 轮（复测达标，已停训）**<br>🤗 [ckpt](https://huggingface.co/BlossomsGarden/G1-Carry-Place-Supermimic-vs-PPO/blob/main/checkpoints/supermimic_4gpu/model_1500.pt) | 4 × RTX 4090 / 8,192（每卡 2,048） | **2.69 h / 2.77 h** | 3,098.2 万 | 3,282 | 1：6,524；4：6,536；5：6,536；7：6,536 MiB | **128/128 = 100.0%**（同卡复测 128/128 = 100.0%） | 127/128 = 99.2% | 7/128 = 5.5% |
+| 方案 | GPU | 并行仿真数 | 训练至权重 / 完整训练 | 真实交互总量 | 稳态真实环境步/秒 | 训练峰值显存 | **主指标：终点箱体到位** | 过程：间歇持物 | 过程：连续双手 |
+|:---:|---|---|---:|---:|---:|---|---:|---:|---:|
+| **SuperMimic 单卡续训 H32 / std 1.2，第 1,300 轮（复测通过）**<br>🤗 [ckpt](https://huggingface.co/BlossomsGarden/G1-Carry-Place-Supermimic-vs-PPO/blob/main/checkpoints/supermimic_continued/model_1300.pt) | 单卡 4090 | 1x4096 | **5.04 h / ≤5.19 h** | 1,357.4 万 | 685 | 6：11,934 MiB | **128/128 = 100.0%**（同卡复测 128/128 = 100.0%） | 102/128 = 79.7% | 0/128 = 0.0% |
+| **PPO-Sim：第 3,999 轮**<br>🤗 [ckpt](https://huggingface.co/BlossomsGarden/G1-Carry-Place-Supermimic-vs-PPO/blob/main/checkpoints/ppo/model_3999.pt) | 4卡 4090 | 4x2048 | **2.58 h / 2.58 h** | 7.864 亿 | 86,216 | 6,288 / 4,922 / 4,922 / 4,922 MiB | **127/128 = 99.2%** | 127/128 = 99.2% | 53/128 = 41.4% |
+| **SuperMimic 四卡 H32 / std 1.2，第 1,500 轮（复测达标，已停训）**<br>🤗 [ckpt](https://huggingface.co/BlossomsGarden/G1-Carry-Place-Supermimic-vs-PPO/blob/main/checkpoints/supermimic_4gpu/model_1500.pt) | 4卡 4090 | 4x2048 | **2.69 h / 2.77 h** | 3,098.2 万 | 3,282 | 1：6,524；4：6,536；5：6,536；7：6,536 MiB | **128/128 = 100.0%**（同卡复测 128/128 = 100.0%） | 127/128 = 99.2% | 7/128 = 5.5% |
 
 **主指标只判位置**：每条物理回放的最后一帧，箱中心与目标中心的三维距离 ≤ **0.12 m** 则记 1，否则记 0；不要求箱体朝向、静止、放手或双手接触。各行均以种子 2027、314159 各 64 条计算；原始权重的历史行使用旧物理回放重新计分，续训/四卡新行使用新物理回放，**不同批次不可逐集拼接**。原四组配方最佳 SuperMimic 权重的第三个种子到位 64/64，三种子共 **188/192 = 97.9%**，但连续双手仍是 **0/192**。因此到位率接近不等于完成稳定抓握。PPO 原始未校正严格成绩为 51/128，几何校正后为 53/128；两方法训练 GPU 数、网络和真实数据预算不同，不能据此声称同等质量的算法效率优势。显存为训练期间每 2 秒采样的整卡已用量峰值。[逐集新旧指标、源文件哈希与失败分析 →](docs/RESULTS.md)
 
